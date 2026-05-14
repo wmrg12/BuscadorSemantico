@@ -6,7 +6,7 @@ import "./App.css";
 const TEXTOS_UI = {
   es: {
     title: "Buscador Semantico Deportivo",
-    subtitle: "Ontologia RDF/OWL · DBpedia · Multilingue",
+    subtitle: "Ontologia RDF/OWL -  DBpedia -  Multilingue",
     placeholder: "Buscar deporte, atleta, evento...",
     btnSearch: "Buscar",
     tabLocal: "Ontologia Local",
@@ -22,7 +22,7 @@ const TEXTOS_UI = {
   },
   en: {
     title: "Sports Semantic Search",
-    subtitle: "RDF/OWL Ontology · DBpedia · Multilingual",
+    subtitle: "RDF/OWL Ontology - DBpedia - Multilingual",
     placeholder: "Search sport, athlete, event...",
     btnSearch: "Search",
     tabLocal: "Local Ontology",
