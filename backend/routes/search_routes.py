@@ -17,7 +17,7 @@ def busqueda():
     return jsonify(datos)
 
 
-# GET /search/query?q=futbol&lang=es&dbpedia=true 
+# GET /search/query?q=futbol&lang=es&dbpedia=true
 @busqueda_bp.route("/search/query")
 def busqueda_consulta():
     palabra_clave = request.args.get("q", "").strip()
@@ -27,11 +27,13 @@ def busqueda_consulta():
     if not palabra_clave:
         return jsonify({"error": "Parametro 'q' requerido"}), 400
 
-    resultados = busqueda_combinada(palabra_clave, idioma=idioma, usar_dbpedia=usar_dbpedia)
+    resultados = busqueda_combinada(
+        palabra_clave, idioma=idioma, usar_dbpedia=usar_dbpedia
+    )
     return jsonify(resultados)
 
 
-# GET /search/classes?lang=es 
+# GET /search/classes?lang=es
 @busqueda_bp.route("/search/classes")
 def busqueda_clases():
     idioma = request.args.get("lang", "es")

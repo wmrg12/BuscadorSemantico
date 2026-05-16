@@ -2,15 +2,17 @@ import os
 from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import RDF, RDFS, OWL
 
-NS_DEPORTE = Namespace("http://www.semanticweb.org/ontologies/deportes#")
+DEPORTE_NS = Namespace("http://www.semanticweb.org/ontologies/deportes#")
 
-grafo = Graph()
-grafo.bind("deporte", NS_DEPORTE)
+# Grafo principal
+graph = Graph()
+graph.bind("deporte", DEPORTE_NS)
 
-DIRECTORIO_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DIRECTORIO_ONTOLOGIA = os.path.join(DIRECTORIO_BASE, "ontology")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ONTOLOGY_DIR = os.path.join(BASE_DIR, "ontology")
 
-FORMATOS_SOPORTADOS = {
+# Cargar archivos ontologicops
+SUPPORTED_FORMATS = {
     ".rdf": "xml",
     ".owl": "xml",
     ".ttl": "turtle",
@@ -19,81 +21,78 @@ FORMATOS_SOPORTADOS = {
     ".jsonld": "json-ld",
 }
 
-archivos_cargados = []
+loaded_files = []
 
-for nombre_archivo in os.listdir(DIRECTORIO_ONTOLOGIA):
-    extension = os.path.splitext(nombre_archivo)[1].lower()
-    if extension in FORMATOS_SOPORTADOS:
-        ruta_archivo = os.path.join(DIRECTORIO_ONTOLOGIA, nombre_archivo)
-        formato_rdf = FORMATOS_SOPORTADOS[extension]
+for filename in os.listdir(ONTOLOGY_DIR):
+    ext = os.path.splitext(filename)[1].lower()
+    if ext in SUPPORTED_FORMATS:
+        filepath = os.path.join(ONTOLOGY_DIR, filename)
+        fmt = SUPPORTED_FORMATS[ext]
         try:
-            grafo.parse(ruta_archivo, format=formato_rdf)
-            archivos_cargados.append(nombre_archivo)
-            print(f"[OK] Cargado: {nombre_archivo} ({formato_rdf})")
-        except Exception as error_carga:
-            print(f"[ERROR] No se pudo cargar {nombre_archivo}: {error_carga}")
+            graph.parse(filepath, format=fmt)
+            loaded_files.append(filename)
+            print(f"[OK] Cargado: {filename} ({fmt})")
+        except Exception as e:
+            print(f"[ERROR] No se pudo cargar {filename}: {e}")
 
-print(f"Total tripletas locales: {len(grafo)} | Archivos: {archivos_cargados}")
+print(f"Total tripletas locales: {len(graph)} | Archivos: {loaded_files}")
 
 
+# DBpedia
 try:
     from SPARQLWrapper import SPARQLWrapper, JSON
 
-    SPARQL_DISPONIBLE = True
+    SPARQL_AVAILABLE = True
 except ImportError:
-    SPARQL_DISPONIBLE = False
+    SPARQL_AVAILABLE = False
     print("[WARN] SPARQLWrapper no instalado. DBpedia deshabilitado.")
 
-URL_DBPEDIA_ONLINE = "https://dbpedia.org/sparql"
-URL_DBPEDIA_OFFLINE = "http://localhost:8890/sparql"
+DBPEDIA_ONLINE_URL = "https://dbpedia.org/sparql"
+DBPEDIA_OFFLINE_URL = "http://localhost:8890/sparql"  # Virtuoso local
 
 
-def _construir_sparql(endpoint: str, limite_tiempo: int = 8) -> "SPARQLWrapper":
+def _build_dbpedia_wrapper(endpoint: str, timeout: int = 8) -> "SPARQLWrapper":
     sparql = SPARQLWrapper(endpoint)
     sparql.setReturnFormat(JSON)
-    sparql.setTimeout(limite_tiempo)
+    sparql.setTimeout(timeout)
     return sparql
 
 
-def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
-    if not SPARQL_DISPONIBLE:
+def query_dbpedia(sparql_query: str, lang: str = "es") -> list[dict]:
+    if not SPARQL_AVAILABLE:
         return []
 
-    endpoints = [URL_DBPEDIA_OFFLINE, URL_DBPEDIA_ONLINE]
+    endpoints = [DBPEDIA_OFFLINE_URL, DBPEDIA_ONLINE_URL]
 
     for endpoint in endpoints:
         try:
-            sparql = _construir_sparql(endpoint)
-            sparql.setQuery(consulta_sparql)
-            resultados = sparql.query().convert()
-            bindings = resultados.get("results", {}).get("bindings", [])
-            filas = []
-            for enlace in bindings:
-                fila = {k: v.get("value", "") for k, v in enlace.items()}
-                filas.append(fila)
-            print(f"[DBpedia] {endpoint} → {len(filas)} resultados")
-            return filas
-        except Exception as error_consulta:
-            print(f"[DBpedia] Fallo {endpoint}: {error_consulta}")
+            sparql = _build_dbpedia_wrapper(endpoint)
+            sparql.setQuery(sparql_query)
+            results = sparql.query().convert()
+            bindings = results.get("results", {}).get("bindings", [])
+            rows = []
+            for b in bindings:
+                row = {k: v.get("value", "") for k, v in b.items()}
+                rows.append(row)
+            print(f"[DBpedia] {endpoint} → {len(rows)} resultados")
+            return rows
+        except Exception as e:
+            print(f"[DBpedia] Falló {endpoint}: {e}")
 
     return []
 
 
-def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]:
-    consulta = f"""
+def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
+    query = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
-    PREFIX dbr:  <http://dbpedia.org/resource/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX dct:  <http://purl.org/dc/terms/>
 
-    SELECT DISTINCT ?deporte ?label ?abstract WHERE {{
+    SELECT DISTINCT ?deporte ?label WHERE {{
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
-        OPTIONAL {{ ?deporte dbo:abstract ?abstract .
-                   FILTER(LANG(?abstract) = "{idioma}") }}
-        FILTER(LANG(?label) = "{idioma}")
-        FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{palabra_clave}")))
+        FILTER(LANG(?label) = "{lang}")
+        FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{keyword}")))
     }}
     LIMIT 10
     """
-    return consultar_dbpedia(consulta, idioma)
+    return query_dbpedia(query, lang)
