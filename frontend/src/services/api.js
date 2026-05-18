@@ -19,4 +19,8 @@ export const obtenerIndividuos = (claseUri = null, idioma = "es") =>
 // Idiomas disponibles
 export const obtenerIdiomas = () => API.get("/search/langs");
 
+// Obtener detalles completos de un recurso individual de la ontología
+export const obtenerDetallesRecurso = (uri, idioma = "es") =>
+    API.get("/search/details", { params: { uri, lang: idioma } });
+
 export default API;

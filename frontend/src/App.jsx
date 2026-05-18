@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { buscarConsulta, obtenerClases, obtenerIdiomas } from "./services/api";
+import { buscarConsulta, obtenerClases, obtenerIdiomas, obtenerDetallesRecurso } from "./services/api";
 import "./App.css";
 
 // Traducciones 
@@ -19,6 +19,13 @@ const TEXTOS_UI = {
     classes: "Clases",
     lang: "Idioma",
     abstract: "Descripción",
+    detailsBtn: "Ver Información y Relaciones",
+    hideDetailsBtn: "Ocultar Información",
+    loadingDetails: "Cargando propiedades...",
+    labelDataProps: "Datos Registrados",
+    labelObjProps: "Relaciones de la Ontología",
+    labelIncomingProps: "Aparece Relacionado en",
+    langCode: "es",
   },
   en: {
     title: "Sports Semantic Search",
@@ -35,13 +42,55 @@ const TEXTOS_UI = {
     classes: "Classes",
     lang: "Language",
     abstract: "Description",
+    detailsBtn: "View Information & Relations",
+    hideDetailsBtn: "Hide Information",
+    loadingDetails: "Loading properties...",
+    labelDataProps: "Registered Data",
+    labelObjProps: "Ontology Relations",
+    labelIncomingProps: "Appears Related in",
+    langCode: "en",
   },
 };
 
+// Formatear valores de fecha/hora de la ontología
+const formatearValor = (valor) => {
+  if (typeof valor !== "string") return valor;
+  if (valor.endsWith("T00:00:00")) {
+    return valor.split("T")[0];
+  }
+  if (valor.includes("T")) {
+    return valor.replace("T", " ");
+  }
+  return valor;
+};
+
 // Resultados
-function TarjetaResultado({ elemento, textos }) {
+function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
   const [expandido, setExpandido] = useState(false);
+  const [detalles, setDetalles] = useState(null);
+  const [cargandoDetalles, setCargandoDetalles] = useState(false);
+  const [expandidoDetalles, setExpandidoDetalles] = useState(false);
+  
   const esDbpedia = elemento.fuente === "dbpedia";
+
+  const toggleDetalles = async () => {
+    if (expandidoDetalles) {
+      setExpandidoDetalles(false);
+      return;
+    }
+    setExpandidoDetalles(true);
+    if (!detalles) {
+      setCargandoDetalles(true);
+      try {
+        const respuesta = await obtenerDetallesRecurso(elemento.uri, textos.langCode);
+        setDetalles(respuesta.data);
+      } catch (err) {
+        console.error("Error al cargar detalles:", err);
+      } finally {
+        setCargandoDetalles(false);
+      }
+    }
+  };
 
   return (
     <div className={`result-card ${esDbpedia ? "dbpedia" : "local"}`}>
@@ -68,6 +117,101 @@ function TarjetaResultado({ elemento, textos }) {
           {expandido && <p className="card-abstract">{elemento.abstract}</p>}
         </div>
       )}
+
+      {/* Panel de detalles semánticos para recursos locales */}
+      {!esDbpedia && (
+        <div className="card-details-wrap">
+          <button
+            className="toggle-details-btn"
+            onClick={toggleDetalles}
+          >
+            {expandidoDetalles ? textos.hideDetailsBtn : textos.detailsBtn}
+          </button>
+          
+          {expandidoDetalles && (
+            <div className="semantic-details-panel">
+              {cargandoDetalles ? (
+                <div className="details-loader">
+                  <div className="spinner"></div>
+                  <span>{textos.loadingDetails}</span>
+                </div>
+              ) : detalles ? (
+                <div className="details-content">
+                  {/* Tipos/Clases de este recurso */}
+                  {detalles.tipos && detalles.tipos.length > 0 && (
+                    <div className="details-section">
+                      <span className="section-title">{textos.labelType}:</span>
+                      <div className="chips-container">
+                        {detalles.tipos.map((t, idx) => (
+                          <span key={idx} className="type-chip">{t.label}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Propiedades de Datos (Data Properties) */}
+                  {detalles.propiedades && detalles.propiedades.filter(p => !p.es_iri).length > 0 && (
+                    <div className="details-section">
+                      <span className="section-title">{textos.labelDataProps}:</span>
+                      <div className="data-props-grid">
+                        {detalles.propiedades.filter(p => !p.es_iri).map((p, idx) => (
+                          <div key={idx} className="data-prop-row">
+                            <span className="prop-name">{p.propiedad}:</span>
+                            <span className="prop-val">{formatearValor(p.valor)}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Relaciones Salientes (Object Properties) */}
+                  {detalles.propiedades && detalles.propiedades.filter(p => p.es_iri).length > 0 && (
+                    <div className="details-section">
+                      <span className="section-title">{textos.labelObjProps}:</span>
+                      <div className="obj-props-grid">
+                        {detalles.propiedades.filter(p => p.es_iri).map((p, idx) => (
+                          <div key={idx} className="obj-prop-row">
+                            <span className="prop-name">{p.propiedad}:</span>
+                            <button 
+                              className="relation-chip"
+                              onClick={() => alBuscarRelacion(p.valor_label)}
+                            >
+                              {p.valor_label}
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Relaciones Entrantes (Incoming connections) */}
+                  {detalles.relaciones_entrantes && detalles.relaciones_entrantes.length > 0 && (
+                    <div className="details-section">
+                      <span className="section-title">{textos.labelIncomingProps}:</span>
+                      <div className="obj-props-grid">
+                        {detalles.relaciones_entrantes.map((r, idx) => (
+                          <div key={idx} className="obj-prop-row">
+                            <span className="prop-name">{r.propiedad}:</span>
+                            <button 
+                              className="relation-chip incoming"
+                              onClick={() => alBuscarRelacion(r.sujeto_label)}
+                            >
+                              {r.sujeto_label}
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="details-error">Error al cargar la información.</div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
       <div className="card-uri" title={elemento.uri}>
         {elemento.uri}
       </div>
@@ -102,6 +246,23 @@ export default function App() {
       .then(respuesta => setClases(respuesta.data))
       .catch(() => { });
   }, [idioma]);
+
+  const alBuscarRelacion = (termino) => {
+    setPalabraClave(termino);
+    setCargando(true);
+    setResultados(null);
+    buscarConsulta(termino, idioma, usarDbpedia)
+      .then(respuesta => {
+        setResultados(respuesta.data);
+        setPestanaActiva(respuesta.data.local?.length > 0 ? "local" : "dbpedia");
+      })
+      .catch(() => {
+        setResultados({ local: [], dbpedia: [], total: 0, error: true });
+      })
+      .finally(() => {
+        setCargando(false);
+      });
+  };
 
   const manejarBusqueda = async (evento) => {
     evento?.preventDefault();
@@ -237,7 +398,12 @@ export default function App() {
                 <div className="no-results">{textos.noResults}</div>
               ) : (
                 listaMostrar.map((elemento, indice) => (
-                  <TarjetaResultado key={indice} elemento={elemento} textos={textos} />
+                  <TarjetaResultado 
+                    key={indice} 
+                    elemento={elemento} 
+                    textos={textos} 
+                    alBuscarRelacion={alBuscarRelacion} 
+                  />
                 ))
               )}
             </div>

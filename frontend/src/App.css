@@ -435,3 +435,184 @@ body {
     align-items: flex-start;
   }
 }
+
+/* Card Semantic Details Panel */
+.card-details-wrap {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--borde);
+}
+
+.toggle-details-btn {
+  background: none;
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  font-size: 0.76rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toggle-details-btn:hover {
+  background: var(--superficie2);
+  border-color: var(--acento);
+}
+
+.semantic-details-panel {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--superficie2);
+  border-radius: var(--radio);
+  border: 1px solid var(--borde);
+  animation: slideDown 0.2s ease both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--tenue);
+  padding: 8px 0;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--borde);
+  border-top-color: var(--acento);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.details-section {
+  margin-bottom: 12px;
+}
+
+.details-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--tenue);
+  margin-bottom: 6px;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.type-chip {
+  background: #ffffff;
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* Data Properties Grid */
+.data-props-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.data-prop-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 6px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  font-size: 0.78rem;
+}
+
+.prop-name {
+  color: var(--tenue);
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+.prop-val {
+  color: var(--texto);
+  font-weight: 500;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* Object/Relation Properties */
+.obj-props-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.obj-prop-row {
+  display: flex;
+  align-items: center;
+  font-size: 0.78rem;
+  gap: 10px;
+}
+
+.obj-prop-row .prop-name {
+  min-width: 110px;
+}
+
+.relation-chip {
+  background: #ffffff;
+  border: 1px solid var(--borde);
+  color: var(--acento);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.76rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: left;
+}
+
+.relation-chip:hover {
+  background: var(--acento);
+  color: #ffffff;
+  border-color: var(--acento);
+}
+
+.relation-chip.incoming {
+  border-style: dashed;
+}
+
+.relation-chip.incoming:hover {
+  border-style: solid;
+}
