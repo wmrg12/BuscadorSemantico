@@ -16,9 +16,6 @@ SUPPORTED_FORMATS = {
     ".rdf": "xml",
     ".owl": "xml",
     ".ttl": "turtle",
-    ".n3": "n3",
-    ".nt": "nt",
-    ".jsonld": "json-ld",
 }
 
 loaded_files = []

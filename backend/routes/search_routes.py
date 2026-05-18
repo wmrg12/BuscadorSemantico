@@ -4,9 +4,23 @@ from queries.search import (
     busqueda_combinada,
     obtener_clases,
     obtener_individuos,
+    obtener_detalles_recurso,
 )
 
 busqueda_bp = Blueprint("busqueda", __name__)
+
+
+# GET /search/details?uri=URI&lang=es
+@busqueda_bp.route("/search/details")
+def busqueda_detalles():
+    uri = request.args.get("uri", "").strip()
+    idioma = request.args.get("lang", "es")
+
+    if not uri:
+        return jsonify({"error": "Parametro 'uri' requerido"}), 400
+
+    detalles = obtener_detalles_recurso(uri, idioma=idioma)
+    return jsonify(detalles)
 
 
 # GET /search
