@@ -5,72 +5,79 @@ from rdflib.namespace import RDF, RDFS, OWL
 DEPORTE_NS = Namespace("http://www.semanticweb.org/ontologies/deportes#")
 
 # Grafo principal
-graph = Graph()
-graph.bind("deporte", DEPORTE_NS)
+grafo = Graph()
+grafo.bind("deporte", DEPORTE_NS)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ONTOLOGY_DIR = os.path.join(BASE_DIR, "ontology")
+DIRECTORIO_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DIRECTORIO_ONTOLOGIA = os.path.join(DIRECTORIO_BASE, "ontology")
 
-# Cargar archivos ontologicops
-SUPPORTED_FORMATS = {
+# Cargar archivos ontologicos
+FORMATOS_SOPORTADOS = {
     ".rdf": "xml",
     ".owl": "xml",
     ".ttl": "turtle",
 }
 
-loaded_files = []
+archivos_cargados = []
 
-for filename in os.listdir(ONTOLOGY_DIR):
-    ext = os.path.splitext(filename)[1].lower()
-    if ext in SUPPORTED_FORMATS:
-        filepath = os.path.join(ONTOLOGY_DIR, filename)
-        fmt = SUPPORTED_FORMATS[ext]
+for nombre_archivo in os.listdir(DIRECTORIO_ONTOLOGIA):
+    extension = os.path.splitext(nombre_archivo)[1].lower()
+    if extension in FORMATOS_SOPORTADOS:
+        ruta_archivo = os.path.join(DIRECTORIO_ONTOLOGIA, nombre_archivo)
+        formato = FORMATOS_SOPORTADOS[extension]
         try:
-            graph.parse(filepath, format=fmt)
-            loaded_files.append(filename)
-            print(f"[OK] Cargado: {filename} ({fmt})")
+            grafo.parse(ruta_archivo, format=formato)
+            archivos_cargados.append(nombre_archivo)
+            print(f"[OK] Cargado: {nombre_archivo} ({formato})")
         except Exception as e:
-            print(f"[ERROR] No se pudo cargar {filename}: {e}")
+            print(f"[ERROR] No se pudo cargar {nombre_archivo}: {e}")
 
-print(f"Total tripletas locales: {len(graph)} | Archivos: {loaded_files}")
+print(f"Total tripletas locales: {len(grafo)} | Archivos: {archivos_cargados}")
 
 
 # DBpedia
 try:
     from SPARQLWrapper import SPARQLWrapper, JSON
 
-    SPARQL_AVAILABLE = True
+    SPARQL_DISPONIBLE = True
 except ImportError:
-    SPARQL_AVAILABLE = False
+    SPARQL_DISPONIBLE = False
     print("[WARN] SPARQLWrapper no instalado. DBpedia deshabilitado.")
 
-DBPEDIA_ONLINE_URL = "https://dbpedia.org/sparql"
+URL_DBPEDIA_EN_LINEA = "https://dbpedia.org/sparql"
 
-def _build_dbpedia_wrapper(endpoint: str, timeout: int = 8) -> "SPARQLWrapper":
-    sparql = SPARQLWrapper(endpoint)
+
+def _construir_envoltorio_dbpedia(
+    punto_acceso: str, tiempo_espera: int = 8
+) -> "SPARQLWrapper":
+    sparql = SPARQLWrapper(punto_acceso)
     sparql.setReturnFormat(JSON)
-    sparql.setTimeout(timeout)
+    sparql.setTimeout(tiempo_espera)
     return sparql
 
 
-def query_dbpedia(sparql_query: str, lang: str = "es") -> list[dict]:
-    if not SPARQL_AVAILABLE:
+def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
+    if not SPARQL_DISPONIBLE:
         return []
 
-    try:
-        sparql = _build_dbpedia_wrapper(DBPEDIA_ONLINE_URL)
-        sparql.setQuery(sparql_query)
-        results = sparql.query().convert()
-        bindings = results.get("results", {}).get("bindings", [])
-        rows = []
-        for b in bindings:
-            row = {k: v.get("value", "") for k, v in b.items()}
-            rows.append(row)
-        print(f"[DBpedia] {DBPEDIA_ONLINE_URL} → {len(rows)} resultados")
-        return rows
-    except Exception as e:
-        print(f"[DBpedia] Fallo {DBPEDIA_ONLINE_URL}: {e}")
-        return []
+    puntos_acceso = [URL_DBPEDIA_EN_LINEA]
+
+    for punto in puntos_acceso:
+        try:
+            sparql = _construir_envoltorio_dbpedia(punto)
+            sparql.setQuery(consulta_sparql)
+            resultados = sparql.query().convert()
+            vinculaciones = resultados.get("results", {}).get("bindings", [])
+            filas = []
+            for b in vinculaciones:
+                fila = {k: v.get("value", "") for k, v in b.items()}
+                filas.append(fila)
+            print(f"[DBpedia] {punto} → {len(filas)} resultados")
+            return filas
+        except Exception as e:
+            print(f"[DBpedia] Fallo {punto}: {e}")
+
+    return []
 
 
 def _crear_regex_acentos(palabra: str) -> str:
@@ -80,9 +87,9 @@ def _crear_regex_acentos(palabra: str) -> str:
     return p
 
 
-def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
+def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]:
     # Separar en palabras para búsqueda compuesta
-    palabras = [p.strip() for p in keyword.split() if p.strip()]
+    palabras = [p.strip() for p in palabra_clave.split() if p.strip()]
     if not palabras:
         return []
 
@@ -90,19 +97,19 @@ def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
     for pal in palabras:
         regex_pal = _crear_regex_acentos(pal)
         filtros_regex.append(f'FILTER(REGEX(STR(?label), "{regex_pal}", "i"))')
-        
+
     filtros_str = "\n        ".join(filtros_regex)
 
-    query = f"""
+    consulta = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
     SELECT DISTINCT ?deporte ?label WHERE {{
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
-        FILTER(LANG(?label) = "{lang}")
+        FILTER(LANG(?label) = "{idioma}")
         {filtros_str}
     }}
     LIMIT 10
     """
-    return query_dbpedia(query, lang)
+    return consultar_dbpedia(consulta, idioma)

@@ -1,6 +1,6 @@
 from rdflib.namespace import RDF, RDFS, OWL
 from rdflib import Literal
-from services.ontology_service import graph, search_dbpedia_sport
+from services.ontology_service import grafo as graph, buscar_deporte_dbpedia as search_dbpedia_sport
 
 IDIOMAS_SOPORTADOS = ["es", "en"]
 
@@ -54,9 +54,7 @@ def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
 
     # Separar la frase en palabras individuales
     palabras = [
-        p.strip().replace('"', '\\"')
-        for p in palabra_clave.split()
-        if p.strip()
+        p.strip().replace('"', '\\"') for p in palabra_clave.split() if p.strip()
     ]
     if not palabras:
         return []
@@ -68,8 +66,12 @@ def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
         patrones.append(re.compile(regex_str, re.IGNORECASE))
 
     meta_classes = {
-        OWL.Class, RDFS.Class, OWL.ObjectProperty, OWL.DatatypeProperty, 
-        OWL.AnnotationProperty, URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
+        OWL.Class,
+        RDFS.Class,
+        OWL.ObjectProperty,
+        OWL.DatatypeProperty,
+        OWL.AnnotationProperty,
+        URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"),
     }
 
     datos = []
@@ -91,11 +93,11 @@ def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
 
         # Recopilar todos los textos asociados a este sujeto para la búsqueda
         textos_sujeto = [str(s)]
-        
+
         # Tipos
         for t in graph.objects(s, RDF.type):
             textos_sujeto.append(str(t))
-            
+
         # Etiquetas y otras propiedades
         for p, o in graph.predicate_objects(s):
             if isinstance(o, Literal) or isinstance(o, URIRef):
@@ -106,33 +108,35 @@ def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
         # Verificar si TODOS los patrones coinciden con el texto del sujeto
         if all(pat.search(texto_completo) for pat in patrones):
             uri_str = str(s)
-            
+
             # Obtener etiqueta principal
             label = None
             for l in graph.objects(s, RDFS.label):
                 if isinstance(l, Literal) and (l.language == idioma or not l.language):
                     label = str(l)
                     break
-                    
+
             # Obtener tipo principal
             tipo = None
             for t in graph.objects(s, RDF.type):
                 if t != OWL.NamedIndividual and t not in meta_classes:
                     tipo = str(t)
                     break
-                    
+
             etiqueta = label if label else _uri_a_etiqueta(uri_str)
             tipo_final = _uri_a_etiqueta(tipo) if tipo else "Recurso"
 
             if uri_str not in vistos:
                 vistos.add(uri_str)
-                datos.append({
-                    "uri": uri_str,
-                    "label": etiqueta,
-                    "tipo": tipo_final,
-                    "lang": idioma,
-                    "fuente": "local",
-                })
+                datos.append(
+                    {
+                        "uri": uri_str,
+                        "label": etiqueta,
+                        "tipo": tipo_final,
+                        "lang": idioma,
+                        "fuente": "local",
+                    }
+                )
 
                 if len(datos) >= 30:
                     break
@@ -224,6 +228,7 @@ def busqueda_combinada(
 
 def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     from rdflib import URIRef
+
     uri_ref = URIRef(uri)
 
     # Obtener el tipo/clase principal
@@ -237,33 +242,40 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     # 2. Consultar propiedades salientes (?p ?o)
     propiedades = []
     for p, o in graph.predicate_objects(uri_ref):
-        # Ignorar tipo NamedIndividual 
+        # Ignorar tipo NamedIndividual
         if p == RDF.type and o == OWL.NamedIndividual:
             continue
 
         p_str = str(p)
-        if any(x in p_str for x in ["#type", "ontology#", "rdf-schema#"]) and p != RDF.type:
+        if (
+            any(x in p_str for x in ["#type", "ontology#", "rdf-schema#"])
+            and p != RDF.type
+        ):
             continue
 
         p_etiqueta = _obtener_etiqueta(p, idioma) or _uri_a_etiqueta(p_str)
 
         if isinstance(o, Literal):
-            propiedades.append({
-                "propiedad_uri": p_str,
-                "propiedad": p_etiqueta,
-                "valor": str(o),
-                "es_iri": False
-            })
+            propiedades.append(
+                {
+                    "propiedad_uri": p_str,
+                    "propiedad": p_etiqueta,
+                    "valor": str(o),
+                    "es_iri": False,
+                }
+            )
         elif isinstance(o, URIRef):
             o_str = str(o)
             o_etiqueta = _obtener_etiqueta(o, idioma) or _uri_a_etiqueta(o_str)
-            propiedades.append({
-                "propiedad_uri": p_str,
-                "propiedad": p_etiqueta,
-                "valor": o_str,
-                "valor_label": o_etiqueta,
-                "es_iri": True
-            })
+            propiedades.append(
+                {
+                    "propiedad_uri": p_str,
+                    "propiedad": p_etiqueta,
+                    "valor": o_str,
+                    "valor_label": o_etiqueta,
+                    "es_iri": True,
+                }
+            )
 
     # Ordenar propiedades alfanumericos
     propiedades.sort(key=lambda x: x["propiedad"])
@@ -275,12 +287,14 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
         s_etiqueta = _obtener_etiqueta(s, idioma) or _uri_a_etiqueta(s_str)
         p_str = str(p)
         p_etiqueta = _obtener_etiqueta(p, idioma) or _uri_a_etiqueta(p_str)
-        relaciones_entrantes.append({
-            "sujeto": s_str,
-            "sujeto_label": s_etiqueta,
-            "propiedad": p_etiqueta,
-            "propiedad_uri": p_str
-        })
+        relaciones_entrantes.append(
+            {
+                "sujeto": s_str,
+                "sujeto_label": s_etiqueta,
+                "propiedad": p_etiqueta,
+                "propiedad_uri": p_str,
+            }
+        )
 
     relaciones_entrantes.sort(key=lambda x: (x["propiedad"], x["sujeto_label"]))
 
@@ -290,5 +304,5 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
         "label": _obtener_etiqueta(uri_ref, idioma) or _uri_a_etiqueta(uri),
         "tipos": tipos,
         "propiedades": propiedades,
-        "relaciones_entrantes": relaciones_entrantes
+        "relaciones_entrantes": relaciones_entrantes,
     }
