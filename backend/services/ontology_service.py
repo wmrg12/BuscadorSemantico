@@ -45,8 +45,6 @@ except ImportError:
     print("[WARN] SPARQLWrapper no instalado. DBpedia deshabilitado.")
 
 DBPEDIA_ONLINE_URL = "https://dbpedia.org/sparql"
-DBPEDIA_OFFLINE_URL = "http://localhost:8890/sparql"  # Virtuoso local
-
 
 def _build_dbpedia_wrapper(endpoint: str, timeout: int = 8) -> "SPARQLWrapper":
     sparql = SPARQLWrapper(endpoint)
@@ -59,24 +57,20 @@ def query_dbpedia(sparql_query: str, lang: str = "es") -> list[dict]:
     if not SPARQL_AVAILABLE:
         return []
 
-    endpoints = [DBPEDIA_OFFLINE_URL, DBPEDIA_ONLINE_URL]
-
-    for endpoint in endpoints:
-        try:
-            sparql = _build_dbpedia_wrapper(endpoint)
-            sparql.setQuery(sparql_query)
-            results = sparql.query().convert()
-            bindings = results.get("results", {}).get("bindings", [])
-            rows = []
-            for b in bindings:
-                row = {k: v.get("value", "") for k, v in b.items()}
-                rows.append(row)
-            print(f"[DBpedia] {endpoint} → {len(rows)} resultados")
-            return rows
-        except Exception as e:
-            print(f"[DBpedia] Falló {endpoint}: {e}")
-
-    return []
+    try:
+        sparql = _build_dbpedia_wrapper(DBPEDIA_ONLINE_URL)
+        sparql.setQuery(sparql_query)
+        results = sparql.query().convert()
+        bindings = results.get("results", {}).get("bindings", [])
+        rows = []
+        for b in bindings:
+            row = {k: v.get("value", "") for k, v in b.items()}
+            rows.append(row)
+        print(f"[DBpedia] {DBPEDIA_ONLINE_URL} → {len(rows)} resultados")
+        return rows
+    except Exception as e:
+        print(f"[DBpedia] Fallo {DBPEDIA_ONLINE_URL}: {e}")
+        return []
 
 
 def _crear_regex_acentos(palabra: str) -> str:
@@ -85,8 +79,20 @@ def _crear_regex_acentos(palabra: str) -> str:
     p = p.replace("o", "[oóöOÓÖ]").replace("u", "[uúüUÚÜ]")
     return p
 
+
 def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
-    regex_pal = _crear_regex_acentos(keyword)
+    # Separar en palabras para búsqueda compuesta
+    palabras = [p.strip() for p in keyword.split() if p.strip()]
+    if not palabras:
+        return []
+
+    filtros_regex = []
+    for pal in palabras:
+        regex_pal = _crear_regex_acentos(pal)
+        filtros_regex.append(f'FILTER(REGEX(STR(?label), "{regex_pal}", "i"))')
+        
+    filtros_str = "\n        ".join(filtros_regex)
+
     query = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -95,7 +101,7 @@ def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
         FILTER(LANG(?label) = "{lang}")
-        FILTER(REGEX(STR(?label), "{regex_pal}", "i"))
+        {filtros_str}
     }}
     LIMIT 10
     """
