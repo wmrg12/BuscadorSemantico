@@ -70,7 +70,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
   const [detalles, setDetalles] = useState(null);
   const [cargandoDetalles, setCargandoDetalles] = useState(false);
   const [expandidoDetalles, setExpandidoDetalles] = useState(false);
-  
+
   const esDbpedia = elemento.fuente === "dbpedia";
 
   const toggleDetalles = async () => {
@@ -118,7 +118,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
         </div>
       )}
 
-      {/* Panel de detalles semánticos para recursos locales */}
+      {/* Panel de detalles semanticos para recursos locales */}
       {!esDbpedia && (
         <div className="card-details-wrap">
           <button
@@ -127,7 +127,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
           >
             {expandidoDetalles ? textos.hideDetailsBtn : textos.detailsBtn}
           </button>
-          
+
           {expandidoDetalles && (
             <div className="semantic-details-panel">
               {cargandoDetalles ? (
@@ -172,7 +172,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
                         {detalles.propiedades.filter(p => p.es_iri).map((p, idx) => (
                           <div key={idx} className="obj-prop-row">
                             <span className="prop-name">{p.propiedad}:</span>
-                            <button 
+                            <button
                               className="relation-chip"
                               onClick={() => alBuscarRelacion(p.valor_label)}
                             >
@@ -192,7 +192,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
                         {detalles.relaciones_entrantes.map((r, idx) => (
                           <div key={idx} className="obj-prop-row">
                             <span className="prop-name">{r.propiedad}:</span>
-                            <button 
+                            <button
                               className="relation-chip incoming"
                               onClick={() => alBuscarRelacion(r.sujeto_label)}
                             >
@@ -224,6 +224,7 @@ export default function App() {
   const [idioma, setIdioma] = useState("es");
   const [idiomas, setIdiomas] = useState({ es: "Español", en: "English" });
   const [palabraClave, setPalabraClave] = useState("");
+  const [palabraBusqueda, setPalabraBusqueda] = useState("");
   const [resultados, setResultados] = useState(null);
   const [cargando, setCargando] = useState(false);
   const [pestanaActiva, setPestanaActiva] = useState("local");
@@ -247,30 +248,27 @@ export default function App() {
       .catch(() => { });
   }, [idioma]);
 
-  const alBuscarRelacion = (termino) => {
-    setPalabraClave(termino);
-    setCargando(true);
-    setResultados(null);
-    buscarConsulta(termino, idioma, usarDbpedia)
-      .then(respuesta => {
-        setResultados(respuesta.data);
-        setPestanaActiva(respuesta.data.local?.length > 0 ? "local" : "dbpedia");
-      })
-      .catch(() => {
-        setResultados({ local: [], dbpedia: [], total: 0, error: true });
-      })
-      .finally(() => {
-        setCargando(false);
-      });
-  };
+  // Debounce para la búsqueda dinámica
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setPalabraBusqueda(palabraClave);
+    }, 400); // 400ms de retraso
+    return () => clearTimeout(timeoutId);
+  }, [palabraClave]);
 
-  const manejarBusqueda = async (evento) => {
-    evento?.preventDefault();
-    if (!palabraClave.trim()) return;
-    setCargando(true);
+  useEffect(() => {
+    if (!palabraBusqueda.trim()) {
+      setResultados(null);
+      return;
+    }
+    realizarBusqueda(palabraBusqueda);
+  }, [palabraBusqueda, usarDbpedia, idioma]);
+
+  const realizarBusqueda = async (termino) => {
     setResultados(null);
+    setCargando(true);
     try {
-      const respuesta = await buscarConsulta(palabraClave, idioma, usarDbpedia);
+      const respuesta = await buscarConsulta(termino, idioma, usarDbpedia);
       setResultados(respuesta.data);
       setPestanaActiva(respuesta.data.local?.length > 0 ? "local" : "dbpedia");
     } catch {
@@ -278,6 +276,16 @@ export default function App() {
     } finally {
       setCargando(false);
     }
+  };
+
+  const alBuscarRelacion = (termino) => {
+    setPalabraClave(termino);
+  };
+
+  const manejarBusqueda = (evento) => {
+    evento?.preventDefault();
+    if (!palabraClave.trim()) return;
+    realizarBusqueda(palabraClave);
   };
 
   const manejarTecla = (evento) => {
@@ -398,11 +406,11 @@ export default function App() {
                 <div className="no-results">{textos.noResults}</div>
               ) : (
                 listaMostrar.map((elemento, indice) => (
-                  <TarjetaResultado 
-                    key={indice} 
-                    elemento={elemento} 
-                    textos={textos} 
-                    alBuscarRelacion={alBuscarRelacion} 
+                  <TarjetaResultado
+                    key={indice}
+                    elemento={elemento}
+                    textos={textos}
+                    alBuscarRelacion={alBuscarRelacion}
                   />
                 ))
               )}

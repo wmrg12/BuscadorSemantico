@@ -1,0 +1,55 @@
+
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+    SELECT DISTINCT ?entidad ?label ?tipo WHERE {
+        ?entidad ?p ?o .
+        FILTER(isIRI(?entidad))
+        
+        # Excluir las clases y propiedades del esquema de los resultados de b�squeda
+        FILTER NOT EXISTS {
+            ?entidad a ?tipoClaseObj .
+            FILTER(
+                ?tipoClaseObj = owl:Class 
+                || ?tipoClaseObj = rdfs:Class 
+                || ?tipoClaseObj = owl:ObjectProperty 
+                || ?tipoClaseObj = owl:DatatypeProperty 
+                || ?tipoClaseObj = owl:AnnotationProperty
+                || ?tipoClaseObj = <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
+            )
+        }
+        
+        OPTIONAL { ?entidad rdfs:label ?label . }
+        OPTIONAL { ?entidad a ?tipo . }
+        OPTIONAL {
+            ?entidad a/rdfs:subClassOf* ?tipoClase .
+            FILTER(isIRI(?tipoClase))
+        }
+        
+        FILTER(
+            REGEX(STR(?entidad), "n[a��A��]t[a��A��]c[i��I��][o��O��]n", "i")
+            || (BOUND(?label) && REGEX(STR(?label), "n[a��A��]t[a��A��]c[i��I��][o��O��]n", "i"))
+            || (BOUND(?tipoClase) && REGEX(STR(?tipoClase), "n[a��A��]t[a��A��]c[i��I��][o��O��]n", "i"))
+            || EXISTS {
+                ?entidad ?prop_0 ?valor_0 .
+                FILTER(isLiteral(?valor_0) && REGEX(STR(?valor_0), "n[a��A��]t[a��A��]c[i��I��][o��O��]n", "i"))
+            }
+        )
+        
+
+        FILTER(
+            REGEX(STR(?entidad), "100m", "i")
+            || (BOUND(?label) && REGEX(STR(?label), "100m", "i"))
+            || (BOUND(?tipoClase) && REGEX(STR(?tipoClase), "100m", "i"))
+            || EXISTS {
+                ?entidad ?prop_1 ?valor_1 .
+                FILTER(isLiteral(?valor_1) && REGEX(STR(?valor_1), "100m", "i"))
+            }
+        )
+        
+        FILTER(!BOUND(?label) || LANG(?label) = "" || LANG(?label) = "es")
+    }
+    LIMIT 30
+    
+
+[{'uri': 'http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Final_Natacion_100m', 'label': 'Final Natacion 100m', 'tipo': 'NamedIndividual', 'lang': 'es', 'fuente': 'local'}]

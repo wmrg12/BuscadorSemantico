@@ -79,7 +79,14 @@ def query_dbpedia(sparql_query: str, lang: str = "es") -> list[dict]:
     return []
 
 
+def _crear_regex_acentos(palabra: str) -> str:
+    p = palabra.lower()
+    p = p.replace("a", "[aáäAÁÄ]").replace("e", "[eéëEÉË]").replace("i", "[iíïIÍÏ]")
+    p = p.replace("o", "[oóöOÓÖ]").replace("u", "[uúüUÚÜ]")
+    return p
+
 def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
+    regex_pal = _crear_regex_acentos(keyword)
     query = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -88,7 +95,7 @@ def search_dbpedia_sport(keyword: str, lang: str = "es") -> list[dict]:
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
         FILTER(LANG(?label) = "{lang}")
-        FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{keyword}")))
+        FILTER(REGEX(STR(?label), "{regex_pal}", "i"))
     }}
     LIMIT 10
     """

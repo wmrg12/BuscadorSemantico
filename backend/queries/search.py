@@ -40,84 +40,103 @@ def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
     return datos
 
 
+def _crear_regex_acentos(palabra: str) -> str:
+    p = palabra.lower()
+    p = p.replace("a", "[aáäAÁÄ]").replace("e", "[eéëEÉË]").replace("i", "[iíïIÍÏ]")
+    p = p.replace("o", "[oóöOÓÖ]").replace("u", "[uúüUÚÜ]")
+    return p
+
+
 def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
-    # Separar la frase en palabras individuales (ignorando espacios vacíos)
+    import re
+    from rdflib import URIRef, Literal
+    from rdflib.namespace import RDF, RDFS, OWL
+
+    # Separar la frase en palabras individuales
     palabras = [
-        p.strip().lower().replace('"', '\\"')
+        p.strip().replace('"', '\\"')
         for p in palabra_clave.split()
         if p.strip()
     ]
     if not palabras:
         return []
 
-    # Construir dinámicamente un FILTER por cada palabra
-    filtros_palabras = []
-    for i, pal in enumerate(palabras):
-        filtros_palabras.append(f"""
-        FILTER(
-            CONTAINS(LCASE(STR(?entidad)), "{pal}")
-            || (BOUND(?label) && CONTAINS(LCASE(STR(?label)), "{pal}"))
-            || (BOUND(?tipoClase) && CONTAINS(LCASE(STR(?tipoClase)), "{pal}"))
-            || EXISTS {{
-                ?entidad ?prop_{i} ?valor_{i} .
-                FILTER(isLiteral(?valor_{i}) && CONTAINS(LCASE(STR(?valor_{i})), "{pal}"))
-            }}
-        )
-        """)
+    # Precompilar patrones de regex para cada palabra
+    patrones = []
+    for pal in palabras:
+        regex_str = _crear_regex_acentos(pal)
+        patrones.append(re.compile(regex_str, re.IGNORECASE))
 
-    filtros_sparql_str = "\n".join(filtros_palabras)
+    meta_classes = {
+        OWL.Class, RDFS.Class, OWL.ObjectProperty, OWL.DatatypeProperty, 
+        OWL.AnnotationProperty, URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
+    }
 
-    consulta = f"""
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-
-    SELECT DISTINCT ?entidad ?label ?tipo WHERE {{
-        ?entidad ?p ?o .
-        FILTER(isIRI(?entidad))
-        
-        # Excluir las clases y propiedades del esquema de los resultados de búsqueda
-        FILTER NOT EXISTS {{
-            ?entidad a ?tipoClaseObj .
-            FILTER(
-                ?tipoClaseObj = owl:Class 
-                || ?tipoClaseObj = rdfs:Class 
-                || ?tipoClaseObj = owl:ObjectProperty 
-                || ?tipoClaseObj = owl:DatatypeProperty 
-                || ?tipoClaseObj = owl:AnnotationProperty
-                || ?tipoClaseObj = <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
-            )
-        }}
-        
-        OPTIONAL {{ ?entidad rdfs:label ?label . }}
-        OPTIONAL {{ ?entidad a ?tipo . }}
-        OPTIONAL {{
-            ?entidad a/rdfs:subClassOf* ?tipoClase .
-            FILTER(isIRI(?tipoClase))
-        }}
-        {filtros_sparql_str}
-        FILTER(!BOUND(?label) || LANG(?label) = "" || LANG(?label) = "{idioma}")
-    }}
-    LIMIT 30
-    """
-    resultados = graph.query(consulta)
     datos = []
     vistos = set()
-    for fila in resultados:
-        uri_str = str(fila[0])
-        etiqueta = str(fila[1]) if fila[1] else _uri_a_etiqueta(uri_str)
-        tipo_raw = str(fila[2]) if fila[2] else "Recurso"
-        tipo = _uri_a_etiqueta(tipo_raw)
-        if uri_str not in vistos:
-            vistos.add(uri_str)
-            datos.append(
-                {
+
+    # Iterar sobre todos los sujetos en el grafo
+    for s in set(graph.subjects()):
+        if not isinstance(s, URIRef):
+            continue
+
+        # Excluir meta clases
+        es_meta = False
+        for t in graph.objects(s, RDF.type):
+            if t in meta_classes:
+                es_meta = True
+                break
+        if es_meta:
+            continue
+
+        # Recopilar todos los textos asociados a este sujeto para la búsqueda
+        textos_sujeto = [str(s)]
+        
+        # Tipos
+        for t in graph.objects(s, RDF.type):
+            textos_sujeto.append(str(t))
+            
+        # Etiquetas y otras propiedades
+        for p, o in graph.predicate_objects(s):
+            if isinstance(o, Literal) or isinstance(o, URIRef):
+                textos_sujeto.append(str(o))
+
+        texto_completo = " ".join(textos_sujeto)
+
+        # Verificar si TODOS los patrones coinciden con el texto del sujeto
+        if all(pat.search(texto_completo) for pat in patrones):
+            uri_str = str(s)
+            
+            # Obtener etiqueta principal
+            label = None
+            for l in graph.objects(s, RDFS.label):
+                if isinstance(l, Literal) and (l.language == idioma or not l.language):
+                    label = str(l)
+                    break
+                    
+            # Obtener tipo principal
+            tipo = None
+            for t in graph.objects(s, RDF.type):
+                if t != OWL.NamedIndividual and t not in meta_classes:
+                    tipo = str(t)
+                    break
+                    
+            etiqueta = label if label else _uri_a_etiqueta(uri_str)
+            tipo_final = _uri_a_etiqueta(tipo) if tipo else "Recurso"
+
+            if uri_str not in vistos:
+                vistos.add(uri_str)
+                datos.append({
                     "uri": uri_str,
                     "label": etiqueta,
-                    "tipo": tipo,
+                    "tipo": tipo_final,
                     "lang": idioma,
                     "fuente": "local",
-                }
-            )
+                })
+
+                if len(datos) >= 30:
+                    break
+
     return datos
 
 
@@ -207,7 +226,7 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     from rdflib import URIRef
     uri_ref = URIRef(uri)
 
-    # 1. Obtener el tipo/clase principal (evitando NamedIndividual)
+    # Obtener el tipo/clase principal
     tipos = []
     for t in graph.objects(uri_ref, RDF.type):
         if t != OWL.NamedIndividual:
@@ -218,12 +237,11 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     # 2. Consultar propiedades salientes (?p ?o)
     propiedades = []
     for p, o in graph.predicate_objects(uri_ref):
-        # Ignorar tipo NamedIndividual ya que es redundante para el usuario
+        # Ignorar tipo NamedIndividual 
         if p == RDF.type and o == OWL.NamedIndividual:
             continue
 
         p_str = str(p)
-        # Omitir propiedades de metadatos del framework
         if any(x in p_str for x in ["#type", "ontology#", "rdf-schema#"]) and p != RDF.type:
             continue
 
@@ -247,10 +265,10 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
                 "es_iri": True
             })
 
-    # Ordenar propiedades alfabéticamente por nombre de propiedad
+    # Ordenar propiedades alfanumericos
     propiedades.sort(key=lambda x: x["propiedad"])
 
-    # 3. Consultar relaciones entrantes (?sujeto ?predicado <uri>)
+    # Consultar relaciones entrantes
     relaciones_entrantes = []
     for s, p in graph.subject_predicates(uri_ref):
         s_str = str(s)
@@ -266,7 +284,7 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
 
     relaciones_entrantes.sort(key=lambda x: (x["propiedad"], x["sujeto_label"]))
 
-    # 4. Retornar los detalles agrupados
+    # Retornar los detalles agrupados
     return {
         "uri": uri,
         "label": _obtener_etiqueta(uri_ref, idioma) or _uri_a_etiqueta(uri),
