@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:prov="http://www.w3.org/ns/prov#" >
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/International_Superstar_Soccer_Deluxe">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/NBA_Live_09">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/El_Tirachinas">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Reusch">
+    <dbo:industry rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Arena_mix">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fox_Sports_Premium">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Howzat!_Kerry_Packer&#39;s_War">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Afizzionados">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Cable_Sport">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Todo_Deportes_TV">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_2_(Sur)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nueva_Era_Revista_Estadio">
+    <dbo:literaryGenre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rocky_(franquicia)">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Space_(canal_de_televisión)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/TyC_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nippon_Cultural_Broadcasting">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Glory_Jane">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Venezolana_de_Tenis_Playa">
+    <dbo:type rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Sky_Sports_(México)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nippon_Broadcasting_System">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Videomatch">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nickelodeon_Games_and_Sports_for_Kids">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_Extra_(Brasil)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/El_novato_del_año">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Sordolimpiadas">
+    <dbo:type rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Zona_Handball">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_Extra_(Latinoamérica)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fox_Sports_(Estados_Unidos)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Altice_USA">
+    <dbo:gender rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_2_(Norte)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fox_Sports_(Colombia)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Million_Dollar_Baby">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Right_now">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Turner_Sports">
+    <dbo:service rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fishing_and_Hunting_Club">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/DirecTV_Sports_2">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Facetas_Deportivas">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fox_Sports_3">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rocket_League">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Supersonic_Acrobatic_Rocket-Powered_Battle-Cars">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/TUDN">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/NFL_Quarterback_Club_(Challenge)">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ice_Hockey_(videojuego)">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nacional_FM">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Canal_del_Deporte_Olímpico">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Movistar_Deportes_2">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Movistar_Golf">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pasión_de_primera">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Triunfo_(Chile)">
+    <dbo:literaryGenre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/CNT_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fox_Sports_(Perú)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gol_y_Gol">
+    <dbo:literaryGenre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Goles_son_amores">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bowling_Headliners">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Deportes">
+    <rdfs:label xml:lang="es">Deportes</rdfs:label>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.06ntj" />
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+    <foaf:isPrimaryTopicOf rdf:resource="http://es.wikipedia.org/wiki/Deportes" />
+    <dbo:wikiPageID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170849</dbo:wikiPageID>
+    <dbo:wikiPageRevisionID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91757000</dbo:wikiPageRevisionID>
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Deporte" />
+    <dbo:wikiPageLength rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">21</dbo:wikiPageLength>
+    <prov:wasDerivedFrom rdf:resource="http://es.wikipedia.org/wiki/Deportes?oldid=91757000&amp;ns=0" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.wikipedia.org/wiki/Deportes">
+    <foaf:primaryTopic rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Men_Boxing">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/América_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/BBC_Radio_5_Live">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rusty&#39;s_Real_Deal_Baseball">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/TyC_Sports_Internacional">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/DirecTV_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Eurosport_1">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Strava">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/TNT_(canal_de_televisión)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Flow_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Movistar_Deportes_(España)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/TNT_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ases_(revista)">
+    <dbo:literaryGenre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Disney_Channel_Games">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_3_(Latinoamérica)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Iron_Man_(película_de_1931)">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Eddie_the_Eagle">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Foto_Sport">
+    <dbo:literaryGenre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mutual_Uruguaya_de_Futbolistas_Profesionales">
+    <dbo:type rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Papita,_maní,_tostón">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pura_Química">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adrenalina_Sports_Network">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Atleta_de_Newark">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Azteca_Deportes">
+    <dbo:industry rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fox_Sports_International">
+    <dbo:industry rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/El_Gráfico_(Chile)">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Torrejón_Basketball_Academy">
+    <dbo:type rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Televisa_Deportes_Network">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Turner_Construction">
+    <dbo:product rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Grupo_Indalo">
+    <dbo:industry rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dexary">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_(Latinoamérica)">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_Europea_del_Deporte_Gay_y_Lésbico">
+    <dbo:regionServed rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Radio_Tonga">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/90_minuti">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Moises_Rules!">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Top_Eleven_Football_Manager">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/BoxRec">
+    <dbo:type rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Eurosport_2">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Univisión_TDN">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/ESPN_Extra">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Canal_F1_Latin_America">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ronaldo_V-Football">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Golf_Channel">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/El_Diez">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Eurosport_3D">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/La_fábrica_(Fox_Sports)">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Blu_Radio">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Deporte_Total">
+    <dbo:literaryGenre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Siu_lam_juk_kau">
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Colorado_Time_Systems">
+    <dbo:industry rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Win_Sports+">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Showsport">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/PX_Sports">
+    <dbo:programmeFormat rdf:resource="http://es.dbpedia.org/resource/Deportes" />
+  </rdf:Description>
+</rdf:RDF>
