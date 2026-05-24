@@ -3,6 +3,7 @@ from rdflib.namespace import RDF, RDFS, OWL
 
 from services.ontology_service import grafo as graph_local
 from services.ontology_service import grafo_dbpedia as graph_dbpedia
+from services.ontology_service import buscar_deporte_dbpedia
 
 
 IDIOMAS_SOPORTADOS = ["es", "en"]
@@ -183,6 +184,15 @@ def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
 
 
 def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
+    resultados_compuestos = busqueda_compuesta_relacional(
+        graph_local,
+        palabra_clave,
+        idioma=idioma,
+        fuente="local",
+    )
+
+    if resultados_compuestos:
+        return resultados_compuestos
     return _buscar_en_grafo(graph_local, palabra_clave, idioma=idioma, fuente="local")
 
 
@@ -269,35 +279,287 @@ def obtener_individuos(uri_clase: str = None, idioma: str = "es") -> list[dict]:
     return datos[:50]
 
 
+def _es_recurso_dbpedia(uri: str) -> bool:
+    uri = uri.lower()
+    return "dbpedia.org/resource" in uri
+
+
 def busqueda_combinada(
     palabra_clave: str, idioma: str = "es", usar_dbpedia: bool = True
 ) -> dict:
-    local = busqueda_local(palabra_clave, idioma)
-    dbpedia = busqueda_dbpedia_local(palabra_clave, idioma) if usar_dbpedia else []
+    resultados_locales_brutos = busqueda_local(palabra_clave, idioma)
 
-    # Evitar duplicados por URI
+    if usar_dbpedia:
+        resultados_dbpedia_brutos = busqueda_dbpedia_local(palabra_clave, idioma)
+    else:
+        resultados_dbpedia_brutos = []
+
+    local_final = []
+    dbpedia_final = []
     vistos = set()
-    local_unico = []
-    dbpedia_unico = []
 
-    for item in local:
-        if item["uri"] not in vistos:
-            vistos.add(item["uri"])
-            local_unico.append(item)
+    # Primero procesamos los resultados encontrados en la ontología local
+    for item in resultados_locales_brutos:
+        uri = item.get("uri", "")
 
-    for item in dbpedia:
-        if item["uri"] not in vistos:
-            vistos.add(item["uri"])
-            dbpedia_unico.append(item)
+        if uri in vistos:
+            continue
+
+        vistos.add(uri)
+
+        # Si la URI pertenece a DBpedia, no debe mostrarse como Local
+        if _es_recurso_dbpedia(uri):
+            if usar_dbpedia:
+                item["fuente"] = "dbpedia"
+                if item.get("tipo") == "Recurso":
+                    item["tipo"] = "Recurso DBpedia"
+                dbpedia_final.append(item)
+        else:
+            item["fuente"] = "local"
+            local_final.append(item)
+
+    # Luego procesamos los resultados propios de DBpedia
+    if usar_dbpedia:
+        for item in resultados_dbpedia_brutos:
+            uri = item.get("uri", "")
+
+            if uri in vistos:
+                continue
+
+            vistos.add(uri)
+            item["fuente"] = "dbpedia"
+
+            if item.get("tipo") == "Recurso":
+                item["tipo"] = "Recurso DBpedia"
+
+            dbpedia_final.append(item)
 
     return {
         "keyword": palabra_clave,
         "lang": idioma,
-        "local": local_unico,
-        "dbpedia": dbpedia_unico,
-        "total": len(local_unico) + len(dbpedia_unico),
+        "local": local_final,
+        "dbpedia": dbpedia_final,
+        "total": len(local_final) + len(dbpedia_final),
     }
 
+STOPWORDS_BUSQUEDA = {
+    "de", "del", "la", "el", "los", "las", "en", "por", "para",
+    "un", "una", "unos", "unas", "y", "a", "con"
+}
+
+TIPOS_CONSULTA = {
+    "atleta": {"Atleta"},
+    "atletas": {"Atleta"},
+
+    "arbitro": {"Arbitro"},
+    "arbitros": {"Arbitro"},
+    "árbitro": {"Arbitro"},
+    "árbitros": {"Arbitro"},
+
+    "equipo": {"Equipo"},
+    "equipos": {"Equipo"},
+
+    "participante": {"Participante"},
+    "participantes": {"Participante"},
+
+    "evento": {"eventoDeportivo"},
+    "eventos": {"eventoDeportivo"},
+
+    "deporte": {"Deporte"},
+    "deportes": {"Deporte"},
+
+    "lugar": {"Lugar"},
+    "lugares": {"Lugar"},
+
+    "modalidad": {"Modalidad"},
+    "modalidades": {"Modalidad"},
+}
+
+
+def _obtener_nombre_principal(grafo: Graph, recurso, idioma: str = "es") -> str:
+    etiqueta = _obtener_etiqueta_en_grafo(grafo, recurso, idioma)
+    if etiqueta:
+        return etiqueta
+
+    propiedades_nombre = {
+        "nombreparticipante",
+        "nombreevento",
+        "nombredeporte",
+        "nombrelugar",
+        "tipomodalidad",
+    }
+
+    for p, o in grafo.predicate_objects(recurso):
+        if isinstance(o, Literal):
+            nombre_propiedad = _normalizar_texto(_uri_a_etiqueta(str(p)))
+            if nombre_propiedad in propiedades_nombre:
+                return str(o)
+
+    return _uri_a_etiqueta(str(recurso))
+
+
+def _cumple_tipo(grafo: Graph, recurso, tipos_buscados: set[str]) -> bool:
+    tipos_normalizados = {
+        _normalizar_texto(t) for t in tipos_buscados
+    }
+
+    for tipo in grafo.objects(recurso, RDF.type):
+        nombre_tipo = _normalizar_texto(_uri_a_etiqueta(str(tipo)))
+
+        if nombre_tipo in tipos_normalizados:
+            return True
+
+        # También revisa superclases:
+        # Ejemplo: Atleta -> Participante
+        for superclase in grafo.transitive_objects(tipo, RDFS.subClassOf):
+            nombre_superclase = _normalizar_texto(_uri_a_etiqueta(str(superclase)))
+            if nombre_superclase in tipos_normalizados:
+                return True
+
+    return False
+
+
+def _texto_recurso(grafo: Graph, recurso, idioma: str = "es") -> str:
+    textos = [
+        str(recurso),
+        _uri_a_etiqueta(str(recurso)),
+        _obtener_nombre_principal(grafo, recurso, idioma),
+    ]
+
+    for tipo in grafo.objects(recurso, RDF.type):
+        textos.append(str(tipo))
+        textos.append(_uri_a_etiqueta(str(tipo)))
+
+        for superclase in grafo.transitive_objects(tipo, RDFS.subClassOf):
+            textos.append(str(superclase))
+            textos.append(_uri_a_etiqueta(str(superclase)))
+
+    for p, o in grafo.predicate_objects(recurso):
+        textos.append(_uri_a_etiqueta(str(p)))
+
+        if isinstance(o, Literal):
+            textos.append(str(o))
+        elif isinstance(o, URIRef):
+            textos.append(str(o))
+            textos.append(_uri_a_etiqueta(str(o)))
+            textos.append(_obtener_nombre_principal(grafo, o, idioma))
+
+    return _normalizar_texto(" ".join(textos))
+
+
+def _contexto_relacional(grafo: Graph, recurso, idioma: str = "es") -> str:
+    textos = []
+
+    # Texto propio del recurso
+    textos.append(_texto_recurso(grafo, recurso, idioma))
+
+    # Relaciones salientes:
+    # recurso -> otro recurso
+    for p, o in grafo.predicate_objects(recurso):
+        textos.append(_uri_a_etiqueta(str(p)))
+
+        if isinstance(o, URIRef):
+            textos.append(_texto_recurso(grafo, o, idioma))
+        elif isinstance(o, Literal):
+            textos.append(str(o))
+
+    # Relaciones entrantes:
+    # otro recurso -> recurso
+    for sujeto, predicado in grafo.subject_predicates(recurso):
+        textos.append(_uri_a_etiqueta(str(predicado)))
+        textos.append(_texto_recurso(grafo, sujeto, idioma))
+
+        # Si el sujeto es un evento, también incluimos todo lo relacionado al evento:
+        # deporte, lugar, modalidad y participantes.
+        for p_evento, o_evento in grafo.predicate_objects(sujeto):
+            textos.append(_uri_a_etiqueta(str(p_evento)))
+
+            if isinstance(o_evento, URIRef):
+                textos.append(_texto_recurso(grafo, o_evento, idioma))
+            elif isinstance(o_evento, Literal):
+                textos.append(str(o_evento))
+
+    return _normalizar_texto(" ".join(textos))
+
+
+def _interpretar_consulta_compuesta(palabra_clave: str) -> tuple[set[str], list[str]]:
+    tokens_originales = _tokenizar_consulta(palabra_clave)
+
+    tipos_buscados = set()
+    terminos = []
+
+    for token in tokens_originales:
+        token_norm = _normalizar_texto(token)
+
+        if token_norm in STOPWORDS_BUSQUEDA:
+            continue
+
+        if token_norm in TIPOS_CONSULTA:
+            tipos_buscados.update(TIPOS_CONSULTA[token_norm])
+        else:
+            terminos.append(token_norm)
+
+    return tipos_buscados, terminos
+
+
+def busqueda_compuesta_relacional(
+    grafo: Graph,
+    palabra_clave: str,
+    idioma: str = "es",
+    fuente: str = "local",
+    limite: int = 30,
+) -> list[dict]:
+    tipos_buscados, terminos = _interpretar_consulta_compuesta(palabra_clave)
+
+    # Si no hay tipo y solo hay una palabra, no es compuesta.
+    # Ejemplo: "futbol" debe seguir usando búsqueda normal.
+    if not tipos_buscados and len(terminos) <= 1:
+        return []
+
+    resultados = []
+
+    for recurso in set(grafo.subjects()):
+        if not isinstance(recurso, URIRef):
+            continue
+
+        if _es_meta_clase(grafo, recurso):
+            continue
+
+        # Si la consulta pide un tipo, filtramos por tipo.
+        # Ejemplo: "atleta futbol" solo devuelve Atletas.
+        if tipos_buscados and not _cumple_tipo(grafo, recurso, tipos_buscados):
+            continue
+
+        contexto = _contexto_relacional(grafo, recurso, idioma)
+
+        # Todos los términos restantes deben aparecer en el contexto relacional.
+        # Ejemplo: "participante ciclismo tour bolivia"
+        # participante = tipo
+        # ciclismo, tour, bolivia = contexto del evento/deporte/lugar
+        if all(termino in contexto for termino in terminos):
+            label = _obtener_nombre_principal(grafo, recurso, idioma)
+
+            tipo = None
+            for t in grafo.objects(recurso, RDF.type):
+                if t != OWL.NamedIndividual and not _es_meta_clase(grafo, t):
+                    tipo = str(t)
+                    break
+
+            tipo_final = _uri_a_etiqueta(tipo) if tipo else "Recurso"
+
+            resultados.append(
+                {
+                    "uri": str(recurso),
+                    "label": label,
+                    "tipo": tipo_final,
+                    "lang": idioma,
+                    "fuente": fuente,
+                    "score": 95,
+                }
+            )
+
+    resultados.sort(key=lambda x: (-x["score"], x["label"].lower()))
+    return resultados[:limite]
 
 def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     grafo = _grafo_para_uri(uri)

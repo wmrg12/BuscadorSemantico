@@ -248,11 +248,103 @@ def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
     return datos
 
 
+# DBpedia online
+try:
+    from SPARQLWrapper import SPARQLWrapper, JSON
+    SPARQL_DISPONIBLE = True
+except ImportError:
+    SPARQL_DISPONIBLE = False
+    print("[WARN] SPARQLWrapper no instalado. DBpedia online deshabilitado.")
+
+
+URL_DBPEDIA_EN_LINEA = "https://dbpedia.org/sparql"
+
+
+def _consultar_dbpedia_online(consulta_sparql: str) -> list[dict]:
+    if not SPARQL_DISPONIBLE:
+        return []
+
+    try:
+        sparql = SPARQLWrapper(URL_DBPEDIA_EN_LINEA)
+        sparql.setQuery(consulta_sparql)
+        sparql.setReturnFormat(JSON)
+        sparql.setTimeout(10)
+
+        resultados = sparql.query().convert()
+        bindings = resultados.get("results", {}).get("bindings", [])
+
+        filas = []
+        for b in bindings:
+            fila = {k: v.get("value", "") for k, v in b.items()}
+            filas.append(fila)
+
+        print(f"[DBpedia online] {len(filas)} resultados")
+        return filas
+
+    except Exception as e:
+        print(f"[ERROR DBpedia online] {e}")
+        return []
+
+
 def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]:
-    return _buscar_en_grafo(
+    # Primero intenta buscar en un archivo DBpedia local, si existe
+    resultados_locales = _buscar_en_grafo(
         grafo_dbpedia,
         palabra_clave,
         idioma=idioma,
         fuente="dbpedia",
         limite=10,
     )
+
+    if resultados_locales:
+        return resultados_locales
+
+    # Si no hay archivo DBpedia local, consulta DBpedia online
+    palabras = [p.strip() for p in palabra_clave.split() if p.strip()]
+    if not palabras:
+        return []
+
+    filtros = []
+    for palabra in palabras:
+        palabra_segura = palabra.replace('"', '\\"')
+        filtros.append(
+            f'FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{palabra_segura}")))'
+        )
+
+    filtros_sparql = "\n        ".join(filtros)
+
+    consulta = f"""
+    PREFIX dbo:  <http://dbpedia.org/ontology/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    SELECT DISTINCT ?deporte ?label ?abstract WHERE {{
+        ?deporte a dbo:Sport .
+        ?deporte rdfs:label ?label .
+        FILTER(LANG(?label) = "{idioma}")
+        {filtros_sparql}
+
+        OPTIONAL {{
+            ?deporte dbo:abstract ?abstract .
+            FILTER(LANG(?abstract) = "{idioma}")
+        }}
+    }}
+    LIMIT 10
+    """
+
+    filas = _consultar_dbpedia_online(consulta)
+
+    datos = []
+    for item in filas:
+        datos.append(
+            {
+                "uri": item.get("deporte", ""),
+                "label": item.get("label", ""),
+                "abstract": item.get("abstract", ""),
+                "tipo": "Deporte (DBpedia)",
+                "lang": idioma,
+                "fuente": "dbpedia",
+                "score": 100,
+            }
+        )
+
+    return datos
