@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:prop-es="http://es.dbpedia.org/property/"
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:prov="http://www.w3.org/ns/prov#" >
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Bartoš">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Bradbury">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Kaminski">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Kocian">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Kozák">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Simac">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Libertadores_de_Voleibol_2020">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_del_Príncipe_de_Voleibol">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_del_Rey_de_voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Suwon_Hyundai_Engineering_&amp;_Construction_Hillstate">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Femenino">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gimnasio_%22Luis_Encinas_Johnson%22">
+    <dbo:event rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Raúl_Lucio_Lozano">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Unión_Española_de_Deportes">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Femenino_Sub-18_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Sporting_Cristal_(vóley)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Libertadores_de_Voleibol_2018-19">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Masculino_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_A1_de_Vóley_1998-99">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adenízia_da_Silva">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniel_Colla">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Eduardo_Esteban_Martínez">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Spartak_(sociedad_deportiva)">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibol_Masculino_en_los_Juegos_Panafricanos_de_2015">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Waldo_Kantor">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Manacor">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_A_de_voleibol_de_Bélgica">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Femenina_del_Voleibol_Argentino_2014-15">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Premundial_Sudamericano_de_Voleibol_Femenino_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Reinder_Nummerdor">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Aguere">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Voleibol_Argentina_2018-19">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mery_Mancilla">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Piotr_Gruszka">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Florencia_Busquets">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Lucía_Fresco">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Srećko_Lisinac">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Aleksandra_Szczygłowska">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Barthélémy_Chinenyeze">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Brina_Bračko">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Buse_Kayacan">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Arena_Sonora">
+    <dbo:event rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Confederación_Europea_de_Voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Barcelona">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voley_Miranda">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Alexis_González_(voleibolista)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_15-15">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Ciudad_de_Buenos_Aires">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vóley_Murcia">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dani_Lins">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Naciones_de_Voleibol_Masculino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Almería">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Córdoba">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniela_Ospina">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/ocupación" rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Tsvetan_Sokolov">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Santiago_Darraidou">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Alianza_Lima_Vóley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Estudiantes_Concordia">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Emevé">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_de_Voley_Universidad_San_Martin_de_Porres">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Masculino_Sub-23_de_2018">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Olympic">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Logroño">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Elaine_Youngs">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jan_Hadrava">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Rochelambert">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nicolás_Bruno">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Płomień_Milowice">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rocío_Miranda">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vikingos_de_Miranda">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Challenger_de_Voleibol_Masculino_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gimnasio_%22Luis_Estrada_Medina%22">
+    <dbo:event rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Libertad_Burgi_Vóley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Yael_Castiglione">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociación_Cultural_y_Deportiva_Bomberos">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_Nacional_de_Voleibol_de_Guatemala">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andréi_Levchenko">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Anna_Pawłowska">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Antoine_Cornil">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daryl_Bultor">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dorota_Ściurka">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andréa_Teixeira">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/posición" rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    -->
+    <dbo:position rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Aragua_Voleibol_Club">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Vall_d&#39;Hebron">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gigantes_del_Sur">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Haruka_Tanizawa">
+    <prop-es:especialidad rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:profession rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Leondino_Giombini">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Numancia_CMA_Soria">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Claudio_Zulianello">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Playas_de_Benidorm">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fenerbahçe_Spor_Kulübü">
+    <dbo:division rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Maurizia_Cacciatori">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Masculino_Sub-21_de_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Diego_Porcelos">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Cristian_Poglajen">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Diego_Callejón">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_del_Voleibol_Argentino">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Argentina_de_Voleibol_2015-16">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mari_Paraíba">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Zinella_Volley_Bologna">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Elche">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Benjamin_Bell">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Atlético_Voleibol_Murcia_2005">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Preolímpico_Sudamericano_de_Voleibol_Masculino_2020">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociación_de_Clubes_Liga_Argentina_de_Voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Masculino_Sub-19_de_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Cienfuegos_(voleibol)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Cuesta_Piedra">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_Sub-23_de_2016">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gabriel_Arroyo">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Femenina_de_Voleibol_Argentino_2015-16">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Masculino_Sub-21_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Femenino_Sub-18_de_2018">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Vigo_Voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Sanse">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vasas_Sport_Club_(sociedad_deportiva)">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Masculino_Sub-19_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Masculino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_J.A.V._Olímpico">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_L&#39;Illa_Grau">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marrit_Leenstra_(jugadora_de_vóley_playa)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ramón_Torralbo">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Benidorm">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Agrupación_Deportiva_A_Pinguela">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Alicante_2000">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_Sub-23_de_2018">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adecor">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Femenina_de_Voleibol_Argentino">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Herman_Ettedgui">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Sección_de_Voleibol_del_Real_Madrid_Club_de_Fútbol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Oviedo">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dmitri_Muserski">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marcelo_Rodolfo_Méndez">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Noelia_Sánchez">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/CAV_Esquimo_Dos_Hermanas">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marko_Klok">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Wang_Mengjie">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Elvis_Contreras">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fabian_Plak">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Krzysztof_Wierzbowski">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Patricia_Oilataguerre">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Volleyball">
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Obras_Sanitarias_(San_Juan)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Calvo_Sotelo">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Teruel">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Iván_Castellani">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rodrigo_Quiroga_(voleibolista)">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Yukie_Utsumi">
+    <prop-es:especialidad rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:profession rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibol_José_María_de_Pereda">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marcos_Milinkovic">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rosario_Sonder">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carlos_Arthur_Nuzman">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andrés_Villena">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Torneo_de_clasificación_africano_para_el_Campeonato_Mundial_de_Voleibol_Femenino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jakub_Kochanowski">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_White">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Richard_Lambourne">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Horacio_d’Almeida">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jan_Planinc">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Janusz_Gałązka">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jeroen_Oprins">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociación_Atlética_Quimsa">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_7_islas">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/C.V._Nuestra_Señora_de_la_Luz">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_FEV">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/CDV_Textil_Santanderina">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Haris">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Melilla">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Naciones_de_Voleibol_Femenino_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liubov_Tiurina">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Raúl_Diago_Izquierdo">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Torneo_europeo_de_clasificación_para_el_Campeonato_Mundial_de_Voleibol_Femenino_Sub-23_de_2017">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carlos_Mora">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_de_Regatas_Lima_(Vóley)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federico_Pereyra">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Itagüí_Voleibol_(femenino)_Club">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Valencia">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Osasco_Voleibol_Clube">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Matías_Sánchez_(voleibolista)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Celeste_Plak">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Laura_Dijkema">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Tomáš_Hýský">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Tomáš_Kriško">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Ciutadella">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Las_Palmas">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_de_2019">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniel_Castellani">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/La_Unión_de_Formosa_(vóley)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Argentina_de_Voleibol_2016-17">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/UNTreF_Vóley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Yasmina_Hernández">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Femenino_Sub-18_de_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Real_Grupo_de_Cultura_Covadonga">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Universidad_de_Granada_(voleibol)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/CSKA_Moscú">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Universitario_de_Deportes_(Vóley)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Tenerife">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Corporación_Club_Deportivo_Universidad_de_Concepción">
+    <prop-es:ramas rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Feliciano_Mayoral">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rosa_García">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Belgrano_(San_Nicolás_de_los_Arroyos)">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_CEV_(voleibol_masculino)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Galatasaray_Spor_Kulübü">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Campeones_(voleibol_masculino)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Serie_A1_masculina_de_Voleibol_de_Italia">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/CSA_Steaua_Bucarest">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Tenerife_Sur_Voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Femenino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/PSM_Vóley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Sebastián_Solé">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibol_en_los_Juegos_Panafricanos_de_2015">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Masculino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Circolo_Sportivo_Italiano_(Vóley)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Toledo">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Challenger_de_Voleibol_Femenino_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Emilce_Sosa">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Winifer_Fernández">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Woźnica">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Zajíček">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_de_2015">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Luciano_De_Cecco">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Femenino_de_2017">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Masculino_de_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Atlético_Boca_Juniors_(voleibol)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Ibiza">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Industriales_de_Valencia">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fundación_Jujuy_Vóley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_voleibol_de_Grecia">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pablo_Crer">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Richard_Schuil">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Son_Amar_Palma">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Azul_Vóley_Club">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Mundial_de_Voleibol_Masculino_Sub-23_de_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Viladecans">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Huracanes_de_Bolívar">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Inès_Granvorka">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/ocupación" rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    -->
+    <dbo:occupation rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mágicos_de_Caracas">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Osaka-jō_Hall">
+    <prop-es:eventos rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:event rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Femenino_Sub-18_de_2016">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Esteban_de_Palma">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fran_Ruíz">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Naciones_de_Voleibol_Femenino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Karch_Kiraly">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Balonvolea_de_pista">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Descripcion_del_voleibol">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mintonette">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibol_de_pista">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibolista">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleo">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voley">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleyball">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Volibol">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Volleyball">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vóleibol">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vóleibol_de_pista">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vóley">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vóley_de_pista">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Campeones_(voleibol_femenino)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vigor_Bovolenta">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Clayton_Stanley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Haro">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Paweł_Zagumny">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Cide">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Varyná_Voleibol_Club">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.wikipedia.org/wiki/Voleibol">
+    <foaf:primaryTopic rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Maja_Ognjenović">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Superliga_Femenina_de_Voleibol">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibol">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Activity" />
+    <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1914636" />
+    <rdf:type rdf:resource="http://www.wikidata.org/entity/Q349" />
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Activity" />
+    <rdfs:label xml:lang="es">Voleibol</rdfs:label>
+    <rdfs:comment xml:lang="es">El voleibol, vóleibol, volibol, vólibol, balonvolea o simplemente vóley (del inglés volleyball),​ es un deporte que se juega con una pelota y en el que dos equipos, integrados por seis jugadores cada uno, se enfrentan sobre un área de juego separada por una red central. El objetivo del juego es pasar el balón por encima de la red, logrando que llegue al suelo del campo contrario mientras el equipo adversario intenta impedir simultáneamente que lo consiga, forzándolo a errar en su intento. Surge una fase de ataque en un equipo cuando intenta que el balón toque el suelo del campo contrario mientras que en el otro equipo surge una fase de defensa intentando impedirlo.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <owl:sameAs rdf:resource="http://commons.dbpedia.org/resource/Volleyball" />
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.07_53" />
+    <foaf:name xml:lang="es">voleibol, vóleibol, volibol, vólibol, balonvolea, vóley.</foaf:name>
+    <dct:subject rdf:resource="http://es.dbpedia.org/resource/Categoría:Voleibol" />
+    <foaf:isPrimaryTopicOf rdf:resource="http://es.wikipedia.org/wiki/Voleibol" />
+    <prop-es:apellido rdf:resource="http://es.dbpedia.org/resource/Federación_Internacional_de_Voleibol" />
+    <prop-es:autoridad rdf:resource="http://es.dbpedia.org/resource/Federación_Internacional_de_Voleibol" />
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/año" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/año" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" xml:lang="es">Al aire libre o</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" xml:lang="es">en espacios cerrados</p:>
+    -->
+    <prop-es:contacto xml:lang="es">no</prop-es:contacto>
+    <prop-es:deporte xml:lang="es">Voleibol</prop-es:deporte>
+    <prop-es:equipo xml:lang="es"></prop-es:equipo>
+    <prop-es:equipo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</prop-es:equipo>
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/género" xml:lang="es">Masculino y femenino</p:>
+    -->
+    <prop-es:imagen xml:lang="es">Europei di pallavolo 2005 - Italia-Russia.jpg</prop-es:imagen>
+    <prop-es:lugar xml:lang="es">con zona libre alrededor de 3 m y 7 m de altura.</prop-es:lugar>
+    <prop-es:lugar xml:lang="es">Campo de juego de 18 m x 9 m,</prop-es:lugar>
+    <prop-es:nombre xml:lang="es">FIVB</prop-es:nombre>
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/olímpico" xml:lang="es">Sí, desde Tokio 1964.</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/olímpico" xml:lang="es">Demostración en París 1924.</p:>
+    -->
+    <prop-es:otrosNombres xml:lang="es">voleibol, vóleibol, volibol, vólibol, balonvolea, vóley.</prop-es:otrosNombres>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</prop-es:p>
+    <prop-es:p rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</prop-es:p>
+    <prop-es:pelota xml:lang="es">de 65-67 cm de circunferencia y 260-280 g de peso.</prop-es:pelota>
+    <prop-es:pelota xml:lang="es">Esférica con cubierta de cuero,</prop-es:pelota>
+    <prop-es:pie xml:lang="es">Partido de voleibol internacional masculino.</prop-es:pie>
+    <prop-es:primer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</prop-es:primer>
+    <prop-es:puntaje rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</prop-es:puntaje>
+    <prop-es:ref xml:lang="es">FIVB2015-2016</prop-es:ref>
+    <prop-es:ref xml:lang="es">FIVB2017-2020</prop-es:ref>
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/tamañoimagen" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</p:>
+    -->
+    <prop-es:texto xml:lang="es">«Reglas Oficiales del Voleibol 2017-2020»</prop-es:texto>
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/título" xml:lang="es">Reglas Oficiales del Voleibol 2015 - 2016</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/título" xml:lang="es">Reglas Oficiales del Voleibol 2017 - 2020</p:>
+    -->
+    <prop-es:url rdf:resource="http://www.fivb.org/EN/Refereeing-Rules/documents/Reglas%20de%20Juego%202015-1016%20-%20Espa%C3%B1ol%20FINAL.pdf" />
+    <prop-es:url rdf:resource="http://www.fivb.org/EN/Refereeing-Rules/documents/FIVB-Volleyball_Rules_2017-2020-SP-v01.pdf" />
+    <dbo:wikiPageID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2564172</dbo:wikiPageID>
+    <dbo:wikiPageRevisionID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">127667604</dbo:wikiPageRevisionID>
+    <dbo:wikiPageExternalLink rdf:resource="https://web.archive.org/web/20151122033042/http:/www.volleyball.org/general/index.html" />
+    <dbo:wikiPageExternalLink rdf:resource="https://web.archive.org/web/19990508145803/http:/www.fortunecity.com/olympia/fowler/183/diccionario.html" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.fivb.org/EN/Refereeing-Rules/documents/FIVB-Volleyball_Rules_2017-2020-SP-v01.pdf" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.fivb.org/EN/Refereeing-Rules/documents/Reglas%20de%20Juego%202015-1016%20-%20Espa%C3%B1ol%20FINAL.pdf" />
+    <dbo:wikiPageExternalLink rdf:resource="https://web.archive.org/web/20120417091912/http:/ened.conade.gob.mx/documentos/ened/sicced/voleibol_Nivel2/Capitulo01.pdf" />
+    <dbo:wikiPageExternalLink rdf:resource="https://web.archive.org/web/20140201043313/http:/www.ligavallecaucanadevoleibol.com/PISO/tacticas.htm" />
+    <dbo:wikiPageExternalLink rdf:resource="https://web.archive.org/web/20131221204529/http:/www.ligavallecaucanadevoleibol.com/PISO/historia.htm" />
+    <dbo:wikiPageLength rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">54665</dbo:wikiPageLength>
+    <dbo:teamSize rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12</dbo:teamSize>
+    <dbo:teamSize rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</dbo:teamSize>
+    <dbo:authority rdf:resource="http://es.dbpedia.org/resource/Federación_Internacional_de_Voleibol" />
+    <dbo:location rdf:resource="http://es.dbpedia.org/resource/Metro" />
+    <prov:wasDerivedFrom rdf:resource="http://es.wikipedia.org/wiki/Voleibol?oldid=127667604&amp;ns=0" />
+    <dbo:abstract xml:lang="es">El voleibol, vóleibol, volibol, vólibol, balonvolea o simplemente vóley (del inglés volleyball),​ es un deporte que se juega con una pelota y en el que dos equipos, integrados por seis jugadores cada uno, se enfrentan sobre un área de juego separada por una red central. El objetivo del juego es pasar el balón por encima de la red, logrando que llegue al suelo del campo contrario mientras el equipo adversario intenta impedir simultáneamente que lo consiga, forzándolo a errar en su intento. Surge una fase de ataque en un equipo cuando intenta que el balón toque el suelo del campo contrario mientras que en el otro equipo surge una fase de defensa intentando impedirlo. El balón debe ser tocado o impulsado con golpes limpios, pero no puede ser parado, sujetado, retenido o acompañado. Cada equipo dispone de un máximo de tres toques para devolver el balón al campo contrario (además del contacto del bloqueo).​ El balón se golpea normalmente con manos y brazos. Desde hace algunos años está permitido el contacto del balón con cualquier parte del cuerpo, incluidos los pies.​ Una de las características más peculiares del voleibol es que los jugadores tienen que ir  sus posiciones a medida que van consiguiendo puntos. El deporte tuvo su origen en Estados Unidos en 1895, siendo hoy muy popular y practicándose en casi todo el mundo. Lo regula la Federación Internacional de Voleibol (FIVB) y en ella se encuentran representadas 220 naciones.​ Han encabezado los rankings de comienzos del siglo XXI Brasil, Estados Unidos, Italia y Rusia. La lista de naciones que lideran el deporte continúa con Japón, Serbia, Polonia, Cuba, República Dominicana, China y Alemania. De acuerdo con estimaciones de la FIVB, una sexta parte de las personas en todo el mundo participa en el voleibol, activamente o como espectador. El voleibol es uno de los deportes donde mayor es la paridad entre las competiciones femeninas y masculinas, tanto por el nivel de la competencia como por la popularidad, presencia en los medios y público que sigue a los equipos.​</dbo:abstract>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Social_Monteros">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Cosiri_Rodríguez">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Galina_Chesnokova">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Naciones_de_Voleibol_Masculino_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Universidad_Nacional_de_Tres_de_Febrero">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nicolás_Uriarte">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_de_2016">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gustavo_Endres">
+    <prop-es:disciplina rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Hugo_Conte">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Julieta_Lazcano">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Premundial_Sudamericano_de_Voleibol_Femenino_2013">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Urbia_Voley_Palma">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Buenos_Aires_Unidos">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Ciudad_de_Bolívar">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Voleibol_Masculino_de_2015">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Facundo_Conte">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Argentina_de_Voleibol_2017-18">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/C.D._Voleibol_Río_Duero_Soria">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Zaragoza">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Alejandro_Diz">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Challenger_de_Voleibol_Femenino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Femenino_de_2017">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Femenino_Sub-23_de_2016">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Lokomotiv_(sociedad_deportiva)">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Yuan_Xinyue">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Aleksander_Śliwka">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Artur_Szalpuk">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniel_McDonnell">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Deportivo_Ávila_Vóley">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Panamericana_de_Voleibol_Masculino_de_2017">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociación_Deportiva_Cáceres_Licenciados_Reunidos_Voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Auditorio_Fausto_Gutiérrez_Moreno">
+    <dbo:event rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carlos_Javier_Weber">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dinamo_(sociedad_deportiva)">
+    <prop-es:secciones rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Juan_Carlos_Cuminetti">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Pòrtol_(masculino)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniel_Rocamora">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_Argentina_de_Voleibol_2014-15">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Plataneros_de_Corozal">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Thomas_Ereu">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Beate_Bühler">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/San_Diego_Christian_College">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_Sudamericano_de_Voleibol_Masculino_de_2019">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Santiago_Orduna">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Alianza_Jesús_María,_Social,_Aérea_y_Deportiva">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Campeonato_NORCECA_de_Voleibol_Masculino_de_2017">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Challenger_de_Voleibol_Masculino_de_2018">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Monteros_Vóley_Club">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Raúl_Quiroga">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Voleibol_Femenino_en_los_Juegos_Panafricanos_de_2015">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Albacete">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Almoradí">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Victor_Poletaev">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Henry_Bell">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Deportivo_Boston_College_(básquetbol)">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Liga_de_Voleibol_Argentina_2019-20">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Zhu_Ting">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Michał_Kosiba">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pimpichaya_Kokram">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Kateřina_Valková">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Kieran_Sowden">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Paula_Słonecka">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Paweł_Adamajtis">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/RealSports_Volleyball">
+    <prop-es:genero rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+    <dbo:genre rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Boris_Buša">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Ateneo_Mariano_Moreno">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_de_Voleibol_Sant_Pere_i_Sant_Pau">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Lenka_Oborná">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Luana_Rebechy">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Serguéi_Savin">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Superliga_2_femenina_de_voleibol_de_España_2012-13">
+    <prop-es:texto rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Superliga_de_voleibol_2016-17">
+    <dbo:sport rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Justyna_Łysiak">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Kamil_Rychlicki">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Klaudia_Kulig">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Konstantinos_Stivachtis">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Magdalena_Woźniczka">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Manius_Abbadi">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mateusz_Laskowski">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Superliga_de_voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Club_Voleibol_Guaguas">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Giacomo_Bellei">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Kowalski">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adam_Schriemer">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Alexandre_Sloboda">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Cabo_de_Cruz_Boiro_Voleibol">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Celeste_Poma">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Matyáš_Jachnicki">
+    <prop-es:deporte rdf:resource="http://es.dbpedia.org/resource/Voleibol" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:prop-es="http://es.dbpedia.org/property/"
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:prov="http://www.w3.org/ns/prov#" >
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociación_Mundial_de_Clubes">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Fútbol_Sub-20_de_2021">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Roberto_Paúl_Sánchez">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bárbra_Bastías">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_Sub-20">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rafael_Furchi">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rubén_Selmán">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Anthony_Taylor_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carina_Vitulano">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jorge_Baliño">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/José_Vidal_(futbolista)">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Salima_Mukansanga">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Efthalia_Mitsi">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_FIFA_Confederaciones">
+    <dbo:country rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1970">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_2022">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Chris_Kerr">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Frank_de_Bleeckere">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andre_Marriner">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carlos_Astroza">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Caso_Qatargate">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/jurisdicción" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marie-Soleil_Beaudoin">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Neil_Doyle">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ri_Hyang-Ok">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Victor_Montagliani">
+    <prop-es:cargo rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fabián_Madorrán">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pol_van_Boekel__Pol_van_Boekel__1">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Henrikke_Nervik">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Simona_Ghisletta">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Guillermo_Enrique_Guerrero">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Virginia_Tovar_Díaz">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Historia_del_Club_Estudiantes_de_La_Plata">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Roberto_Silvera">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pablo_Pozo">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ainara_Andrea_Acevedo_Dudley">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Diego_Lara_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Eduardo_Gamboa">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Michael_Oliver_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Abdelkader_Zitouni">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/María_Dolores_Martínez_Madrona">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Confederación_Asiática_de_Fútbol">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fernando_Rapallini">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marta_Huerta_de_Aza">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Szymon_Marciniak">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Therese_Neguel">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1962">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Tom_Henning_Øvrebø">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ben_Williams_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ekaterina_Koroleva">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fahad_Al-Mirdasi">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Sachiko_Yamagishi">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carol-Anne_Chenard">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fair_Play_Cup">
+    <prop-es:continente rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ricardo_Montero_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nick_Waldron">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Fútbol_Sub-17">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Olegário_Benquerença">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Anastasia_Pustovoytova">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/comité" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bamlak_Tessema_Weyesa">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_Sub-17">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Denys_Shurman">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Estela_Álvarez">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Confederación_Brasileña_de_Fútbol">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_2030">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniele_Orsato">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fernando_Espinoza_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/José_Argote">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mads-Kristoffer_Kristoffersen">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Milorad_Mažić">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/UEFA">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Premio_The_Best_al_jugador_de_la_FIFA_2016">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Daniel_Salazar">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bobby_Madden">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Christopher_Beath">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Luis_Quiroz">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Nicolás_Lamolina">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Jules_Rimet">
+    <prop-es:presentador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jugador_Mundial_de_la_FIFA">
+    <prop-es:presentador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Trofeo_de_la_Copa_Mundial_de_Fútbol">
+    <prop-es:presentador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Comite_Ejecutivo_de_la_FIFA">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Comité_Ejecutivo_de_la_FIFA">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/FIFA.com">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federacion_Internacional_de_Futbol_Asociación">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federacion_Internacional_de_Futbol_Asociado">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federacion_Internacional_de_Fútbol_Asociacion">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federacion_Internacional_de_Fútbol_Asociación">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federacion_Internacional_de_Fútbol_Asociado">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federacion_Internacional_del_Fútbol_Asociado">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_Internacional_de_Futbol_Asociación">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_Internacional_de_Futbol_Asociado">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_Internacional_de_Fútbol_Asociado">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Federación_Internacional_del_Futbol_Asociado">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fedération_Internationale_de_Football_Association">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fedération_internationale_de_football_association">
+    <dbo:wikiPageRedirects rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Isidore_Assiene-Ambassa">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mauro_Vigliano">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ahmed_Al-Kaf">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Caso_de_corrupción_en_la_FIFA">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/denominación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Massimiliano_Irrati">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_fútbol_sala_de_la_FIFA">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Fútbol">
+    <dbo:country rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Fútbol_Sub-20_de_2018">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Edvin_Jurisevic">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Lidya_Tafesse">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Martin_Strömbergsson">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ovidiu_Haţegan">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/María_Laura_Fortunato">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Estadio_Rommel_Fernández">
+    <prop-es:acontecimientos rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Museo_de_la_FIFA">
+    <prop-es:propietario rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adhemar_Canavessi">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1958">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Claudio_Puga">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Armando_Castro">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carlos_Orbe">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Francisco_Peñuela">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Henry_Bejarano">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Yeimy_Martínez">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Benoît_Bastien">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mario_Escobar">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Khamis_Al-Marri">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rasa_Imanalijeva">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol">
+    <dbo:country rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fútbol_playa">
+    <prop-es:autoridad rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:authority rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/José_Naya">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jana_Adámková">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Julio_Bascuñán">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_Sub-20_de_2021">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Omar_Ponce">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Augusto_Aragón">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Franklin_Congo">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marlon_Gregorio_Vera">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.wikipedia.org/wiki/FIFA">
+    <foaf:primaryTopic rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Casey_Reibelt">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bart_Vertenten">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_2026">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gladys_Lengwe">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Mehdi_Abid_Charef">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Silvio_Trucco">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fútbol_en_los_Juegos_Olímpicos_de_la_Juventud">
+    <dbo:country rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andrés_Merlos">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/István_Kovács">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andris_Treimanis">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Emilie_Dokset">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1966">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Felix_Zwayer">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Himno_de_la_FIFA">
+    <prop-es:lugar rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Kateryna_Monzul">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Manfredas_Lukjančukas">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Premio_The_Best_FIFA">
+    <prop-es:presentador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Alexis_Herrera">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1986">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Edina_Batista_Alves">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fútbol">
+    <prop-es:autoridad rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:authority rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociaciones_locales_de_fútbol_de_Chile">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Kim_Dong-jin_(árbitro)">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ricardo_Casas">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Roberto_Figueroa_(futbolista_uruguayo)">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Estadio_Cuscatlán">
+    <prop-es:acontecimientos rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Vinicio_Espinel">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Aníbal_Tejada">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carolina_González">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marco_Antonio_Rodríguez">
+    <prop-es:comite rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_2034">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Gabriel_Brazenas">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Jorge_Osorio">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Premio_The_Best_FIFA_de_2019">
+    <prop-es:datos rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Clément_Turpin">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Lucila_Venegas">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ivana_Martinčić">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ma_Ning">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Volha_Tsiareshka">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Victor_Miguel_de_Freitas_Gomes">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Adonai_Escobedo">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dianne_Ferreira-James">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Peter_O&#39;Leary_(árbitro)">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fahad_Al-Marri">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Humberto_Tomassina">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Rédouane_Jiyed">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dejan_Jakimovski">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Elia_María_Martínez_Martínez">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Srđan_Jovanović">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Antonio_Márquez_Ramírez">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Fútbol_Sub-20_de_2016">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Howard_Webb">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Joel_Aguilar">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/César_Arturo_Ramos">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Matthew_Conger">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Asociación_de_Fútbol_Makana">
+    <prop-es:editorial rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/International_Football_Association_Board">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <prop-es:miembros rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:affiliation rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1954">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/José_Roberto_Wright">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Juvenil_de_la_FIFA_/Blue_Stars">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Marta_Frías_Acedo">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Martin_Atkinson">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pedro_Casella">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Roberto_Tobar">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/FIFA">
+    <rdf:type rdf:resource="http://www.wikidata.org/entity/Q43229" />
+    <rdf:type rdf:resource="http://www.wikidata.org/entity/Q24229398" />
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" />
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson" />
+    <rdf:type rdf:resource="http://schema.org/Organization" />
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent" />
+    <rdfs:label xml:lang="es">FIFA</rdfs:label>
+    <rdfs:comment xml:lang="es">La Federación Internacional de Fútbol Asociación​ (en francés, Fédération Internationale de Football Association)​ universalmente conocida por sus siglas FIFA, es la institución que gobierna las federaciones de fútbol en todo el planeta. Se fundó el 21 de mayo de 1904 y tiene su sede en Zúrich, Suiza. Forma parte del IFAB, organismo encargado de modificar las reglas del juego. Además, la FIFA organiza la Copa Mundial de Fútbol, los otros campeonatos del mundo en sus distintas categorías, ramas y variaciones de la disciplina, y los Torneos Olímpicos a la par del COI.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.02zm3" />
+    <owl:sameAs rdf:resource="http://commons.dbpedia.org/resource/FIFA" />
+    <foaf:name xml:lang="es">de Fútbol Asociación</foaf:name>
+    <foaf:name xml:lang="es">Federación Internacional</foaf:name>
+    <foaf:nick xml:lang="es">FIFA</foaf:nick>
+    <foaf:homepage rdf:resource="http://es.fifa.com/" />
+    <foaf:homepage rdf:resource="http://es.fifa.com" />
+    <dct:subject rdf:resource="http://es.dbpedia.org/resource/Categoría:FIFA" />
+    <foaf:isPrimaryTopicOf rdf:resource="http://es.wikipedia.org/wiki/FIFA" />
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/acrónimo" xml:lang="es">FIFA</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" xml:lang="es">Comité Olímpico Internacional</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/International_Football_Association_Board" />
+    -->
+    <prop-es:deporte xml:lang="es">Fútbol, Fútbol sala y Fútbol playa</prop-es:deporte>
+    <prop-es:empleados rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</prop-es:empleados>
+    <prop-es:eslogan xml:lang="es">For the Game. For the World.</prop-es:eslogan>
+    <prop-es:eslogan xml:lang="es"></prop-es:eslogan>
+    <prop-es:estatus rdf:resource="http://es.dbpedia.org/resource/Asociación_caritativa" />
+    <prop-es:estatus rdf:resource="http://es.dbpedia.org/resource/Asociación_(derecho)" />
+    <prop-es:idiomasOficiales rdf:resource="http://es.dbpedia.org/resource/Idioma_francés" />
+    <prop-es:idiomasOficiales rdf:resource="http://es.dbpedia.org/resource/Idioma_español" />
+    <prop-es:idiomasOficiales rdf:resource="http://es.dbpedia.org/resource/Idioma_alemán" />
+    <prop-es:idiomasOficiales rdf:resource="http://es.dbpedia.org/resource/Idioma_inglés" />
+    <prop-es:imagen xml:lang="es">World Map FIFA.svg</prop-es:imagen>
+    <prop-es:logo xml:lang="es">FIFA logo without slogan.svg</prop-es:logo>
+    <prop-es:miembros rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">211</prop-es:miembros>
+    <prop-es:nombre xml:lang="es">Federación Internacional</prop-es:nombre>
+    <prop-es:nombre xml:lang="es">de Fútbol Asociación</prop-es:nombre>
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Victor Montagliani</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Aleksander Čeferin</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Salman Bin Ibrahim Al-Jalifa</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Ahmad Ahmad</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Sándor Csányi</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Alejandro Domínguez</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Lambert Maltock</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/nombreLíder" xml:lang="es">Greg Clarke</p:>
+    -->
+    <prop-es:pieImagen xml:lang="es">Mapa de los miembros de la FIFA según su confederación</prop-es:pieImagen>
+    <prop-es:presidente xml:lang="es">Gianni Infantino</prop-es:presidente>
+    <prop-es:sedeCentral xml:lang="es">Zúrich, Suiza</prop-es:sedeCentral>
+    <prop-es:sitioWeb rdf:resource="http://es.fifa.com" />
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/tamañoImagen" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</p:>
+    -->
+    <prop-es:tipo xml:lang="es">Federación deportiva internacional y Metaorganización</prop-es:tipo>
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/títuloLíder" xml:lang="es">Vicepresidentes</p:>
+    -->
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/áreaDeInfluencia" rdf:resource="http://es.dbpedia.org/resource/Mundo" />
+    -->
+    <dbo:wikiPageID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6225</dbo:wikiPageID>
+    <dbo:wikiPageRevisionID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130542159</dbo:wikiPageRevisionID>
+    <dbo:wikiPageExternalLink rdf:resource="http://es.fifa.com" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.le.ac.uk/so/css/resources/factsheets/fs12.html" />
+    <dbo:wikiPageExternalLink rdf:resource="http://es.fifa.com/fifa-world-ranking/ranking-table/men/" />
+    <dbo:wikiPageExternalLink rdf:resource="http://es.fifa.com/FIWC" />
+    <dbo:wikiPageExternalLink rdf:resource="http://es.fifa.com/" />
+    <dbo:wikiPageLength rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">49042</dbo:wikiPageLength>
+    <dbo:motto>For the Game. For the World.</dbo:motto>
+    <dbo:motto>(Por el Juego. Por el Mundo.)</dbo:motto>
+    <dbo:numberOfEmployees rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">103</dbo:numberOfEmployees>
+    <dbo:numberOfStaff rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">211</dbo:numberOfStaff>
+    <dbo:slogan xml:lang="es">(Por el Juego. Por el Mundo.)</dbo:slogan>
+    <dbo:slogan xml:lang="es">For the Game. For the World.</dbo:slogan>
+    <dbo:status>Asociación caritativa</dbo:status>
+    <dbo:status>Asociación</dbo:status>
+    <dbo:leaderFunction rdf:resource="http://es.dbpedia.org/resource/FIFA__PersonFunction__1" />
+    <dbo:president rdf:resource="http://es.dbpedia.org/resource/Gianni_Infantino" />
+    <dbo:regionServed rdf:resource="http://es.dbpedia.org/resource/Mundo" />
+    <dbo:type rdf:resource="http://es.dbpedia.org/resource/Metaorganización" />
+    <prov:wasDerivedFrom rdf:resource="http://es.wikipedia.org/wiki/FIFA?oldid=130542159&amp;ns=0" />
+    <dbo:abstract xml:lang="es">La Federación Internacional de Fútbol Asociación​ (en francés, Fédération Internationale de Football Association)​ universalmente conocida por sus siglas FIFA, es la institución que gobierna las federaciones de fútbol en todo el planeta. Se fundó el 21 de mayo de 1904 y tiene su sede en Zúrich, Suiza. Forma parte del IFAB, organismo encargado de modificar las reglas del juego. Además, la FIFA organiza la Copa Mundial de Fútbol, los otros campeonatos del mundo en sus distintas categorías, ramas y variaciones de la disciplina, y los Torneos Olímpicos a la par del COI. La FIFA agrupa 211 asociaciones o federaciones de fútbol de distintos países, contando con 17 países afiliados más que la Organización de las Naciones Unidas, tres menos que la Asociación Internacional de Federaciones de Atletismo y dos menos que la Federación Internacional de Baloncesto.​​</dbo:abstract>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Ghead_Grisha">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Matthew_Breeze">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Orel_Grinfeld">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_de_Fútbol_de_1978">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bruce_George">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Darío_Herrera_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Esther_Staubli">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fatma_Samoura">
+    <prop-es:cargo rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Héctor_Martínez">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Listen_Up!_–_El_álbum_oficial_de_la_Copa_Mundial_de_la_FIFA_2010">
+    <prop-es:artista rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:artist rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Valentin_Kovalenko">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Confederación_de_Fútbol_de_Oceanía">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/afiliación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Bibiana_Steinhaus">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Alioum_Alioum">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Benoît_Millot">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Clubes_de_la_FIFA">
+    <prop-es:organizador rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Deniz_Aytekin">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Kate_Jacewicz">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Artur_Soares_Dias">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Luis_Paulino_Siles_Calderón">
+    <prop-es:comite rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Sandra_Braz">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Georgi_Kabakov">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Carlos_Simon">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Estadio_Nacional_de_Fútbol_de_Nicaragua">
+    <prop-es:acontecimientos rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Fausto_Batignani">
+    <prop-es:autor rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Iwan_Arwel_Griffith">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Quetzalli_Alvarado">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/María_Belén_Carvajal">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Michelle_Pye">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Tupou_Patia">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Germán_Delfino">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Héctor_Baldassi">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Norbert_Hauata">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Paweł_Gil">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Enrique_Osses">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pol_van_Boekel">
+    <prop-es:categoria rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Anna-Marie_Keighley">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Juan_Carlos_Albarracín">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Riem_Hussein">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Andreas_Ekberg">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Monika_Mularczyk">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Olga_Zadinová">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Amin_Omar">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Dimitrina_Milkova">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Iuliana_Demetrescu">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/categoría" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Iván_Barton">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Pernilla_Larsson">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Copa_Mundial_Femenina_de_Fútbol_Sub-17_de_2021">
+    <!--
+    <p: xmlns:p="http://es.dbpedia.org/property/confederación" rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+    -->
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Serguéi_Karasiov_(árbitro)">
+    <dbo:category rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://es.dbpedia.org/resource/Torneo_Olímpico_Juvenil_de_Fútbol_Sala">
+    <dbo:country rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIFA">
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/FIFA" />
+  </rdf:Description>
+</rdf:RDF>
