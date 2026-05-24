@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dbp="http://dbpedia.org/property/"
+	xmlns:prov="http://www.w3.org/ns/prov#" >
+  <rdf:Description rdf:about="http://dbpedia.org/resource/EuroBasket_2022">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/FIBA_Women&#39;s_World_Ranking" />
+    <owl:sameAs rdf:resource="http://sr.dbpedia.org/resource/ФИБА_светска_ранг-листа" />
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Ranking_Mundial_FIBA" />
+    <owl:sameAs rdf:resource="http://ru.dbpedia.org/resource/Рейтинг_ФИБА" />
+    <owl:sameAs rdf:resource="http://he.dbpedia.org/resource/דירוג_פיב%22א" />
+    <owl:sameAs rdf:resource="http://th.dbpedia.org/resource/อันดับโลกฟีบา" />
+    <owl:sameAs rdf:resource="http://zh.dbpedia.org/resource/国际篮球联合会世界排名" />
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Classement_mondial_de_la_FIBA" />
+    <owl:sameAs rdf:resource="http://fi.dbpedia.org/resource/Koripallon_maailmanranking" />
+    <owl:sameAs rdf:resource="http://ca.dbpedia.org/resource/Rànquing_FIBA" />
+    <owl:sameAs rdf:resource="http://lb.dbpedia.org/resource/FIBA-Weltranglëscht" />
+    <owl:sameAs rdf:resource="http://ast.dbpedia.org/resource/Ranking_Mundial_FIBA" />
+    <owl:sameAs rdf:resource="http://no.dbpedia.org/resource/FIBAs_verdensranking" />
+    <owl:sameAs rdf:resource="http://fa.dbpedia.org/resource/رده‌بندی_جهانی_فیبا" />
+    <owl:sameAs rdf:resource="http://gl.dbpedia.org/resource/Rankings_FIBA_de_seleccións" />
+    <owl:sameAs rdf:resource="http://ja.dbpedia.org/resource/FIBAランキング" />
+    <owl:sameAs rdf:resource="http://tr.dbpedia.org/resource/FIBA_Dünya_Sıralaması" />
+    <owl:sameAs rdf:resource="http://az.dbpedia.org/resource/FIBA_reytinqi" />
+    <owl:sameAs rdf:resource="http://de.dbpedia.org/resource/FIBA-Weltrangliste" />
+    <owl:sameAs rdf:resource="http://pl.dbpedia.org/resource/Ranking_FIBA" />
+    <owl:sameAs rdf:resource="http://bs.dbpedia.org/resource/FIBA_svjetski_poredak" />
+    <owl:sameAs rdf:resource="http://it.dbpedia.org/resource/Classifica_mondiale_della_FIBA" />
+    <owl:sameAs rdf:resource="http://el.dbpedia.org/resource/Παγκόσμια_Κατάταξη_FIBA" />
+    <owl:sameAs rdf:resource="http://ko.dbpedia.org/resource/FIBA_랭킹" />
+    <owl:sameAs rdf:resource="http://hr.dbpedia.org/resource/FIBA-ina_ljestvica" />
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q1388410" />
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+    <owl:sameAs rdf:resource="http://lv.dbpedia.org/resource/FIBA_Pasaules_rangs" />
+    <owl:sameAs rdf:resource="https://global.dbpedia.org/id/Q4e5" />
+    <rdfs:label xml:lang="fr">Classement mondial de la FIBA</rdfs:label>
+    <rdfs:label xml:lang="en">FIBA Men&#39;s World Ranking</rdfs:label>
+    <rdfs:label xml:lang="es">Ranking Mundial FIBA</rdfs:label>
+    <rdfs:label xml:lang="pl">Ranking FIBA</rdfs:label>
+    <rdfs:label xml:lang="ru">Рейтинг ФИБА</rdfs:label>
+    <rdfs:label xml:lang="ko">FIBA 랭킹</rdfs:label>
+    <rdfs:label xml:lang="ja">FIBAランキング</rdfs:label>
+    <rdfs:label xml:lang="el">Παγκόσμια Κατάταξη FIBA</rdfs:label>
+    <rdfs:label xml:lang="de">FIBA-Weltrangliste</rdfs:label>
+    <rdfs:label xml:lang="ca">Rànquing FIBA</rdfs:label>
+    <rdfs:label xml:lang="it">Classifica mondiale della FIBA</rdfs:label>
+    <rdfs:label xml:lang="zh">国际篮球联合会世界排名</rdfs:label>
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Basketball_rankings" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Sports_world_rankings" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:FIBA" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Product_(mathematics)" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Weighted_arithmetic_mean" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Basketball_at_the_Summer_Olympics" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Basketball_World_Cup" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Category:FIBA" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Category:Sports_world_rankings" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/3x3_basketball" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/AfroBasket" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/EuroBasket" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_AmeriCup" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_European_Championship_for_Small_Countries" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Category:Basketball_rankings" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Basketball" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Oceania_Championship" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Asia_Cup" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.fiba.basketball/documents/rankingmen/examples" />
+    <dbo:description xml:lang="de">Rangliste von Basketball-Nationalmannschaften</dbo:description>
+    <dbo:description xml:lang="en">world ranking list</dbo:description>
+    <dbo:description xml:lang="es">Clasificación de Selecciones de Adultos en Baloncesto FIBA por países de los cinco (5) continentes</dbo:description>
+    <dbo:description xml:lang="ja">国際バスケットボール連盟が発表するバスケットボールのナショナルチームのランキング</dbo:description>
+    <dbo:description xml:lang="sr">кошаркашка светска ранг листа</dbo:description>
+    <foaf:homepage rdf:resource="http://www.fiba.basketball/documents/rankingmen/examples" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:N/a" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:FIBA_navbox" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Main" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Sport_world_rankings" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:International_basketball" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:See_also" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Reflist" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Short_description" />
+    <prov:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/FIBA_Men&#39;s_World_Ranking?oldid=1309181739&amp;ns=0" />
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Slovenia_men&#39;s_national_basketball_team">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/United_States_men&#39;s_national_basketball_team">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Vassilis_Spanoulis">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2023_FIBA_Basketball_World_Cup_qualification">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_AfroBasket_2021">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Russell_Westbrook">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2020_FIBA_Men&#39;s_Olympic_Qualifying_Tournaments_–_Belgrade">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2020_FIBA_Men&#39;s_Olympic_Qualifying_Tournaments_–_Kaunas">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2020_FIBA_Men&#39;s_Olympic_Qualifying_Tournaments_–_Split">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2020_FIBA_Men&#39;s_Olympic_Qualifying_Tournaments_–_Victoria">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sport_in_Spain">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2023_FIBA_Basketball_World_Cup">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://en.wikipedia.org/wiki/FIBA_Men&#39;s_World_Ranking">
+    <foaf:primaryTopic rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2020_FIBA_Men&#39;s_Olympic_Qualifying_Tournaments">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_Women&#39;s_World_Ranking">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2023_FIBA_Basketball_World_Cup_qualification_(Europe)_–_Pre-qualifiers">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/EuroBasket_2022_Group_A">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/EuroBasket_2022_Group_B">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/EuroBasket_2022_Group_C">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/EuroBasket_2022_Group_D">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Basketball_at_the_2024_Summer_Olympics_–_Men&#39;s_qualification">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_World_Rankings">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Rankings">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_Ranking">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_Rankings">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/FIBA_World_Ranking">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/FIBA_Men&#39;s_World_Ranking" />
+  </rdf:Description>
+</rdf:RDF>

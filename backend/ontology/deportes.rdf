@@ -165,6 +165,7 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/fechaEvento -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/fechaEvento">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -509,10 +510,43 @@
     
 
 
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Albert_Einstein -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Albert_Einstein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Albert Einstein</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alemania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alemania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Alemania</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alex_Pereira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alex_Pereira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Alex Pereira</nombreParticipante>
+        <rol>atleta</rol>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alfredo_Marquina -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alfredo_Marquina">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Piscina"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
+        <direccion>Cochabamba, Bolivia</direccion>
+        <nombreLugar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">Piscina Alfredo Marquina</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -522,6 +556,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Always_Ready">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
         <nombreParticipante>Always Ready</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -574,7 +609,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo_Masculino">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo"/>
-        <descripcionDeporte>Atletismo</descripcionDeporte>
+        <descripcionDeporte>Atletismo Masculino</descripcionDeporte>
         <nombreDeporte>Atletismo Masculino</nombreDeporte>
         <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numeroParticipantes>
         <reglamentoBase>World Athletics</reglamentoBase>
@@ -586,6 +621,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo_Olimpico">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</capacidad>
+        <descripcionDeporte>Atletismo Olimpico</descripcionDeporte>
+        <nombreDeporte>Atletismo</nombreDeporte>
+        <reglamentoBase>World Athletics</reglamentoBase>
     </owl:NamedIndividual>
     
 
@@ -606,6 +645,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo_Velocidad">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</capacidad>
+        <descripcionDeporte>Atletismo de alta velocidad</descripcionDeporte>
+        <nombreDeporte>Atletismo</nombreDeporte>
+        <reglamentoBase>World Athletics</reglamentoBase>
     </owl:NamedIndividual>
     
 
@@ -625,6 +668,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Baltimore_Ravens">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
         <nombreParticipante>Baltimore Ravens</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -694,6 +738,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bayern_Munich">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
         <nombreParticipante>Bayern Munich</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -703,6 +748,16 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Blooming">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
         <nombreParticipante>Blooming</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bolivar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bolivar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Bolivar</nombreParticipante>
         <rol>equipo</rol>
     </owl:NamedIndividual>
     
@@ -723,7 +778,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bruno_Rojas">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>Bruno Rojas</nombreParticipante>
-        <rol>equipo</rol>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -732,6 +787,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Buffalo_Bills">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Buffalo Bills</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -767,6 +824,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Achumani">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</capacidad>
+        <direccion>Cochabamba, Bolivia</direccion>
+        <nombreLugar>Cancha Achumani</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -775,6 +835,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Beni">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250</capacidad>
+        <direccion>Beni, Bolivia</direccion>
+        <nombreLugar>Cancha Beni</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -794,6 +857,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_ElAlto">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
+        <direccion>La Paz, Bolivia</direccion>
+        <nombreLugar>Cancha El Alto</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -802,6 +868,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_LaPaz">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</capacidad>
+        <direccion>La Paz, Bolivia</direccion>
+        <nombreLugar>Cancha La Paz</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -821,6 +890,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Obrajes">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</capacidad>
+        <direccion>La Paz, Bolivia</direccion>
+        <nombreLugar>Cancha Obrajes</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -829,6 +901,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Oruro">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
+        <direccion>Oruro, Bolivia</direccion>
+        <nombreLugar>Cancha Oruro</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -837,6 +912,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Potosi">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
+        <direccion>Potosi, Bolivia</direccion>
+        <nombreLugar>Cancha Potosi</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -845,6 +923,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_SantaCruz">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</capacidad>
+        <direccion>Santa Cruz, Bolivia</direccion>
+        <nombreLugar>Cancha Santa Cruz</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -864,6 +945,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Sucre">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250</capacidad>
+        <direccion>Chuquisaca, Bolivia</direccion>
+        <nombreLugar>Cancha Sucre</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -872,6 +956,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cancha_Tarija">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
+        <direccion>Tarija, Bolivia</direccion>
+        <nombreLugar>Cancha Tarija</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -900,6 +987,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Carlos_Ramos">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Arbitro"/>
+        <nombreParticipante>Carlos Ramos</nombreParticipante>
+        <rol>arbitro</rol>
     </owl:NamedIndividual>
     
 
@@ -911,7 +1000,10 @@
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo_Femenino"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Hernando_Siles"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bruno_Rojas"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Jhoselyn_Camargo"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Nicole_Romero"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ángela_Castro"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-09-01T00:00:00</fechaEvento>
         <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-09-01T15:00:00</horaEvento>
         <nombreEvento>Final 100 metros planos</nombreEvento>
@@ -924,10 +1016,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Catolica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Catolica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Catolica</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cecilia_Zeballos -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cecilia_Zeballos">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Cecilia Zeballos</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -936,6 +1040,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Chacaltaya">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Rutas"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</capacidad>
+        <direccion>La Paz, Bolivia</direccion>
+        <direccion>Ruta Chacaltaya</direccion>
     </owl:NamedIndividual>
     
 
@@ -950,6 +1057,7 @@
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bayern_Munich"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Real_Madrid"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-02-21T00:00:00</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-02-21T20:00:00</horaEvento>
         <nombreEvento>Champios League Final</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1007,6 +1115,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Claudia_Balderrama">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Claudia Balderrama</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1015,6 +1125,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Club_Atlético_Nacional_Potosí">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Club Atletico Nacional Potosi</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1023,6 +1135,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Club_Deportivo_Ejército">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Club Deportivo Ejercito</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1031,6 +1145,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Club_Olympic">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Club Olympic</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1082,6 +1198,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_LaPaz">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Coliseo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800</capacidad>
+        <direccion>La Paz, Bolivia</direccion>
+        <nombreLugar>Coliseo La Paz</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1090,6 +1209,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_Oruro">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Coliseo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
+        <direccion>Oruro, Bolivia</direccion>
+        <nombreLugar>Coliseo Oruro</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1098,6 +1220,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_SantaCruz">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Coliseo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600</capacidad>
+        <direccion>Santa Cruz, Bolivia</direccion>
+        <nombreLugar>Coliseo Santa Cruz</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1106,6 +1231,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_Sucre">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Coliseo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400</capacidad>
+        <direccion>Chuquisaca, Bolivia</direccion>
+        <nombreLugar>Coliseo Sucre</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1114,6 +1242,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_Tarija">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Coliseo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
+        <direccion>Tarija, Bolivia</direccion>
+        <nombreLugar>Coliseo Tarija</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1161,11 +1292,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Copa_del_Mundo_FIBA">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Basquet_Profesional"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_SantaCruz"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alemania"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#España"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estados_Unidos"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Serbia"/>
+        <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-15T00:00:00</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-15T19:00:00</horaEvento>
         <nombreEvento>Copa del mundo FIBA</nombreEvento>
         <nombreParticipante>Alemania</nombreParticipante>
         <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numeroParticipantes>
@@ -1177,6 +1312,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cordillera_de_las_tres_Cruces">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Rutas"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
+        <direccion>La Paz, Bolivia</direccion>
+        <nombreLugar>Cordillera Tres Cruces</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1191,10 +1329,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Deporte_Multidisciplinario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Deporte_Multidisciplinario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"/>
+        <descripcionDeporte>Evento deportivo que reúne varias disciplinas</descripcionDeporte>
+        <nombreDeporte>Multidisciplinario</nombreDeporte>
+        <reglamentoBase>Reglamento por disciplina</reglamentoBase>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Diego_Mamani -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Diego_Mamani">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Arbitro"/>
+        <nombreParticipante>Diego Mamani</nombreParticipante>
+        <rol>arbitro</rol>
     </owl:NamedIndividual>
     
 
@@ -1212,7 +1363,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#España">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
-        <nombreParticipante>Spain</nombreParticipante>
+        <nombreParticipante>España</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1221,7 +1373,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Felix_Capriles">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
-        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32000</capacidad>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320</capacidad>
         <direccion>Cochabamba, Bolivia</direccion>
         <nombreLugar>Estadio Felix Capriles</nombreLugar>
     </owl:NamedIndividual>
@@ -1232,7 +1384,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Hernando_Siles">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
-        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41000</capacidad>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">410</capacidad>
         <direccion>La Paz, Bolivia</direccion>
         <nombreLugar>Estadio Hernando Siles</nombreLugar>
     </owl:NamedIndividual>
@@ -1243,7 +1395,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Maracaná">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
-        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78000</capacidad>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">780</capacidad>
         <direccion>Rio de Janeiro, Brasil</direccion>
         <nombreLugar>Estadio Maracaná</nombreLugar>
     </owl:NamedIndividual>
@@ -1254,6 +1406,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Olimpico_Sucre">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
         <nombreLugar>Estadio Olimpico Sucre</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1263,6 +1416,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Patricio_Serrano">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</capacidad>
         <nombreLugar>Estadio Patricio Serrano</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1272,6 +1426,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Ramon_Tahuichi">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
         <nombreLugar>Estadio Ramon Tahuichi</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1281,6 +1436,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_San_Jose">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</capacidad>
         <nombreLugar>Estadio San Jose</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1290,6 +1446,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Tarija">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
         <nombreLugar>Estadio Tarija</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1299,6 +1456,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Villa_Ingenio">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
         <nombreLugar>Estadio Villa Ingenio</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1308,6 +1466,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Villa_Pagador">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</capacidad>
         <nombreLugar>Estadio Villa Pagador</nombreLugar>
     </owl:NamedIndividual>
     
@@ -1317,7 +1476,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_el_Monumental_de_Maturin">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio"/>
-        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51838</capacidad>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</capacidad>
         <direccion>Monagas, Venezuela</direccion>
         <nombreLugar>Estadio el Monumental de Maturin</nombreLugar>
     </owl:NamedIndividual>
@@ -1328,6 +1487,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estados_Unidos">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>EEUU</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1336,6 +1497,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Esteban_Núñez_del_Prado">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Esteban Nunez del Prado</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1344,6 +1507,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Evy_Saavedra">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Evy Saavedra</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1352,6 +1517,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#FC_Barcelona">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>FC Barcelona</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1360,6 +1527,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Facundo_Quiroga">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Complejo_Deportivo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600</capacidad>
+        <direccion>Cochabamba, Bolivia</direccion>
+        <nombreLugar>Complejo Facundo Quiroga</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -1368,8 +1538,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Final_Mundial_Qatar_2022">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Futbol_Profesional"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Felix_Capriles"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Francia"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Seleccion_Argentina"/>
+        <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-18T00:00:00</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-18T11:00:00</horaEvento>
         <nombreEvento>Final Mundial Qatar 2022</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1383,6 +1558,8 @@
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Piscina_Evo_Morales"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Karen_Torrez"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Katerine_Moreno"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#María_José_Ribera"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-01T00:00:00</fechaEvento>
         <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-01T10:00:00</horaEvento>
         <nombreEvento>Final 100 metros libre</nombreEvento>
@@ -1398,6 +1575,8 @@
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Piscina_Olimpica_GAMC"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Maria_Rene_Vila"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Marisabel_Padilla"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Regina_Martinez"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-02T00:00:00</fechaEvento>
         <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-02T19:00:00</horaEvento>
         <nombreEvento>Final 200 metros mariposa</nombreEvento>
@@ -1409,6 +1588,19 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Francia">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Francia</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Futbol_Americano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Futbol_Americano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Futbol"/>
+        <descripcionDeporte>Fubol Americano</descripcionDeporte>
+        <nombreDeporte>Futbol</nombreDeporte>
+        <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</numeroParticipantes>
     </owl:NamedIndividual>
     
 
@@ -1453,6 +1645,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Futbol_Playa">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Futbol"/>
+        <descripcionDeporte>Futbol de playa</descripcionDeporte>
+        <nombreDeporte>Futbol</nombreDeporte>
+        <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</numeroParticipantes>
+        <reglamentoBase>FIFA</reglamentoBase>
     </owl:NamedIndividual>
     
 
@@ -1485,6 +1681,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Gabriel_Villamil">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Gabriel Villamil</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1493,6 +1691,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Giba">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Giba</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1517,6 +1717,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ilia_Topuria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ilia_Topuria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Ilia Topuria</nombreParticipante>
+        <rol>atleta</rol>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual">
@@ -1526,11 +1736,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ineos_Grenadiers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ineos_Grenadiers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Ineos Grenadiers</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#IronMan_world_championship -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#IronMan_world_championship">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
-        <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Parque_Nacional_Amboro"/>
+        <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Esteban_Núñez_del_Prado"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Walter_Vargas"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Yatsen_Soza"/>
+        <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-10T00:00:00</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-10T06:00:00</horaEvento>
         <nombreEvento>IronMan World Championship</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1570,6 +1796,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Juan_Perez">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Arbitro"/>
+        <nombreParticipante>Juan Perez</nombreParticipante>
+        <rol>arbitro</rol>
     </owl:NamedIndividual>
     
 
@@ -1578,7 +1806,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#JuegosPlurinacionales2024">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Deporte_Multidisciplinario"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Club_Olympic"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UMSS"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Unifranz"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Universitario"/>
+        <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-15T00:00:00</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-15T09:00:00</horaEvento>
         <nombreEvento>JuegosPlurinacionales-2024</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1588,7 +1823,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Juegos_Plurinacionales_2000">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Deporte_Multidisciplinario"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Always_Ready"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#The_Strongest"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-09-15T09:00:00</horaEvento>
         <nombreEvento>Juegos Plurinacionales Bolivia</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1598,6 +1837,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Kansas_City_Chiefs">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Kansas City Chiefs</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1636,7 +1877,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Kim_Yeon-koung">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <numeroParticipantes>kim yeon koung</numeroParticipantes>
+        <nombreParticipante>kim yeon koung</nombreParticipante>
         <rol>atleta</rol>
     </owl:NamedIndividual>
     
@@ -1646,6 +1887,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Kinwa_La_Paz">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Kinwa La Paz</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1654,7 +1897,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Kobe_Bryant">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <numeroParticipantes>kobe bryant</numeroParticipantes>
+        <nombreParticipante>kobe bryant</nombreParticipante>
         <rol>atleta</rol>
     </owl:NamedIndividual>
     
@@ -1721,12 +1964,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Liga_Boliviana">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Futbol_Profesional"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Villa_Pagador"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Blooming"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Bolívar"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Oriente_Petrolero"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-05T00:09:00</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-05T20:00:00</horaEvento>
         <nombreEvento>Liga Boliviana</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1739,6 +1984,12 @@
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Basquet_Masculino"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Villa_Ingenio"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Catolica"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Club_Olympic"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UMSS"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Unifranz"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Universitario"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-06-20T18:00:00</horaEvento>
         <nombreEvento>Liga Sub 25</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1749,6 +2000,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Liga_Superior_Masculina">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Voleibol_Masculino"/>
+        <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_Cochabamba"/>
+        <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Panteras"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Vipers"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-12T19:00:00</horaEvento>
         <nombreEvento>LIga Superior Masculina</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1759,6 +2015,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Liga_Superior_del_Voleibol_Boliviano">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Voleibol_Profesional"/>
+        <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_LaPaz"/>
+        <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Catolica"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Club_Olympic"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Panteras"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UMSS"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Urubó_Olympic_Club"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Vipers"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-15T18:30:00</horaEvento>
         <nombreEvento>Liga Superior Del Voleibol Bolivia</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1769,6 +2034,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Lionel_Messi">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>lionel messi</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1799,6 +2065,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Luciano_de_Cecco">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>luciano de cecco</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1818,6 +2085,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Luis_Haquín">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>luis haquin</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1826,6 +2094,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Manchester_City">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Manchester City</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1837,7 +2107,9 @@
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo_Maraton"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Felix_Capriles"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Claudia_Balderrama"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Héctor_Garibay"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#José_Manuel_Aramayo"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-01T00:00:00</fechaEvento>
         <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-09-01T15:00:00</horaEvento>
         <nombreEvento>Maraton La Paz</nombreEvento>
@@ -1850,6 +2122,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Marcelo_Martins">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>marcelo martins</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1868,7 +2141,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Marisabel_Padilla">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <nombreParticipante>marisel padilla</nombreParticipante>
+        <nombreParticipante>Marisabel Padilla</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1878,6 +2152,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#María_Belén_Peredo">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>maria belen peredo</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1886,7 +2161,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#María_José_Ribera">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <nombreParticipante>maria jose ribera</nombreParticipante>
+        <nombreParticipante>Maria Jose Ribera</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1896,6 +2172,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Michael_Jordan">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>michael jordan</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -1910,12 +2187,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Movistar_Team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Movistar_Team">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Movistar Team</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#NBA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#NBA">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Basquet_Profesional"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Pacata"/>
+        <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Golden_State_Warriors"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Los_Angeles_Lakers"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-20T20:00:00</horaEvento>
         <nombreEvento>NBA eeuu</nombreEvento>
     </owl:NamedIndividual>
     
@@ -1973,6 +2264,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Natacion_Sincronizada">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Natación"/>
+        <descripcionDeporte>Natacion Sincronizada</descripcionDeporte>
+        <nombreDeporte>Natacion</nombreDeporte>
+        <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</numeroParticipantes>
+        <reglamentoBase>FINA</reglamentoBase>
     </owl:NamedIndividual>
     
 
@@ -1981,6 +2276,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#New_England_Patriots">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>New England Patriots</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -1989,7 +2286,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Neymar_Jr">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <nombreParticipante>neymar junior</nombreParticipante>
+        <nombreParticipante>Neymar Junior</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2008,6 +2306,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Nikola_Jokić">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Nikola Jokic</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2016,6 +2316,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Oriente_Petrolero">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Oriente Petrolero</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2024,6 +2326,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Pacata">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Complejo_Deportivo"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</capacidad>
+        <direccion>Cochabamba, Bolivia</direccion>
+        <nombreLugar>Complejo Depertivo Pacata</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -2042,6 +2347,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Parque_Nacional_Amboro">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Rutas"/>
+        <capacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</capacidad>
+        <direccion>Santa Cruz, Bolivia</direccion>
+        <nombreLugar>Parque Nacional Amboro</nombreLugar>
     </owl:NamedIndividual>
     
 
@@ -2088,6 +2396,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ramiro_Vaca">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Ramiro Vaca</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2097,6 +2407,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Real_Madrid">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
         <nombreParticipante>Real Madrid</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2105,6 +2416,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Regina_Martinez">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Regina Martinez</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2113,6 +2426,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ronald_Iván_Arze_Soria">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <rol>Ronald Ivan Arze Soria</rol>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2121,6 +2436,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#San_Martín">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>San Martin</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2129,6 +2446,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Santiago_Alba">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Santiago Alba</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2137,6 +2456,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Seattle_Seahawks">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Seattle Seahawks</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2145,6 +2466,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Sebastián_Vargas">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Sebastian</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2184,6 +2507,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Serbia">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
         <nombreParticipante>Serbia</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2192,6 +2516,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Stephen_Curry">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Stephen Curry</nombreParticipante>
+        <rol>atleta</rol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Stronger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Stronger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Stronger</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2200,12 +2536,26 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Super_Bowl">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Futbol_Americano"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Estadio_Felix_Capriles"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Buffalo_Bills"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Kansas_City_Chiefs"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-09T00:20:04</fechaEvento>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-09T20:00:00</horaEvento>
         <nombreEvento>SUPER BOWL masachusets</nombreEvento>
         <nombreLugar>Masachusets Pennsilvania(MP)</nombreLugar>
         <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</numeroParticipantes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Team_Visma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Team_Visma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Team Visma</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2214,6 +2564,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#The_Strongest">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>The Strongest</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2241,7 +2593,10 @@
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ciclismo_Ruta"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Camino_de_la_Muerte"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cecilia_Zeballos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Sebastián_Vargas"/>
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Walter_Vargas"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Óscar_Soliz"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-20T00:00:00</fechaEvento>
         <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-20T07:00:00</horaEvento>
         <nombreEvento>Tour Bolivia</nombreEvento>
@@ -2253,8 +2608,35 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Tour_De_Francia">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
+        <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ciclismo_Ruta"/>
+        <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cordillera_de_las_tres_Cruces"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Equipos"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ineos_Grenadiers"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Movistar_Team"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Team_Visma"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UAE_Team_Emirates"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-01T08:00:00</horaEvento>
         <nombreEvento>Tour de Francia Ciclismo</nombreEvento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UAE_Team_Emirates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UAE_Team_Emirates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>UAE Team Emirates</nombreParticipante>
+        <rol>equipo</rol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UMSS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#UMSS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Universidad Mayor De San Simon</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2264,7 +2646,20 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ultimate_Figth_Champion">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <tieneModalidad rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Individual"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Alex_Pereira"/>
+        <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ilia_Topuria"/>
+        <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-11-10T22:00:00</horaEvento>
         <nombreEvento>UFC</nombreEvento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Unifranz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Unifranz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Universidad de Unifranz</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2273,6 +2668,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Universitario">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Universitario</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2281,6 +2678,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Universitario_de_Sucre">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Universidad de Sucre</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2289,6 +2688,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Urubó_Olympic_Club">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo"/>
+        <nombreParticipante>Urubo Olympic Club</nombreParticipante>
+        <rol>equipo</rol>
     </owl:NamedIndividual>
     
 
@@ -2297,6 +2698,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Victor_Wembanyama">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Victor Wembanyama</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2338,6 +2741,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Voleibol_Juvenil">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Voleibol"/>
+        <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</numeroParticipantes>
     </owl:NamedIndividual>
     
 
@@ -2414,6 +2818,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Yatsen_Soza">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
+        <nombreParticipante>Yatsen Soza</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
     
 
@@ -2432,7 +2838,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Ángela_Castro">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <nombreParticipante>Angel Castro</nombreParticipante>
+        <nombreParticipante>Angela Castro</nombreParticipante>
         <rol>atleta</rol>
     </owl:NamedIndividual>
     
@@ -2443,6 +2849,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Óscar_Soliz">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
         <nombreParticipante>Oscar Soliz</nombreParticipante>
+        <rol>atleta</rol>
     </owl:NamedIndividual>
 </rdf:RDF>
 
