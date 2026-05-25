@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dbp="http://dbpedia.org/property/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:prov="http://www.w3.org/ns/prov#" >
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Spanish_football_league_system">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/European_Super_League">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://en.wikipedia.org/wiki/Liga_Nacional_de_Fútbol_Profesional">
+    <foaf:primaryTopic rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ball_(association_football)">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Malabo">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Segunda_División">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbp:tv rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Yuri_Berchiche">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alexia_Putellas">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2009–10_La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2011–12_La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cristiano_Ronaldo">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2008–09_La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/LFP">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:wikiPageDisambiguates rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/New_Force_(Spain)">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2011–12_Sevilla_FC_season">
+    <dbp:team rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/José_María_del_Nido">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_retired_numbers_in_association_football">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cala_(footballer,_born_1989)">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Anderson_Cruz">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ligue_de_Football_Professionnel">
+    <owl:differentFrom rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation" />
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <owl:differentFrom rdf:resource="http://dbpedia.org/resource/Ligue_de_Football_Professionnel" />
+    <owl:sameAs rdf:resource="http://fi.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://gl.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://an.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://ro.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://el.dbpedia.org/resource/Εθνική_Ένωση_Επαγγελματικού_Ποδοσφαίρου_(Ισπανία)" />
+    <owl:sameAs rdf:resource="http://jv.dbpedia.org/resource/LaLiga" />
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://he.dbpedia.org/resource/LFP" />
+    <owl:sameAs rdf:resource="http://viaf.org/viaf/124021501" />
+    <owl:sameAs rdf:resource="http://tr.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://ko.dbpedia.org/resource/스페인_프로축구연맹" />
+    <owl:sameAs rdf:resource="https://global.dbpedia.org/id/48U1c" />
+    <owl:sameAs rdf:resource="http://ast.dbpedia.org/resource/Lliga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://ja.dbpedia.org/resource/リーガ・デ・フトボル・プロフェシオナル" />
+    <owl:sameAs rdf:resource="http://ar.dbpedia.org/resource/رابطة_الدوري_الإسباني" />
+    <owl:sameAs rdf:resource="http://nl.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://th.dbpedia.org/resource/สันนิบาตฟุตบอลอาชีพแห่งชาติ_(สเปน)" />
+    <owl:sameAs rdf:resource="http://ca.dbpedia.org/resource/Lliga_de_Futbol_Professional" />
+    <owl:sameAs rdf:resource="http://it.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <owl:sameAs rdf:resource="http://eu.dbpedia.org/resource/Profesionalen_Futbol_Liga" />
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q4453842" />
+    <owl:sameAs rdf:resource="http://sco.dbpedia.org/resource/Liga_de_Fútbol_Profesional" />
+    <rdfs:label xml:lang="en">Liga Nacional de Fútbol Profesional</rdfs:label>
+    <rdfs:label xml:lang="es">Liga Nacional de Fútbol Profesional</rdfs:label>
+    <rdfs:label xml:lang="ko">스페인 프로축구연맹</rdfs:label>
+    <rdfs:label xml:lang="ja">リーガ・デ・フトボル・プロフェシオナル</rdfs:label>
+    <rdfs:label xml:lang="ca">Lliga de Futbol Professional</rdfs:label>
+    <rdfs:label xml:lang="nl">Liga de Fútbol Profesional</rdfs:label>
+    <rdfs:label xml:lang="eu">Profesionalen Futbol Liga</rdfs:label>
+    <rdfs:label xml:lang="el">Εθνική Ένωση Επαγγελματικού Ποδοσφαίρου (Ισπανία)</rdfs:label>
+    <rdfs:label xml:lang="it">Liga de Fútbol Profesional</rdfs:label>
+    <rdfs:label xml:lang="fr">Liga Nacional de Fútbol Profesional</rdfs:label>
+    <rdfs:label xml:lang="ar">رابطة الدوري الإسباني</rdfs:label>
+    <dbp:mainOrgan xml:lang="en">General Assembly</dbp:mainOrgan>
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Sports_leagues_established_in_1984" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Football_governing_bodies_in_Spain" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Albacete_Balompié" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/European_Professional_Football_Leagues" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Primera_División_RFEF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Category:Football_governing_bodies_in_Spain" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Private_equity" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Madrid" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Spanish_football_league_system" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/LaLiga_Tech" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Segunda_División" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/UD_Las_Palmas" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Granada_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/SD_Huesca" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Real_Oviedo" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/UD_Almería" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FC_Barcelona" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Real_Madrid_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Real_Sociedad" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Real_Zaragoza" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/SD_Eibar" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Espanyol" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Deportivo_Alavés" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Category:Sports_leagues_established_in_1984" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Real_Betis" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FC_Andorra" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/CD_Mirandés" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Cádiz_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Villarreal_CF_B" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/SD_Ponferradina" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Valencia_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Sporting_Gijón" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Burgos_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Levante_UD" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Nike,_Inc." />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/RCD_Mallorca" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/La_Liga" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/CD_Lugo" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Sevilla_FC" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Javier_Tebas_Medrano" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Manuel_Vega-Arango" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Málaga_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Indirect_job" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Girona_FC" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Elche_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Getafe_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Atlético_de_Madrid" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Holding_company" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/COVID-19_pandemic" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/RCD_Espanyol" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Spain" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Association_football" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/CD_Leganés" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/CD_Tenerife" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/RC_Celta_de_Vigo" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Adidas" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Sporting_de_Gijón" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/FC_Cartagena" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Athletic_Bilbao" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Javier_Tebas" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/José_Luis_Astiazarán" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Deliberative_assembly" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Puma_SE" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/UD_Ibiza" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Terrassa_FC" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Royal_Spanish_Football_Federation" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/CA_Osasuna" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/CVC_Capital_Partners" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Villarreal_CF" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Ciudad_Lineal" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Rayo_Vallecano" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Racing_de_Santander" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/PricewaterhouseCoopers" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Andorra" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Sportswear_(activewear)" />
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Real_Valladolid" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.laliga.es" />
+    <dbo:description xml:lang="ca">competició de futbol a Espanya</dbo:description>
+    <dbo:description xml:lang="es">liga de fútbol profesional de España</dbo:description>
+    <dbo:description xml:lang="ja">ラリーガの管理運営組織</dbo:description>
+    <dbo:description xml:lang="eu">Espainiako kirol-elkartea</dbo:description>
+    <dbo:description xml:lang="en">Spanish national association football organization</dbo:description>
+    <dbo:description xml:lang="ar">منظمة وطنية لتنظيم رياضة كرة القدم في إسبانيا</dbo:description>
+    <dbo:description xml:lang="it">organizzazione associativa sportiva spagnola</dbo:description>
+    <dbo:description xml:lang="iw">הארגון האחראי על כדורגל גברים בספרד</dbo:description>
+    <foaf:homepage rdf:resource="https://www.laliga.com/en-GB" />
+    <dbp:name xml:lang="en">Liga Nacional de Fútbol Profesional</dbp:name>
+    <foaf:depiction rdf:resource="http://commons.wikimedia.org/wiki/Special:FilePath/RGB_Logotipo_LALIGA_color_positivevg.svg" />
+    <dbp:formation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1984-07-27</dbp:formation>
+    <dbp:headquarters xml:lang="en">Calle Torrelaguna 60, Ciudad Lineal, Madrid, Spain</dbp:headquarters>
+    <dbp:membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</dbp:membership>
+    <dbp:size rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</dbp:size>
+    <dbp:affiliations rdf:resource="http://dbpedia.org/resource/European_Leagues" />
+    <dbo:thumbnail rdf:resource="http://commons.wikimedia.org/wiki/Special:FilePath/RGB_Logotipo_LALIGA_color_positivevg.svg?width=300" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:IPA" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Start_date_and_age" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Distinguish" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Reflist" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Short_description" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Authority_control" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Commons_category" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Notelist" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Ill" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Efn" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Translation" />
+    <dbp:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_organization" />
+    <dbp:leaderName rdf:resource="http://dbpedia.org/resource/Javier_Tebas" />
+    <dbp:leaderTitle xml:lang="en">President</dbp:leaderTitle>
+    <dbp:type xml:lang="en">Sports association</dbp:type>
+    <prov:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Liga_Nacional_de_Fútbol_Profesional?oldid=1308959308&amp;ns=0" />
+    <dbp:regionServed xml:lang="en">Spain, Andorra</dbp:regionServed>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_association_football_competitions">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2013–14_La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2014–15_La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2015–16_La_Liga">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2001_FIFA_Club_World_Championship">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/LaLiga+">
+    <dbp:owner rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:owner rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Javier_Tebas">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Liga_de_Fútbol_Profesional">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/LaLigaSportsTV">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/LaLiga_Tech">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Laliga.com">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Laliga.es">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sports_broadcasting_contracts_in_Spain">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/La_Liga_de_Futbol_Profesional">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Liga_de_Futbol_Profesional">
+    <dbo:wikiPageWikiLink rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Liga_Nacional_de_Fútbol_Profesional" />
+  </rdf:Description>
+</rdf:RDF>
