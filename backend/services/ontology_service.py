@@ -1,93 +1,110 @@
 import os
-from rdflib import Graph, Namespace, URIRef, Literal
+from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import RDF, RDFS, OWL
 
 DEPORTE_NS = Namespace("http://www.semanticweb.org/ontologies/deportes#")
 
-# Grafo principal de la ontología local
+# Grafo principal
 grafo = Graph()
 grafo.bind("deporte", DEPORTE_NS)
 
-# Grafo para la ontología / RDF de DBpedia local
-grafo_dbpedia = Graph()
+# Alias para que no falle la importación en queries/search.py
+grafo_dbpedia = grafo
+
 
 DIRECTORIO_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIRECTORIO_ONTOLOGIA = os.path.join(DIRECTORIO_BASE, "ontology")
 
-# Formatos soportados para cargar archivos RDF/OWL/Turtle
+# Cargar archivos ontologicos
 FORMATOS_SOPORTADOS = {
     ".rdf": "xml",
     ".owl": "xml",
     ".ttl": "turtle",
-    ".nt": "nt",
-    ".xml": "xml",
-    ".jsonld": "json-ld",
 }
 
-archivos_cargados_locales = []
-archivos_cargados_dbpedia = []
+archivos_cargados = []
 
-def _cargar_grafo_desde_archivo(grafo_objetivo: Graph, ruta_archivo: str, formato: str) -> bool:
-    try:
-        grafo_objetivo.parse(ruta_archivo, format=formato)
-        return True
-    except Exception as e:
-        print(f"[ERROR] No se pudo cargar {os.path.basename(ruta_archivo)}: {e}")
-        return False
+for nombre_archivo in os.listdir(DIRECTORIO_ONTOLOGIA):
+    extension = os.path.splitext(nombre_archivo)[1].lower()
+    if extension in FORMATOS_SOPORTADOS:
+        ruta_archivo = os.path.join(DIRECTORIO_ONTOLOGIA, nombre_archivo)
+        formato = FORMATOS_SOPORTADOS[extension]
+        try:
+            grafo.parse(ruta_archivo, format=formato)
+            archivos_cargados.append(nombre_archivo)
+            print(f"[OK] Cargado: {nombre_archivo} ({formato})")
+        except Exception as e:
+            print(f"[ERROR] No se pudo cargar {nombre_archivo}: {e}")
 
-
-def _es_archivo_dbpedia(nombre_archivo: str) -> bool:
-    nombre = nombre_archivo.lower()
-    return "dbpedia" in nombre or "depedia" in nombre
-
-
-# Cargar archivos ontológicos desde la carpeta ontology/
-if os.path.isdir(DIRECTORIO_ONTOLOGIA):
-    for nombre_archivo in os.listdir(DIRECTORIO_ONTOLOGIA):
-        extension = os.path.splitext(nombre_archivo)[1].lower()
-
-        if extension in FORMATOS_SOPORTADOS:
-            ruta_archivo = os.path.join(DIRECTORIO_ONTOLOGIA, nombre_archivo)
-            formato = FORMATOS_SOPORTADOS[extension]
-
-            if _es_archivo_dbpedia(nombre_archivo):
-                if _cargar_grafo_desde_archivo(grafo_dbpedia, ruta_archivo, formato):
-                    archivos_cargados_dbpedia.append(nombre_archivo)
-                    print(f"[OK] DBpedia cargado: {nombre_archivo} ({formato})")
-            else:
-                if _cargar_grafo_desde_archivo(grafo, ruta_archivo, formato):
-                    archivos_cargados_locales.append(nombre_archivo)
-                    print(f"[OK] Local cargado: {nombre_archivo} ({formato})")
-else:
-    print(f"[WARN] No existe el directorio de ontología: {DIRECTORIO_ONTOLOGIA}")
-
-print(
-    f"Total tripletas locales: {len(grafo)} | Archivos: {archivos_cargados_locales}"
-)
-print(
-    f"Total tripletas DBpedia: {len(grafo_dbpedia)} | Archivos: {archivos_cargados_dbpedia}"
-)
+print(f"Total tripletas locales: {len(grafo)} | Archivos: {archivos_cargados}")
 
 
-def _uri_a_etiqueta(uri: str) -> str:
-    nombre = uri.split("#")[-1] if "#" in uri else uri.split("/")[-1]
-    return nombre.replace("_", " ").strip()
+# DBpedia
+try:
+    from SPARQLWrapper import SPARQLWrapper, JSON
+
+    SPARQL_DISPONIBLE = True
+except ImportError:
+    SPARQL_DISPONIBLE = False
+    print("[WARN] SPARQLWrapper no instalado. DBpedia deshabilitado.")
+
+URL_DBPEDIA_EN_LINEA = "https://dbpedia.org/sparql"
 
 
-def _normalizar_texto(texto: str) -> str:
-    texto = texto.lower().strip()
-    reemplazos = {
-        "á": "a",
-        "é": "e",
-        "í": "i",
-        "ó": "o",
-        "ú": "u",
-        "ü": "u",
-        "ñ": "n",
-    }
-    for a, b in reemplazos.items():
-        texto = texto.replace(a, b)
-    return texto
+def _construir_envoltorio_dbpedia(
+    punto_acceso: str, tiempo_espera: int = 8
+) -> "SPARQLWrapper":
+    sparql = SPARQLWrapper(punto_acceso)
+    sparql.setReturnFormat("xml")  # RDF
+    sparql.setTimeout(tiempo_espera)
+    return sparql
+
+
+def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
+    if not SPARQL_DISPONIBLE:
+        return []
+
+    puntos_acceso = [URL_DBPEDIA_EN_LINEA]
+
+    for punto in puntos_acceso:
+        try:
+            sparql = _construir_envoltorio_dbpedia(punto)
+            sparql.setQuery(consulta_sparql)
+            grafo_res = sparql.query().convert()
+
+            DBO_SPORT = URIRef("http://dbpedia.org/ontology/Sport")
+            DBO_ABSTRACT = URIRef("http://dbpedia.org/ontology/abstract")
+
+            filas = []
+            for s in grafo_res.subjects(RDF.type, DBO_SPORT):
+                deporte = str(s)
+                label = ""
+                for l in grafo_res.objects(s, RDFS.label):
+                    label = str(l)
+                    break
+
+                abstract = ""
+                for a in grafo_res.objects(s, DBO_ABSTRACT):
+                    abstract = str(a)
+                    break
+
+                filas.append(
+                    {
+                        "uri": deporte,
+                        "label": label,
+                        "abstract": abstract,
+                        "tipo": "Deporte (DBpedia Online)",
+                        "lang": idioma,
+                        "fuente": "dbpedia_online",
+                        "score": 100,
+                    }
+                )
+            print(f"[DBpedia] {punto} → {len(filas)} resultados (desde RDF)")
+            return filas
+        except Exception as e:
+            print(f"[DBpedia] Fallo {punto}: {e}")
+
+    return []
 
 
 def _crear_regex_acentos(palabra: str) -> str:
@@ -97,231 +114,32 @@ def _crear_regex_acentos(palabra: str) -> str:
     return p
 
 
-def _obtener_etiqueta_en_grafo(grafo_obj: Graph, uri_ref, idioma: str = "es") -> str | None:
-    for etiqueta in grafo_obj.objects(uri_ref, RDFS.label):
-        if isinstance(etiqueta, Literal) and etiqueta.language == idioma:
-            return str(etiqueta)
-
-    for etiqueta in grafo_obj.objects(uri_ref, RDFS.label):
-        if isinstance(etiqueta, Literal) and not etiqueta.language:
-            return str(etiqueta)
-
-    return None
-
-
-def _es_meta_clase(grafo_obj: Graph, s) -> bool:
-    meta_classes = {
-        OWL.Class,
-        RDFS.Class,
-        OWL.ObjectProperty,
-        OWL.DatatypeProperty,
-        OWL.AnnotationProperty,
-        URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"),
-    }
-
-    for t in grafo_obj.objects(s, RDF.type):
-        if t in meta_classes:
-            return True
-    return False
-
-
-def _buscar_en_grafo(
-    grafo_obj: Graph,
-    palabra_clave: str,
-    idioma: str = "es",
-    fuente: str = "local",
-    limite: int = 10,
-) -> list[dict]:
-    import re
-
-    palabras = [p.strip() for p in palabra_clave.split() if p.strip()]
-    if not palabras:
-        return []
-
-    # Búsqueda compuesta: todas las palabras deben aparecer
-    patrones = []
-    for pal in palabras:
-        regex_str = _crear_regex_acentos(pal)
-        patrones.append(re.compile(regex_str, re.IGNORECASE))
-
-    consulta_norm = _normalizar_texto(palabra_clave)
-
-    datos = []
-    vistos = set()
-
-    for s in set(grafo_obj.subjects()):
-        if not isinstance(s, URIRef):
-            continue
-
-        if _es_meta_clase(grafo_obj, s):
-            continue
-
-        textos_sujeto = [str(s), _uri_a_etiqueta(str(s))]
-
-        for t in grafo_obj.objects(s, RDF.type):
-            textos_sujeto.append(str(t))
-            textos_sujeto.append(_uri_a_etiqueta(str(t)))
-
-        for p, o in grafo_obj.predicate_objects(s):
-            if isinstance(o, Literal) or isinstance(o, URIRef):
-                textos_sujeto.append(str(o))
-                if isinstance(o, URIRef):
-                    textos_sujeto.append(_uri_a_etiqueta(str(o)))
-
-        texto_completo = _normalizar_texto(" ".join(textos_sujeto))
-
-        # Deben aparecer todas las palabras de la consulta
-        if not all(pat.search(texto_completo) for pat in patrones):
-            continue
-
-        # Score simple para priorizar coincidencias más exactas
-        score = 80
-        if consulta_norm and consulta_norm in texto_completo:
-            score = 100
-
-        uri_str = str(s)
-
-        label = None
-        for l in grafo_obj.objects(s, RDFS.label):
-            if isinstance(l, Literal) and (l.language == idioma or not l.language):
-                label = str(l)
-                break
-
-        if not label:
-            label = _uri_a_etiqueta(uri_str)
-
-        tipo = None
-        for t in grafo_obj.objects(s, RDF.type):
-            if t != OWL.NamedIndividual and not _es_meta_clase(grafo_obj, t):
-                tipo = str(t)
-                break
-
-        tipo_final = _uri_a_etiqueta(tipo) if tipo else "Recurso"
-
-        if uri_str not in vistos:
-            vistos.add(uri_str)
-            datos.append(
-                {
-                    "uri": uri_str,
-                    "label": label,
-                    "tipo": tipo_final,
-                    "lang": idioma,
-                    "fuente": fuente,
-                    "score": score,
-                }
-            )
-
-        if len(datos) >= limite:
-            break
-
-    datos.sort(key=lambda x: (-x["score"], x["label"].lower()))
-    return datos[:limite]
-
-
-def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
-    datos = []
-    vistos = set()
-
-    for grafo_obj, fuente in [(grafo, "local"), (grafo_dbpedia, "dbpedia")]:
-        for s in set(grafo_obj.subjects()):
-            if not isinstance(s, URIRef):
-                continue
-
-            uri_str = str(s)
-            if uri_str in vistos:
-                continue
-            vistos.add(uri_str)
-
-            etiqueta = _obtener_etiqueta_en_grafo(grafo_obj, s, idioma) or _uri_a_etiqueta(uri_str)
-            datos.append(
-                {
-                    "uri": uri_str,
-                    "label": etiqueta,
-                    "lang": idioma,
-                    "fuente": fuente,
-                }
-            )
-
-            if len(datos) >= 50:
-                return datos
-
-    return datos
-
-
-# DBpedia online
-try:
-    from SPARQLWrapper import SPARQLWrapper, JSON
-    SPARQL_DISPONIBLE = True
-except ImportError:
-    SPARQL_DISPONIBLE = False
-    print("[WARN] SPARQLWrapper no instalado. DBpedia online deshabilitado.")
-
-
-URL_DBPEDIA_EN_LINEA = "https://dbpedia.org/sparql"
-
-
-def _consultar_dbpedia_online(consulta_sparql: str) -> list[dict]:
-    if not SPARQL_DISPONIBLE:
-        return []
-
-    try:
-        sparql = SPARQLWrapper(URL_DBPEDIA_EN_LINEA)
-        sparql.setQuery(consulta_sparql)
-        sparql.setReturnFormat(JSON)
-        sparql.setTimeout(10)
-
-        resultados = sparql.query().convert()
-        bindings = resultados.get("results", {}).get("bindings", [])
-
-        filas = []
-        for b in bindings:
-            fila = {k: v.get("value", "") for k, v in b.items()}
-            filas.append(fila)
-
-        print(f"[DBpedia online] {len(filas)} resultados")
-        return filas
-
-    except Exception as e:
-        print(f"[ERROR DBpedia online] {e}")
-        return []
-
-
 def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]:
-    # Primero intenta buscar en un archivo DBpedia local, si existe
-    resultados_locales = _buscar_en_grafo(
-        grafo_dbpedia,
-        palabra_clave,
-        idioma=idioma,
-        fuente="dbpedia",
-        limite=10,
-    )
-
-    if resultados_locales:
-        return resultados_locales
-
-    # Si no hay archivo DBpedia local, consulta DBpedia online
+    # Búsqueda online
     palabras = [p.strip() for p in palabra_clave.split() if p.strip()]
     if not palabras:
         return []
 
-    filtros = []
-    for palabra in palabras:
-        palabra_segura = palabra.replace('"', '\\"')
-        filtros.append(
-            f'FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{palabra_segura}")))'
-        )
+    filtros_regex = []
+    for pal in palabras:
+        regex_pal = _crear_regex_acentos(pal)
+        filtros_regex.append(f'FILTER(REGEX(STR(?label), "{regex_pal}", "i"))')
 
-    filtros_sparql = "\n        ".join(filtros)
+    filtros_str = "\n        ".join(filtros_regex)
 
     consulta = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    SELECT DISTINCT ?deporte ?label ?abstract WHERE {{
+    CONSTRUCT {{
+        ?deporte a dbo:Sport .
+        ?deporte rdfs:label ?label .
+        ?deporte dbo:abstract ?abstract .
+    }} WHERE {{
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
         FILTER(LANG(?label) = "{idioma}")
-        {filtros_sparql}
+        {filtros_str}
 
         OPTIONAL {{
             ?deporte dbo:abstract ?abstract .
@@ -330,21 +148,4 @@ def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]
     }}
     LIMIT 10
     """
-
-    filas = _consultar_dbpedia_online(consulta)
-
-    datos = []
-    for item in filas:
-        datos.append(
-            {
-                "uri": item.get("deporte", ""),
-                "label": item.get("label", ""),
-                "abstract": item.get("abstract", ""),
-                "tipo": "Deporte (DBpedia)",
-                "lang": idioma,
-                "fuente": "dbpedia",
-                "score": 100,
-            }
-        )
-
-    return datos
+    return consultar_dbpedia(consulta, idioma)

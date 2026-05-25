@@ -174,8 +174,12 @@ def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
                 continue
             vistos.add(uri_str)
 
-            etiqueta = _obtener_etiqueta_en_grafo(grafo, s, idioma) or _uri_a_etiqueta(uri_str)
-            datos.append({"uri": uri_str, "label": etiqueta, "lang": idioma, "fuente": fuente})
+            etiqueta = _obtener_etiqueta_en_grafo(grafo, s, idioma) or _uri_a_etiqueta(
+                uri_str
+            )
+            datos.append(
+                {"uri": uri_str, "label": etiqueta, "lang": idioma, "fuente": fuente}
+            )
 
             if len(datos) >= 50:
                 return datos
@@ -197,7 +201,21 @@ def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
 
 
 def busqueda_dbpedia_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
-    return _buscar_en_grafo(graph_dbpedia, palabra_clave, idioma=idioma, fuente="dbpedia")
+    # Primero buscar en los archivos locales de dbpedia (offline)
+    resultados = _buscar_en_grafo(
+        graph_dbpedia, palabra_clave, idioma=idioma, fuente="dbpedia"
+    )
+
+    # Luego buscar en línea para complementar si hay pocos resultados
+    if len(resultados) < 10:
+        resultados_online = buscar_deporte_dbpedia(palabra_clave, idioma=idioma)
+        uris_vistas = {res["uri"] for res in resultados}
+        for res_online in resultados_online:
+            if res_online["uri"] not in uris_vistas:
+                resultados.append(res_online)
+                uris_vistas.add(res_online["uri"])
+
+    return resultados
 
 
 def obtener_clases(idioma: str = "es") -> list[dict]:
@@ -342,35 +360,43 @@ def busqueda_combinada(
         "total": len(local_final) + len(dbpedia_final),
     }
 
+
 STOPWORDS_BUSQUEDA = {
-    "de", "del", "la", "el", "los", "las", "en", "por", "para",
-    "un", "una", "unos", "unas", "y", "a", "con"
+    "de",
+    "del",
+    "la",
+    "el",
+    "los",
+    "las",
+    "en",
+    "por",
+    "para",
+    "un",
+    "una",
+    "unos",
+    "unas",
+    "y",
+    "a",
+    "con",
 }
 
 TIPOS_CONSULTA = {
     "atleta": {"Atleta"},
     "atletas": {"Atleta"},
-
     "arbitro": {"Arbitro"},
     "arbitros": {"Arbitro"},
     "árbitro": {"Arbitro"},
     "árbitros": {"Arbitro"},
-
     "equipo": {"Equipo"},
     "equipos": {"Equipo"},
-
     "participante": {"Participante"},
     "participantes": {"Participante"},
-
     "evento": {"eventoDeportivo"},
     "eventos": {"eventoDeportivo"},
-
     "deporte": {"Deporte"},
     "deportes": {"Deporte"},
-
     "lugar": {"Lugar"},
     "lugares": {"Lugar"},
-
     "modalidad": {"Modalidad"},
     "modalidades": {"Modalidad"},
 }
@@ -399,9 +425,7 @@ def _obtener_nombre_principal(grafo: Graph, recurso, idioma: str = "es") -> str:
 
 
 def _cumple_tipo(grafo: Graph, recurso, tipos_buscados: set[str]) -> bool:
-    tipos_normalizados = {
-        _normalizar_texto(t) for t in tipos_buscados
-    }
+    tipos_normalizados = {_normalizar_texto(t) for t in tipos_buscados}
 
     for tipo in grafo.objects(recurso, RDF.type):
         nombre_tipo = _normalizar_texto(_uri_a_etiqueta(str(tipo)))
@@ -419,7 +443,15 @@ def _cumple_tipo(grafo: Graph, recurso, tipos_buscados: set[str]) -> bool:
     return False
 
 
+_CACHE_TEXTO_RECURSO = {}
+_CACHE_CONTEXTO_RELACIONAL = {}
+
+
 def _texto_recurso(grafo: Graph, recurso, idioma: str = "es") -> str:
+    cache_key = (id(grafo), str(recurso), idioma)
+    if cache_key in _CACHE_TEXTO_RECURSO:
+        return _CACHE_TEXTO_RECURSO[cache_key]
+
     textos = [
         str(recurso),
         _uri_a_etiqueta(str(recurso)),
@@ -444,16 +476,21 @@ def _texto_recurso(grafo: Graph, recurso, idioma: str = "es") -> str:
             textos.append(_uri_a_etiqueta(str(o)))
             textos.append(_obtener_nombre_principal(grafo, o, idioma))
 
-    return _normalizar_texto(" ".join(textos))
+    resultado = _normalizar_texto(" ".join(textos))
+    _CACHE_TEXTO_RECURSO[cache_key] = resultado
+    return resultado
 
 
 def _contexto_relacional(grafo: Graph, recurso, idioma: str = "es") -> str:
+    cache_key = (id(grafo), str(recurso), idioma)
+    if cache_key in _CACHE_CONTEXTO_RELACIONAL:
+        return _CACHE_CONTEXTO_RELACIONAL[cache_key]
+
     textos = []
 
     # Texto propio del recurso
     textos.append(_texto_recurso(grafo, recurso, idioma))
 
-    # Relaciones salientes:
     # recurso -> otro recurso
     for p, o in grafo.predicate_objects(recurso):
         textos.append(_uri_a_etiqueta(str(p)))
@@ -462,15 +499,11 @@ def _contexto_relacional(grafo: Graph, recurso, idioma: str = "es") -> str:
             textos.append(_texto_recurso(grafo, o, idioma))
         elif isinstance(o, Literal):
             textos.append(str(o))
-
-    # Relaciones entrantes:
     # otro recurso -> recurso
     for sujeto, predicado in grafo.subject_predicates(recurso):
         textos.append(_uri_a_etiqueta(str(predicado)))
         textos.append(_texto_recurso(grafo, sujeto, idioma))
 
-        # Si el sujeto es un evento, también incluimos todo lo relacionado al evento:
-        # deporte, lugar, modalidad y participantes.
         for p_evento, o_evento in grafo.predicate_objects(sujeto):
             textos.append(_uri_a_etiqueta(str(p_evento)))
 
@@ -479,7 +512,9 @@ def _contexto_relacional(grafo: Graph, recurso, idioma: str = "es") -> str:
             elif isinstance(o_evento, Literal):
                 textos.append(str(o_evento))
 
-    return _normalizar_texto(" ".join(textos))
+    resultado = _normalizar_texto(" ".join(textos))
+    _CACHE_CONTEXTO_RELACIONAL[cache_key] = resultado
+    return resultado
 
 
 def _interpretar_consulta_compuesta(palabra_clave: str) -> tuple[set[str], list[str]]:
@@ -561,6 +596,7 @@ def busqueda_compuesta_relacional(
     resultados.sort(key=lambda x: (-x["score"], x["label"].lower()))
     return resultados[:limite]
 
+
 def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     grafo = _grafo_para_uri(uri)
     uri_ref = URIRef(uri)
@@ -569,7 +605,9 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     for t in grafo.objects(uri_ref, RDF.type):
         if t != OWL.NamedIndividual:
             t_str = str(t)
-            t_label = _obtener_etiqueta_en_grafo(grafo, t, idioma) or _uri_a_etiqueta(t_str)
+            t_label = _obtener_etiqueta_en_grafo(grafo, t, idioma) or _uri_a_etiqueta(
+                t_str
+            )
             tipos.append({"uri": t_str, "label": t_label})
 
     propiedades = []
@@ -578,10 +616,15 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
             continue
 
         p_str = str(p)
-        if any(x in p_str for x in ["#type", "ontology#", "rdf-schema#"]) and p != RDF.type:
+        if (
+            any(x in p_str for x in ["#type", "ontology#", "rdf-schema#"])
+            and p != RDF.type
+        ):
             continue
 
-        p_etiqueta = _obtener_etiqueta_en_grafo(grafo, p, idioma) or _uri_a_etiqueta(p_str)
+        p_etiqueta = _obtener_etiqueta_en_grafo(grafo, p, idioma) or _uri_a_etiqueta(
+            p_str
+        )
 
         if isinstance(o, Literal):
             propiedades.append(
@@ -594,7 +637,9 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
             )
         elif isinstance(o, URIRef):
             o_str = str(o)
-            o_etiqueta = _obtener_etiqueta_en_grafo(grafo, o, idioma) or _uri_a_etiqueta(o_str)
+            o_etiqueta = _obtener_etiqueta_en_grafo(
+                grafo, o, idioma
+            ) or _uri_a_etiqueta(o_str)
             propiedades.append(
                 {
                     "propiedad_uri": p_str,
@@ -610,9 +655,13 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
     relaciones_entrantes = []
     for s, p in grafo.subject_predicates(uri_ref):
         s_str = str(s)
-        s_etiqueta = _obtener_etiqueta_en_grafo(grafo, s, idioma) or _uri_a_etiqueta(s_str)
+        s_etiqueta = _obtener_etiqueta_en_grafo(grafo, s, idioma) or _uri_a_etiqueta(
+            s_str
+        )
         p_str = str(p)
-        p_etiqueta = _obtener_etiqueta_en_grafo(grafo, p, idioma) or _uri_a_etiqueta(p_str)
+        p_etiqueta = _obtener_etiqueta_en_grafo(grafo, p, idioma) or _uri_a_etiqueta(
+            p_str
+        )
         relaciones_entrantes.append(
             {
                 "sujeto": s_str,
@@ -626,7 +675,8 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
 
     return {
         "uri": uri,
-        "label": _obtener_etiqueta_en_grafo(grafo, uri_ref, idioma) or _uri_a_etiqueta(uri),
+        "label": _obtener_etiqueta_en_grafo(grafo, uri_ref, idioma)
+        or _uri_a_etiqueta(uri),
         "tipos": tipos,
         "propiedades": propiedades,
         "relaciones_entrantes": relaciones_entrantes,
