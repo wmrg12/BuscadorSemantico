@@ -3,7 +3,7 @@ from rdflib.namespace import RDF, RDFS, OWL, SKOS
 
 from services.ontology_service import grafo as graph_local
 from services.ontology_service import grafo_dbpedia as graph_dbpedia
-from services.ontology_service import buscar_deporte_dbpedia
+from services.ontology_service import buscar_deporte_dbpedia, _crear_regex_acentos
 
 
 IDIOMAS_SOPORTADOS = ["es", "en"]
@@ -273,9 +273,146 @@ def _buscar_tipos_deporte(
     return resultados
 
 
+def obtener_info_ontologia(idioma: str = "es") -> dict:
+    consulta = """
+    PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    SELECT DISTINCT ?ontologia ?comentario WHERE {
+        ?ontologia a owl:Ontology .
+        ?ontologia rdfs:comment ?comentario .
+    }
+    """
+    resultados = graph_local.query(consulta)
+    comentarios = {}
+    uri_ontologia = "http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica"
+    
+    for fila in resultados:
+        uri_ontologia = str(fila[0])
+        comentario_lit = fila[1]
+        lang = comentario_lit.language or "es"
+        comentarios[lang] = str(comentario_lit)
+    
+    if not comentarios:
+        comentarios = {
+            "es": "Esta es una ontologia sobre deportes",
+            "en": "This is an ontology about sports"
+        }
+        
+    return {
+        "uri": uri_ontologia,
+        "descripcion": comentarios.get(idioma, comentarios.get("es", "")),
+        "comentarios": comentarios,
+        "idiomas_soportados": ["es", "en"],
+        "niveles_representacion": {
+            "informacion": {
+                "titulo": "Nivel 1: Información",
+                "detalle": "La ontología declara explícitamente sus metadatos e idiomas soportados en la cabecera owl:Ontology con rdfs:comment en español e inglés."
+            },
+            "realizacion": {
+                "titulo": "Nivel 2: Realización",
+                "detalle": "Los datos (instancias, clases y propiedades) contienen etiquetas físicas con tags de idioma @es y @en en el archivo RDF/OWL."
+            },
+            "modelizacion": {
+                "titulo": "Nivel 3: Modelización",
+                "detalle": "El buscador realiza consultas SPARQL y filtra dinámicamente los recursos por idioma usando la función FILTER(LANG(?label) = 'idioma')."
+            }
+        }
+    }
+
+
+def obtener_query_sparql_busqueda(palabra_clave: str, idioma: str = "es") -> str:
+    palabra_clave_norm = _normalizar_texto(palabra_clave)
+    regex_pal = _crear_regex_acentos(palabra_clave_norm)
+    
+    return f"""PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?recurso ?label ?tipo WHERE {{
+    ?recurso rdf:type ?tipo_uri .
+    FILTER(isIRI(?recurso))
+    
+    # Excluir meta-clases y propiedades del esquema
+    FILTER(?tipo_uri != owl:Class && ?tipo_uri != rdfs:Class && ?tipo_uri != owl:ObjectProperty && ?tipo_uri != owl:DatatypeProperty)
+    
+    # Obtener etiquetas preferidas o normales en el idioma actual o sin idioma
+    OPTIONAL {{
+        ?recurso rdfs:label ?label_rdfs .
+        FILTER(LANG(?label_rdfs) = "{idioma}")
+    }}
+    OPTIONAL {{
+        ?recurso skos:prefLabel ?label_skos .
+        FILTER(LANG(?label_skos) = "{idioma}")
+    }}
+    OPTIONAL {{
+        ?recurso rdfs:label ?label_rdfs_any .
+        FILTER(LANG(?label_rdfs_any) = "")
+    }}
+    
+    # Enlazar la mejor etiqueta disponible
+    BIND(COALESCE(?label_rdfs, ?label_skos, ?label_rdfs_any) AS ?label)
+    
+    # Obtener el tipo legible
+    OPTIONAL {{
+        ?tipo_uri rdfs:label ?tipo_label .
+        FILTER(LANG(?tipo_label) = "{idioma}")
+    }}
+    BIND(COALESCE(?tipo_label) AS ?tipo)
+    
+    # Búsqueda relacional/literal con Regex (Modelización)
+    FILTER(
+        REGEX(STR(?recurso), "{regex_pal}", "i") ||
+        (BOUND(?label) && REGEX(STR(?label), "{regex_pal}", "i")) ||
+        EXISTS {{
+            ?recurso ?p ?valor .
+            FILTER(isLiteral(?valor) && REGEX(STR(?valor), "{regex_pal}", "i"))
+        }}
+    )
+    
+    # Modelización: Filtrado por idioma estricto en el buscador
+    FILTER(!BOUND(?label) || LANG(?label) = "" || LANG(?label) = "{idioma}")
+}}
+LIMIT 30"""
+
+
+def busqueda_local_sparql(palabra_clave: str, idioma: str = "es") -> list[dict]:
+    consulta = obtener_query_sparql_busqueda(palabra_clave, idioma)
+    try:
+        resultados = graph_local.query(consulta)
+        datos = []
+        for fila in resultados:
+            uri_str = str(fila[0])
+            label = str(fila[1]) if fila[1] else _uri_a_etiqueta(uri_str)
+            
+            if fila[2]:
+                tipo = str(fila[2])
+            else:
+                tipo_uri = _tipo_dominio(graph_local, fila[0])
+                tipo = _tipo_etiqueta(graph_local, tipo_uri, idioma)
+                
+            datos.append({
+                "uri": uri_str,
+                "label": label,
+                "tipo": tipo,
+                "lang": idioma,
+                "fuente": "local",
+                "score": 100
+            })
+        return datos
+    except Exception as e:
+        print(f"[SPARQL Error] {e}")
+        return []
+
+
 def busqueda_local(palabra_clave: str, idioma: str = "es") -> list[dict]:
     if _es_consulta_deporte_generica(palabra_clave):
         return _buscar_tipos_deporte(graph_local, idioma=idioma, fuente="local")
+
+    resultados_sparql = busqueda_local_sparql(palabra_clave, idioma)
+    if resultados_sparql:
+        return resultados_sparql
 
     resultados_compuestos = busqueda_compuesta_relacional(
         graph_local,
@@ -471,12 +608,16 @@ def busqueda_combinada(
 
             dbpedia_final.append(item)
 
+    # Obtener la consulta SPARQL generada para mostrarla en la Consola del buscador
+    sparql_query_str = obtener_query_sparql_busqueda(palabra_clave, idioma)
+
     return {
         "keyword": palabra_clave,
         "lang": idioma,
         "local": local_final,
         "dbpedia": dbpedia_final,
         "total": len(local_final) + len(dbpedia_final),
+        "sparql_query": sparql_query_str,
     }
 
 
@@ -781,6 +922,7 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
                     "propiedad": p_etiqueta,
                     "valor": str(o),
                     "es_iri": False,
+                    "lang": o.language if o.language else None
                 }
             )
         elif isinstance(o, URIRef):

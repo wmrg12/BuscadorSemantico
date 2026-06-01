@@ -23,4 +23,8 @@ export const obtenerIdiomas = () => API.get("/search/langs");
 export const obtenerDetallesRecurso = (uri, idioma = "es") =>
     API.get("/search/details", { params: { uri, lang: idioma } });
 
+// Obtener información de metadatos de la ontología (comentarios, URIs, idiomas)
+export const obtenerInfoOntologia = (idioma = "es") =>
+    API.get("/search/ontology-info", { params: { lang: idioma } });
+
 export default API;
