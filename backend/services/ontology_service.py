@@ -52,6 +52,8 @@ print(
 
 
 # DBpedia
+import logging
+
 try:
     from SPARQLWrapper import SPARQLWrapper, JSON
 
@@ -62,59 +64,65 @@ except ImportError:
 
 URL_DBPEDIA_EN_LINEA = "https://dbpedia.org/sparql"
 
+# Configurar logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+handler = logging.StreamHandler()
+handler.setFormatter(logging.Formatter('[%(asctime)s] %(levelname)s: %(message)s'))
+logger.addHandler(handler)
+
 
 def _construir_envoltorio_dbpedia(
-    punto_acceso: str, tiempo_espera: int = 8
+    punto_acceso: str, tiempo_espera: int = 20
 ) -> "SPARQLWrapper":
     sparql = SPARQLWrapper(punto_acceso)
-    sparql.setReturnFormat("xml")  # RDF
+    sparql.setReturnFormat(JSON)
     sparql.setTimeout(tiempo_espera)
     return sparql
 
 
 def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
     if not SPARQL_DISPONIBLE:
+        logger.warning("SPARQLWrapper no disponible. No se puede consultar DBpedia.")
         return []
 
     puntos_acceso = [URL_DBPEDIA_EN_LINEA]
 
     for punto in puntos_acceso:
         try:
+            logger.info(f"Consultando DBpedia en {punto}...")
+            logger.debug(f"Consulta SPARQL: {consulta_sparql[:200]}...")
+            
             sparql = _construir_envoltorio_dbpedia(punto)
             sparql.setQuery(consulta_sparql)
-            grafo_res = sparql.query().convert()
-
-            DBO_SPORT = URIRef("http://dbpedia.org/ontology/Sport")
-            DBO_ABSTRACT = URIRef("http://dbpedia.org/ontology/abstract")
+            resultados_json = sparql.query().convert()
 
             filas = []
-            for s in grafo_res.subjects(RDF.type, DBO_SPORT):
-                deporte = str(s)
-                label = ""
-                for l in grafo_res.objects(s, RDFS.label):
-                    label = str(l)
-                    break
-
-                abstract = ""
-                for a in grafo_res.objects(s, DBO_ABSTRACT):
-                    abstract = str(a)
-                    break
-
-                filas.append(
-                    {
-                        "uri": deporte,
-                        "label": label,
-                        "abstract": abstract,
-                        "tipo": "Deporte (DBpedia Online)",
-                        "lang": idioma,
-                        "fuente": "dbpedia_online",
-                        "score": 100,
-                    }
-                )
-            print(f"[DBpedia] {punto} -> {len(filas)} resultados (desde RDF)")
+            if "results" in resultados_json and "bindings" in resultados_json["results"]:
+                for binding in resultados_json["results"]["bindings"]:
+                    uri = binding.get("deporte", {}).get("value", "")
+                    label = binding.get("label", {}).get("value", "")
+                    abstract = binding.get("abstract", {}).get("value", "")
+                    
+                    if uri and label:
+                        filas.append(
+                            {
+                                "uri": uri,
+                                "label": label,
+                                "abstract": abstract,
+                                "tipo": "Deporte (DBpedia Online)",
+                                "lang": idioma,
+                                "fuente": "dbpedia_online",
+                                "score": 100,
+                            }
+                        )
+            
+            logger.info(f"DBpedia {punto} -> {len(filas)} resultados encontrados")
             return filas
         except Exception as e:
-            print(f"[DBpedia] Fallo {punto}: {e}")
+            logger.error(f"Error consultando DBpedia {punto}: {type(e).__name__}: {e}")
+            import traceback
+            logger.debug(traceback.format_exc())
 
     return []
 
@@ -127,7 +135,7 @@ def _crear_regex_acentos(palabra: str) -> str:
 
 
 def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]:
-    # Búsqueda online
+    # Búsqueda online con SELECT para mejor compatibilidad
     palabras = [p.strip() for p in palabra_clave.split() if p.strip()]
     if not palabras:
         return []
@@ -139,25 +147,33 @@ def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]
 
     filtros_str = "\n        ".join(filtros_regex)
 
+    # Usar SELECT en lugar de CONSTRUCT para mejor manejo de resultados
+    # Relajar el filtro de idioma: intentar idioma solicitado primero, luego inglés como fallback
     consulta = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    CONSTRUCT {{
+    SELECT ?deporte ?label ?abstract
+    WHERE {{
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
-        ?deporte dbo:abstract ?abstract .
-    }} WHERE {{
-        ?deporte a dbo:Sport .
-        ?deporte rdfs:label ?label .
-        FILTER(LANG(?label) = "{idioma}")
+        
+        FILTER(
+            LANG(?label) = "{idioma}" OR
+            LANG(?label) = "en" OR
+            LANG(?label) = "es"
+        )
         {filtros_str}
 
         OPTIONAL {{
             ?deporte dbo:abstract ?abstract .
-            FILTER(LANG(?abstract) = "{idioma}")
+            FILTER(
+                LANG(?abstract) = "{idioma}" OR
+                LANG(?abstract) = "en" OR
+                LANG(?abstract) = "es"
+            )
         }}
     }}
-    LIMIT 10
+    LIMIT 15
     """
     return consultar_dbpedia(consulta, idioma)
