@@ -12,6 +12,7 @@ const TEXTOS_UI = {
     tabLocal: "Ontologia Local",
     tabDbpedia: "DBpedia",
     noResults: "Sin resultados",
+    backendError: "No se pudo conectar con el servidor. Inicia el backend: cd backend && python app.py",
     loading: "Buscando...",
     labelSource: "Fuente",
     labelType: "Tipo",
@@ -35,6 +36,7 @@ const TEXTOS_UI = {
     tabLocal: "Local Ontology",
     tabDbpedia: "DBpedia",
     noResults: "No results",
+    backendError: "Could not connect to the server. Start the backend: cd backend && python app.py",
     loading: "Searching...",
     labelSource: "Source",
     labelType: "Type",
@@ -403,7 +405,9 @@ export default function App() {
             {/* Lista */}
             <div className="results-list">
               {listaMostrar.length === 0 ? (
-                <div className="no-results">{textos.noResults}</div>
+                <div className="no-results">
+                  {resultados.error ? textos.backendError : textos.noResults}
+                </div>
               ) : (
                 listaMostrar.map((elemento, indice) => (
                   <TarjetaResultado

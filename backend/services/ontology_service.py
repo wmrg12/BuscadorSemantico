@@ -4,39 +4,51 @@ from rdflib.namespace import RDF, RDFS, OWL
 
 DEPORTE_NS = Namespace("http://www.semanticweb.org/ontologies/deportes#")
 
-# Grafo principal
+# Grafo local (ontología propia) y grafo DBpedia offline (archivos bdpedia_*)
 grafo = Graph()
+grafo_dbpedia = Graph()
 grafo.bind("deporte", DEPORTE_NS)
-
-# Alias para que no falle la importación en queries/search.py
-grafo_dbpedia = grafo
-
 
 DIRECTORIO_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIRECTORIO_ONTOLOGIA = os.path.join(DIRECTORIO_BASE, "ontology")
 
-# Cargar archivos ontologicos
 FORMATOS_SOPORTADOS = {
     ".rdf": "xml",
     ".owl": "xml",
     ".ttl": "turtle",
 }
 
-archivos_cargados = []
+archivos_local = []
+archivos_dbpedia = []
+
+
+def _es_archivo_dbpedia(nombre_archivo: str) -> bool:
+    return nombre_archivo.lower().startswith("bdpedia_")
+
 
 for nombre_archivo in os.listdir(DIRECTORIO_ONTOLOGIA):
     extension = os.path.splitext(nombre_archivo)[1].lower()
-    if extension in FORMATOS_SOPORTADOS:
-        ruta_archivo = os.path.join(DIRECTORIO_ONTOLOGIA, nombre_archivo)
-        formato = FORMATOS_SOPORTADOS[extension]
-        try:
-            grafo.parse(ruta_archivo, format=formato)
-            archivos_cargados.append(nombre_archivo)
-            print(f"[OK] Cargado: {nombre_archivo} ({formato})")
-        except Exception as e:
-            print(f"[ERROR] No se pudo cargar {nombre_archivo}: {e}")
+    if extension not in FORMATOS_SOPORTADOS:
+        continue
 
-print(f"Total tripletas locales: {len(grafo)} | Archivos: {archivos_cargados}")
+    ruta_archivo = os.path.join(DIRECTORIO_ONTOLOGIA, nombre_archivo)
+    formato = FORMATOS_SOPORTADOS[extension]
+    destino = grafo_dbpedia if _es_archivo_dbpedia(nombre_archivo) else grafo
+
+    try:
+        destino.parse(ruta_archivo, format=formato)
+        if _es_archivo_dbpedia(nombre_archivo):
+            archivos_dbpedia.append(nombre_archivo)
+        else:
+            archivos_local.append(nombre_archivo)
+        print(f"[OK] Cargado: {nombre_archivo} ({formato})")
+    except Exception as e:
+        print(f"[ERROR] No se pudo cargar {nombre_archivo}: {e}")
+
+print(
+    f"Ontologia local: {len(grafo)} tripletas ({archivos_local}) | "
+    f"DBpedia offline: {len(grafo_dbpedia)} tripletas ({archivos_dbpedia})"
+)
 
 
 # DBpedia
@@ -99,7 +111,7 @@ def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
                         "score": 100,
                     }
                 )
-            print(f"[DBpedia] {punto} → {len(filas)} resultados (desde RDF)")
+            print(f"[DBpedia] {punto} -> {len(filas)} resultados (desde RDF)")
             return filas
         except Exception as e:
             print(f"[DBpedia] Fallo {punto}: {e}")
