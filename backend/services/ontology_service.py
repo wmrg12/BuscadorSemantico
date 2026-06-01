@@ -103,6 +103,8 @@ def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
                     uri = binding.get("deporte", {}).get("value", "")
                     label = binding.get("label", {}).get("value", "")
                     abstract = binding.get("abstract", {}).get("value", "")
+                    label_lang = binding.get("labelLang", {}).get("value", idioma)
+                    abstract_lang = binding.get("abstractLang", {}).get("value", idioma)
                     
                     if uri and label:
                         filas.append(
@@ -111,7 +113,7 @@ def consultar_dbpedia(consulta_sparql: str, idioma: str = "es") -> list[dict]:
                                 "label": label,
                                 "abstract": abstract,
                                 "tipo": "Deporte (DBpedia Online)",
-                                "lang": idioma,
+                                "lang": label_lang,
                                 "fuente": "dbpedia_online",
                                 "score": 100,
                             }
@@ -147,33 +149,36 @@ def buscar_deporte_dbpedia(palabra_clave: str, idioma: str = "es") -> list[dict]
 
     filtros_str = "\n        ".join(filtros_regex)
 
-    # Usar SELECT en lugar de CONSTRUCT para mejor manejo de resultados
-    # Relajar el filtro de idioma: intentar idioma solicitado primero, luego inglés como fallback
-    consulta = f"""
+    # Intentar primero con el idioma solicitado, luego con alternativas
+    idiomas_a_intentar = [idioma]
+    if idioma != "en":
+        idiomas_a_intentar.append("en")
+    if idioma != "es":
+        idiomas_a_intentar.append("es")
+    
+    for idioma_intento in idiomas_a_intentar:
+        consulta = f"""
     PREFIX dbo:  <http://dbpedia.org/ontology/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    SELECT ?deporte ?label ?abstract
+    SELECT ?deporte ?label ?labelLang ?abstract ?abstractLang
     WHERE {{
         ?deporte a dbo:Sport .
         ?deporte rdfs:label ?label .
-        
-        FILTER(
-            LANG(?label) = "{idioma}" OR
-            LANG(?label) = "en" OR
-            LANG(?label) = "es"
-        )
+        FILTER(LANG(?label) = "{idioma_intento}")
+        BIND(LANG(?label) AS ?labelLang)
         {filtros_str}
 
         OPTIONAL {{
             ?deporte dbo:abstract ?abstract .
-            FILTER(
-                LANG(?abstract) = "{idioma}" OR
-                LANG(?abstract) = "en" OR
-                LANG(?abstract) = "es"
-            )
+            BIND(LANG(?abstract) AS ?abstractLang)
+            FILTER(LANG(?abstract) = "{idioma_intento}")
         }}
     }}
     LIMIT 15
     """
-    return consultar_dbpedia(consulta, idioma)
+        resultados = consultar_dbpedia(consulta, idioma_intento)
+        if resultados:
+            return resultados
+    
+    return []

@@ -9,6 +9,27 @@ from queries.search import (
 
 busqueda_bp = Blueprint("busqueda", __name__)
 
+# Mensajes de error multiidioma
+MENSAJES_ERROR = {
+    "es": {
+        "uri_requerido": "Parámetro 'uri' requerido",
+        "q_requerido": "Parámetro 'q' (búsqueda) requerido",
+        "uri_no_encontrado": "Recurso no encontrado",
+        "clase_invalida": "Clase URI inválida",
+    },
+    "en": {
+        "uri_requerido": "Parameter 'uri' required",
+        "q_requerido": "Parameter 'q' (search query) required",
+        "uri_no_encontrado": "Resource not found",
+        "clase_invalida": "Invalid class URI",
+    },
+}
+
+
+def _obtener_mensaje_error(clave: str, idioma: str = "es") -> str:
+    """Obtiene mensaje de error en el idioma solicitado."""
+    return MENSAJES_ERROR.get(idioma, MENSAJES_ERROR["es"]).get(clave, clave)
+
 
 # GET /search/details?uri=URI&lang=es
 @busqueda_bp.route("/search/details")
@@ -17,7 +38,7 @@ def busqueda_detalles():
     idioma = request.args.get("lang", "es")
 
     if not uri:
-        return jsonify({"error": "Parametro 'uri' requerido"}), 400
+        return jsonify({"error": _obtener_mensaje_error("uri_requerido", idioma)}), 400
 
     detalles = obtener_detalles_recurso(uri, idioma=idioma)
     return jsonify(detalles)
@@ -39,7 +60,7 @@ def busqueda_consulta():
     usar_dbpedia = request.args.get("dbpedia", "true").lower() != "false"
 
     if not palabra_clave:
-        return jsonify({"error": "Parametro 'q' requerido"}), 400
+        return jsonify({"error": _obtener_mensaje_error("q_requerido", idioma)}), 400
 
     resultados = busqueda_combinada(
         palabra_clave, idioma=idioma, usar_dbpedia=usar_dbpedia
