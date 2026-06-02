@@ -233,7 +233,7 @@ def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
 
 
 DEPORTE_NS = "http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"
-TERMINOS_DEPORTE_GENERICO = {"deporte", "deportes", "sport", "sports"}
+TERMINOS_DEPORTE_GENERICO = {"deporte", "deportes", "sport", "sports", "Sport", "Sportarten"}
 
 
 def _es_consulta_deporte_generica(palabra_clave: str) -> bool:
@@ -296,22 +296,23 @@ def obtener_info_ontologia(idioma: str = "es") -> dict:
     if not comentarios:
         comentarios = {
             "es": "Esta es una ontologia sobre deportes",
-            "en": "This is an ontology about sports"
+            "en": "This is an ontology about sports",
+            "de": "Dies ist eine Ontologie über Sport"
         }
         
     return {
         "uri": uri_ontologia,
         "descripcion": comentarios.get(idioma, comentarios.get("es", "")),
         "comentarios": comentarios,
-        "idiomas_soportados": ["es", "en"],
+        "idiomas_soportados": ["es", "en", "de"],
         "niveles_representacion": {
             "informacion": {
                 "titulo": "Nivel 1: Información",
-                "detalle": "La ontología declara explícitamente sus metadatos e idiomas soportados en la cabecera owl:Ontology con rdfs:comment en español e inglés."
+                "detalle": "La ontología declara explícitamente sus metadatos e idiomas soportados en la cabecera owl:Ontology con rdfs:comment en español, inglés y alemán."
             },
             "realizacion": {
                 "titulo": "Nivel 2: Realización",
-                "detalle": "Los datos (instancias, clases y propiedades) contienen etiquetas físicas con tags de idioma @es y @en en el archivo RDF/OWL."
+                "detalle": "Los datos (instancias, clases y propiedades) contienen etiquetas físicas con tags de idioma @es, @en y @de en el archivo RDF/OWL."
             },
             "modelizacion": {
                 "titulo": "Nivel 3: Modelización",
@@ -657,6 +658,33 @@ STOPWORDS_BUSQUEDA = {
     "are",
     "was",
     "were",
+    # Deutsch
+    "der",
+    "die",
+    "das",
+    "den",
+    "dem",
+    "des",  # Artículos determinados
+    "ein",
+    "eine",
+    "einer",
+    "eines",
+    "einem",
+    "einen",  # Artículos indeterminados
+    "in",
+    "von",
+    "zu",
+    "für",
+    "mit",
+    "auf",
+    "bei",
+    "aus",  # Preposiciones
+    "und",
+    "oder",  # Conjunciones
+    "ist",
+    "sind",
+    "war",
+    "waren",  # Verbo sein
 }
 
 TIPOS_CONSULTA = {
@@ -704,6 +732,49 @@ TIPOS_CONSULTA = {
     "venues": {"Lugar"},
     "modality": {"Modalidad"},
     "modalities": {"Modalidad"},
+    # Deutsch
+    "athlet": {"Atleta"},
+    "athleten": {"Atleta"},
+    "Athlet": {"Atleta"},
+    "Athleten": {"Atleta"},
+    "schiedsrichter": {"Arbitro"},
+    "Schiedsrichter": {"Arbitro"},  # Singular y plural se escriben igual
+    "mannschaft": {"Equipo"},
+    "mannschaften": {"Equipo"},
+    "Mannschaft": {"Equipo"},
+    "Mannschaften": {"Equipo"},
+    "team": {"Equipo"},
+    "teams": {"Equipo"},
+    "Team": {"Equipo"},
+    "Teams": {"Equipo"},
+    "spieler": {"Atleta"},
+    "Spieler": {"Atleta"},  # "Jugador" mapea excelente a Atleta
+    "teilnehmer": {"Participante"},
+    "Teilnehmer": {"Participante"},  # Singular y plural igual
+    "ereignis": {"eventoDeportivo"},
+    "ereignisse": {"eventoDeportivo"},
+    "Ereignis": {"eventoDeportivo"},
+    "Ereignisse": {"eventoDeportivo"},
+    "veranstaltung": {"eventoDeportivo"},
+    "Veranstaltung": {"eventoDeportivo"},
+    "sport": {"Deporte"},
+    "sportarten": {"Deporte"},
+    "Sport": {"Deporte"},
+    "Sportarten": {"Deporte"},
+    "ort": {"Lugar"},
+    "orte": {"Lugar"},
+    "Ort": {"Lugar"},
+    "Orte": {"Lugar"},
+    "platz": {"Lugar"},
+    "Platz": {"Lugar"},
+    "modalität": {"Modalidad"},
+    "modalitäten": {"Modalidad"},
+    "Modalität": {"Modalidad"},
+    "Modalitäten": {"Modalidad"},
+    "fussball": {"Futbol"},
+    "fußball": {"Futbol"},
+    "Fussball": {"Futbol"},
+    "Fußball": {"Futbol"},
 }
 
 
