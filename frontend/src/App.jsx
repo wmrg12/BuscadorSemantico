@@ -295,7 +295,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
 //
 export default function App() {
   const [idioma, setIdioma] = useState("es");
-  const [idiomas, setIdiomas] = useState({ es: "Español", en: "English" });
+  const [idiomas, setIdiomas] = useState({ es: "Español", en: "English", de: "Deutsch" });
   const [palabraClave, setPalabraClave] = useState("");
   const [palabraBusqueda, setPalabraBusqueda] = useState("");
   const [resultados, setResultados] = useState(null);
