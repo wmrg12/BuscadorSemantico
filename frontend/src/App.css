@@ -613,6 +613,364 @@ body {
   border-style: dashed;
 }
 
+/* --- Multilingual Aesthetics Upgrade --- */
+
+/* 1. Nivel 1: Ontology Info Panel (Información) */
+.ontology-info-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 247, 250, 0.9) 100%);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ontology-info-panel.collapsed {
+  max-height: 52px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid transparent;
+  transition: background 0.2s;
+}
+
+.panel-header:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.ontology-info-panel.expanded .panel-header {
+  border-bottom-color: var(--borde);
+}
+
+.panel-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-header-title h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--texto);
+  margin: 0;
+}
+
+.info-icon {
+  font-size: 1.1rem;
+}
+
+.toggle-panel-btn {
+  background: none;
+  border: none;
+  color: var(--tenue);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 4px;
+}
+
+.panel-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.metadata-row {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.metadata-label {
+  font-weight: 600;
+  color: var(--tenue);
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.metadata-value {
+  color: var(--texto);
+  word-break: break-all;
+}
+
+.metadata-value.uri {
+  font-family: monospace;
+  color: #3f51b5;
+  background: rgba(63, 81, 181, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.metadata-value.desc {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.lang-chips {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-chip-meta {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--superficie2);
+  border: 1px solid var(--borde);
+  color: var(--tenue);
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.lang-chip-meta.active {
+  background: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+/* Niveles de Representación */
+.representation-levels {
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--borde);
+}
+
+.representation-levels h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tenue);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.levels-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.levels-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.level-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.badge-info {
+  background: rgba(33, 150, 243, 0.1);
+  color: #1565c0;
+}
+
+.badge-realization {
+  background: rgba(156, 39, 176, 0.1);
+  color: #7b1fa2;
+}
+
+.badge-modelization {
+  background: rgba(255, 152, 0, 0.1);
+  color: #e65100;
+}
+
+.level-text {
+  color: var(--texto);
+}
+
+/* 2. Nivel 2: Realización Tags (@es y @en) */
+.lang-tag-pill,
+.label-lang-pill {
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: monospace;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  text-transform: lowercase;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.lang-tag-pill.lang-es,
+.label-lang-pill.lang-es {
+  background: rgba(63, 81, 181, 0.1);
+  color: #3f51b5;
+}
+
+.lang-tag-pill.lang-en,
+.label-lang-pill.lang-en {
+  background: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 3. Nivel 3: Consola SPARQL (Modelización) */
+.sparql-console-panel {
+  background: #141414;
+  border: 1px solid #2e2e2e;
+  border-radius: var(--radio);
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 4px 15px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #2a2a2a;
+  cursor: pointer;
+}
+
+.console-header:hover {
+  background: #252525;
+}
+
+.console-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.console-header-left h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: #e0e0e0;
+  margin: 0 0 0 4px;
+}
+
+.console-toggle-btn {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #aaaaaa;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.console-toggle-btn:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.console-body {
+  padding: 12px 0;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.sparql-code {
+  margin: 0;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  font-size: 0.78rem;
+  color: #a9b7c6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code-line {
+  display: flex;
+  padding: 2px 16px;
+  line-height: 1.5;
+  transition: background 0.1s;
+}
+
+.code-line:hover {
+  background: #1a1a1a;
+}
+
+.line-num {
+  width: 30px;
+  color: #4c566a;
+  text-align: right;
+  margin-right: 16px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.line-content {
+  color: #d8dee9;
+}
+
+/* Resaltado del Filtro de Idioma */
+.code-line.highlighted-filter {
+  background: rgba(255, 167, 38, 0.12);
+  border-left: 3px solid #ff9800;
+  padding-left: 13px;
+}
+
+.code-line.highlighted-filter .line-content {
+  color: #ffcc80;
+  font-weight: 600;
+}
+
+.highlight-tag {
+  margin-left: 12px;
+  background: #ff9800;
+  color: #000000;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+  user-select: none;
+  display: inline-block;
+  align-self: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .relation-chip.incoming:hover {
   border-style: solid;
 }

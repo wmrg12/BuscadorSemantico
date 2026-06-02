@@ -5,6 +5,7 @@ from queries.search import (
     obtener_clases,
     obtener_individuos,
     obtener_detalles_recurso,
+    obtener_info_ontologia,
 )
 
 busqueda_bp = Blueprint("busqueda", __name__)
@@ -62,6 +63,14 @@ def busqueda_individuos():
     idioma = request.args.get("lang", "es")
     datos = obtener_individuos(uri_clase=clase, idioma=idioma)
     return jsonify(datos)
+
+
+# GET /search/ontology-info?lang=es
+@busqueda_bp.route("/search/ontology-info")
+def busqueda_ontologia_info():
+    idioma = request.args.get("lang", "es")
+    info = obtener_info_ontologia(idioma=idioma)
+    return jsonify(info)
 
 
 # GET /search/langs

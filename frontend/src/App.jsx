@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from "react";
-import { buscarConsulta, obtenerClases, obtenerIdiomas, obtenerDetallesRecurso } from "./services/api";
+import { buscarConsulta, obtenerClases, obtenerIdiomas, obtenerDetallesRecurso, obtenerInfoOntologia } from "./services/api";
 import "./App.css";
 
 // Traducciones 
 const TEXTOS_UI = {
   es: {
-    title: "Buscador Semantico Deportivo",
-    subtitle: "Ontologia RDF/OWL -  DBpedia -  Multilingue",
+    title: "Buscador Semántico Deportivo",
+    subtitle: "Ontología RDF/OWL - DBpedia - Multilingüe",
     placeholder: "Buscar deporte, atleta, evento...",
     btnSearch: "Buscar",
-    tabLocal: "Ontologia Local",
+    tabLocal: "Ontología Local",
     tabDbpedia: "DBpedia",
     noResults: "Sin resultados",
     backendError: "No se pudo conectar con el servidor. Inicia el backend: cd backend && python app.py",
@@ -27,6 +27,17 @@ const TEXTOS_UI = {
     labelObjProps: "Relaciones de la Ontología",
     labelIncomingProps: "Aparece Relacionado en",
     langCode: "es",
+    ontologyMetadataTitle: "Nivel 1: Información de la Ontología (owl:Ontology)",
+    ontologyMetadataDesc: "Metadatos extraídos dinámicamente sobre la ontología.",
+    supportedLangs: "Idiomas soportados",
+    levelsRepresentation: "Representaciones del Multilingüismo en esta App",
+    levelInfo: "1. Información: Declarada en owl:Ontology con rdfs:comment en español e inglés.",
+    levelRealization: "2. Realización: Datos reales con etiquetas físicas @es y @en.",
+    levelModelization: "3. Modelización: El buscador filtra por idioma en tiempo real con consultas SPARQL.",
+    sparqlConsoleTitle: "Nivel 3: Consola SPARQL - Consulta Activa (Modelización)",
+    showQueryBtn: "Ver Consulta SPARQL",
+    hideQueryBtn: "Ocultar Consulta SPARQL",
+    noQueryYet: "Realiza una búsqueda para ver la consulta SPARQL generada con el filtro de idioma."
   },
   en: {
     title: "Sports Semantic Search",
@@ -51,6 +62,17 @@ const TEXTOS_UI = {
     labelObjProps: "Ontology Relations",
     labelIncomingProps: "Appears Related in",
     langCode: "en",
+    ontologyMetadataTitle: "Level 1: Ontology Information (owl:Ontology)",
+    ontologyMetadataDesc: "Metadata dynamically extracted about the ontology.",
+    supportedLangs: "Supported languages",
+    levelsRepresentation: "Multilingualism Representations in this App",
+    levelInfo: "1. Information: Declared in owl:Ontology with rdfs:comment in Spanish and English.",
+    levelRealization: "2. Realization: Physical data containing @es and @en tags.",
+    levelModelization: "3. Modelization: Search filters by language in real-time using SPARQL queries.",
+    sparqlConsoleTitle: "Level 3: SPARQL Console - Active Query (Modelization)",
+    showQueryBtn: "Show SPARQL Query",
+    hideQueryBtn: "Hide SPARQL Query",
+    noQueryYet: "Run a search to see the generated SPARQL query with the language filter."
   },
 };
 
@@ -97,7 +119,14 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
   return (
     <div className={`result-card ${esDbpedia ? "dbpedia" : "local"}`}>
       <div className="card-header">
-        <span className="card-label">{elemento.label}</span>
+        <span className="card-label">
+          {elemento.label}
+          {elemento.lang && (
+            <span className={`label-lang-pill lang-${elemento.lang}`}>
+              @{elemento.lang}
+            </span>
+          )}
+        </span>
         <span className={`badge ${esDbpedia ? "badge-dbpedia" : "badge-local"}`}>
           {esDbpedia ? "DBpedia" : "Local"}
         </span>
@@ -159,7 +188,14 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
                         {detalles.propiedades.filter(p => !p.es_iri).map((p, idx) => (
                           <div key={idx} className="data-prop-row">
                             <span className="prop-name">{p.propiedad}:</span>
-                            <span className="prop-val">{formatearValor(p.valor)}</span>
+                            <span className="prop-val">
+                              {formatearValor(p.valor)}
+                              {p.lang ? (
+                                <span className={`lang-tag-pill lang-${p.lang}`}>
+                                  @{p.lang}
+                                </span>
+                              ) : null}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -232,6 +268,10 @@ export default function App() {
   const [pestanaActiva, setPestanaActiva] = useState("local");
   const [clases, setClases] = useState([]);
   const [usarDbpedia, setUsarDbpedia] = useState(true);
+  const [infoOntologia, setInfoOntologia] = useState(null);
+  const [querySparql, setQuerySparql] = useState("");
+  const [mostrarSparql, setMostrarSparql] = useState(true);
+  const [mostrarMetadata, setMostrarMetadata] = useState(true);
   const entradaRef = useRef(null);
 
   const textos = TEXTOS_UI[idioma] || TEXTOS_UI.es;
@@ -250,6 +290,13 @@ export default function App() {
       .catch(() => { });
   }, [idioma]);
 
+  // Cargar metadatos de la ontología al cambiar de idioma
+  useEffect(() => {
+    obtenerInfoOntologia(idioma)
+      .then(respuesta => setInfoOntologia(respuesta.data))
+      .catch(() => { });
+  }, [idioma]);
+
   // Debounce para la búsqueda dinámica
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -261,6 +308,7 @@ export default function App() {
   useEffect(() => {
     if (!palabraBusqueda.trim()) {
       setResultados(null);
+      setQuerySparql("");
       return;
     }
     realizarBusqueda(palabraBusqueda);
@@ -272,9 +320,11 @@ export default function App() {
     try {
       const respuesta = await buscarConsulta(termino, idioma, usarDbpedia);
       setResultados(respuesta.data);
+      setQuerySparql(respuesta.data.sparql_query || "");
       setPestanaActiva(respuesta.data.local?.length > 0 ? "local" : "dbpedia");
     } catch {
       setResultados({ local: [], dbpedia: [], total: 0, error: true });
+      setQuerySparql("");
     } finally {
       setCargando(false);
     }
