@@ -866,7 +866,7 @@
         <descripcionDeporte xml:lang="es">Atletismo masculino</descripcionDeporte>
         <descripcionDeporte xml:lang="en">Men's athletics</descripcionDeporte>
         <descripcionDeporte xml:lang="de">Männerleichtathletik</descripcionDeporte>
-        <nombreDeporte>Atletismo Masculino</nombreDeporte>
+        <nombreDeporte>Atletismo</nombreDeporte>
         <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numeroParticipantes>
         <reglamentoBase>World Athletics</reglamentoBase>
     </owl:NamedIndividual>
@@ -877,6 +877,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo_Olimpico">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Atletismo"/>
+        <descripcionDeporte xml:lang="es">Atletismo a Nivel Olimpico</descripcionDeporte>
+        <descripcionDeporte xml:lang="en">Olympic athletics</descripcionDeporte>
+        <descripcionDeporte xml:lang="de">Olympische Leichtathletik</descripcionDeporte>
+        <nombreDeporte>Atletismo</nombreDeporte>
+        <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numeroParticipantes>
+        <reglamentoBase>World Athletics</reglamentoBase>
     </owl:NamedIndividual>
     
 
@@ -2758,6 +2764,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Voleibol_Juvenil">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Voleibol"/>
+        <descripcionDeporte xml:lang="es">Voleibol Juvenil</descripcionDeporte>
+        <descripcionDeporte xml:lang="en">Youth Volleyball</descripcionDeporte>
+        <descripcionDeporte xml:lang="de">Jugend-Volleyball</descripcionDeporte>
+        <nombreDeporte>Voleibol</nombreDeporte>
+        <numeroParticipantes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numeroParticipantes>
+        <reglamentoBase>FIVB</reglamentoBase>
     </owl:NamedIndividual>
     
 
