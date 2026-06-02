@@ -10,6 +10,7 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica">
         <rdfs:comment xml:lang="es">Esta es una ontologia sobre deportes</rdfs:comment>
         <rdfs:comment xml:lang="en">This is an ontology about sports</rdfs:comment>
+        <rdfs:comment xml:lang="de">Dies ist eine Ontologie über Sport.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -35,6 +36,9 @@
         <rdfs:label xml:lang="es">corresponde a</rdfs:label>
         <skos:prefLabel xml:lang="es">corresponde a</skos:prefLabel>
         <skos:altLabel xml:lang="es">se asocia a</skos:altLabel>
+        <rdfs:label xml:lang="de">entspricht</rdfs:label>
+        <skos:prefLabel xml:lang="de">entspricht</skos:prefLabel>
+        <skos:altLabel xml:lang="de">ist zugeordnet zu</skos:altLabel>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/correspondeA"/>
@@ -61,6 +65,10 @@
         <rdfs:label xml:lang="es">se realiza en</rdfs:label>
         <skos:prefLabel xml:lang="es">se realiza en</skos:prefLabel>
         <skos:altLabel xml:lang="es">se lleva a cabo en</skos:altLabel>
+        <rdfs:label xml:lang="de">findet statt in</rdfs:label>
+        <skos:prefLabel xml:lang="de">findet statt in</skos:prefLabel>
+        <skos:altLabel xml:lang="de">wird abgehalten in</skos:altLabel>
+
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/seRealizaEn"/>
@@ -87,6 +95,9 @@
         <rdfs:label xml:lang="es">tiene modalidad</rdfs:label>
         <skos:prefLabel xml:lang="es">tiene modalidad</skos:prefLabel>
         <skos:altLabel xml:lang="es">tiene categoría</skos:altLabel>
+        <rdfs:label xml:lang="de">hat Modalität</rdfs:label>
+        <skos:prefLabel xml:lang="de">hat Modalität</skos:prefLabel>
+        <skos:altLabel xml:lang="de">hat Kategorie</skos:altLabel>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/tieneModalidad"/>
@@ -113,6 +124,9 @@
         <rdfs:label xml:lang="es">tiene participante</rdfs:label>
         <skos:prefLabel xml:lang="es">tiene participante</skos:prefLabel>
         <skos:altLabel xml:lang="es">involucra</skos:altLabel>
+        <rdfs:label xml:lang="de">hat Teilnehmer</rdfs:label>
+        <skos:prefLabel xml:lang="de">hat Teilnehmer</skos:prefLabel>
+        <skos:altLabel xml:lang="de">betrifft</skos:altLabel>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/tieneParticipante"/>
@@ -148,6 +162,9 @@
         <skos:prefLabel xml:lang="en">capacity</skos:prefLabel>
         <rdfs:label xml:lang="es">capacidad</rdfs:label>
         <skos:prefLabel xml:lang="es">capacidad</skos:prefLabel>
+        <rdfs:label xml:lang="de">Kapazität</rdfs:label>
+        <skos:prefLabel xml:lang="de">Kapazität</skos:prefLabel>
+
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Lugar"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -168,6 +185,8 @@
         <skos:prefLabel xml:lang="en">sport description</skos:prefLabel>
         <rdfs:label xml:lang="es">descripción del deporte</rdfs:label>
         <skos:prefLabel xml:lang="es">descripción del deporte</skos:prefLabel>
+        <rdfs:label xml:lang="de">Sportbeschreibung</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sportbeschreibung</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -188,6 +207,8 @@
         <skos:prefLabel xml:lang="en">address</skos:prefLabel>
         <rdfs:label xml:lang="es">dirección</rdfs:label>
         <skos:prefLabel xml:lang="es">dirección</skos:prefLabel>
+        <rdfs:label xml:lang="de">Adresse</rdfs:label>
+        <skos:prefLabel xml:lang="de">Adresse</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Lugar"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -207,6 +228,8 @@
         <skos:prefLabel xml:lang="en">event date</skos:prefLabel>
         <rdfs:label xml:lang="es">fecha del evento</rdfs:label>
         <skos:prefLabel xml:lang="es">fecha del evento</skos:prefLabel>
+        <rdfs:label xml:lang="de">Veranstaltungsdatum</rdfs:label>
+        <skos:prefLabel xml:lang="de">Veranstaltungsdatum</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -227,6 +250,8 @@
         <skos:prefLabel xml:lang="en">event time</skos:prefLabel>
         <rdfs:label xml:lang="es">hora del evento</rdfs:label>
         <skos:prefLabel xml:lang="es">hora del evento</skos:prefLabel>
+        <rdfs:label xml:lang="de">Veranstaltungsuhrzeit</rdfs:label>
+        <skos:prefLabel xml:lang="de">Veranstaltungsuhrzeit</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -247,6 +272,8 @@
         <skos:prefLabel xml:lang="en">sport name</skos:prefLabel>
         <rdfs:label xml:lang="es">nombre del deporte</rdfs:label>
         <skos:prefLabel xml:lang="es">nombre del deporte</skos:prefLabel>
+        <rdfs:label xml:lang="de">Sportname</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sportname</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -265,6 +292,8 @@
         <skos:prefLabel xml:lang="en">event name</skos:prefLabel>
         <rdfs:label xml:lang="es">nombre del evento</rdfs:label>
         <skos:prefLabel xml:lang="es">nombre del evento</skos:prefLabel>
+        <rdfs:label xml:lang="de">Veranstaltungsname</rdfs:label>
+        <skos:prefLabel xml:lang="de">Veranstaltungsname</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -285,6 +314,8 @@
         <skos:prefLabel xml:lang="en">place name</skos:prefLabel>
         <rdfs:label xml:lang="es">nombre del lugar</rdfs:label>
         <skos:prefLabel xml:lang="es">nombre del lugar</skos:prefLabel>
+        <rdfs:label xml:lang="de">Ortsname</rdfs:label>
+        <skos:prefLabel xml:lang="de">Ortsname</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Lugar"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -305,6 +336,8 @@
         <skos:prefLabel xml:lang="en">participant name</skos:prefLabel>
         <rdfs:label xml:lang="es">nombre del participante</rdfs:label>
         <skos:prefLabel xml:lang="es">nombre del participante</skos:prefLabel>
+        <rdfs:label xml:lang="de">Teilnehmername</rdfs:label>
+        <skos:prefLabel xml:lang="de">Teilnehmername</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Participante"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -325,6 +358,8 @@
         <skos:prefLabel xml:lang="en">number of participants</skos:prefLabel>
         <rdfs:label xml:lang="es">número de participantes</rdfs:label>
         <skos:prefLabel xml:lang="es">número de participantes</skos:prefLabel>
+        <rdfs:label xml:lang="de">Anzahl der Teilnehmer</rdfs:label>
+        <skos:prefLabel xml:lang="de">Anzahl der Teilnehmer</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -347,6 +382,9 @@
         <rdfs:label xml:lang="es">reglamento base</rdfs:label>
         <skos:prefLabel xml:lang="es">reglamento base</skos:prefLabel>
         <skos:altLabel xml:lang="es">reglas</skos:altLabel>
+        <rdfs:label xml:lang="de">Grundregeln</rdfs:label>
+        <skos:prefLabel xml:lang="de">Grundregeln</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Regeln</skos:altLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -369,6 +407,9 @@
         <rdfs:label xml:lang="es">rol</rdfs:label>
         <skos:prefLabel xml:lang="es">rol</skos:prefLabel>
         <skos:altLabel xml:lang="es">posición</skos:altLabel>
+        <rdfs:label xml:lang="de">rol</rdfs:label>
+        <skos:prefLabel xml:lang="de">rol</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Position</skos:altLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Participante"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -389,6 +430,8 @@
         <skos:prefLabel xml:lang="en">modality type</skos:prefLabel>
         <rdfs:label xml:lang="es">tipo de modalidad</rdfs:label>
         <skos:prefLabel xml:lang="es">tipo de modalidad</skos:prefLabel>
+        <rdfs:label xml:lang="de">Modalitätstyp</rdfs:label>
+        <skos:prefLabel xml:lang="de">Modalitätstyp</skos:prefLabel>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Modalidad"/>
         <rdfs:domain>
             <owl:Restriction>
@@ -422,6 +465,9 @@
         <rdfs:label xml:lang="es">Atletismo</rdfs:label>
         <skos:prefLabel xml:lang="es">Atletismo</skos:prefLabel>
         <skos:altLabel xml:lang="es">Atletismo y campo</skos:altLabel>
+        <rdfs:label xml:lang="de">Leichtathletik</rdfs:label>
+        <skos:prefLabel xml:lang="de">Leichtathletik</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Leichtathletik</skos:altLabel>
     </owl:Class>
     
 
@@ -436,6 +482,9 @@
         <rdfs:label xml:lang="es">Ciclismo</rdfs:label>
         <skos:prefLabel xml:lang="es">Ciclismo</skos:prefLabel>
         <skos:altLabel xml:lang="es">Carrera ciclista</skos:altLabel>
+        <rdfs:label xml:lang="de">Radfahren</rdfs:label>
+        <skos:prefLabel xml:lang="de">Radfahren</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Fahrradrennen</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Complejo_Deportivo -->
@@ -448,6 +497,9 @@
         <rdfs:label xml:lang="es">Complejo deportivo</rdfs:label>
         <skos:prefLabel xml:lang="es">Complejo deportivo</skos:prefLabel>
         <skos:altLabel xml:lang="es">Centro deportivo</skos:altLabel>
+        <rdfs:label xml:lang="de">Sportkomplex</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sportkomplex</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Sportzentrum</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Natación -->
@@ -461,6 +513,9 @@
         <skos:prefLabel xml:lang="es">Natación</skos:prefLabel>
         <skos:altLabel xml:lang="es">Natacion</skos:altLabel>
         <skos:altLabel xml:lang="es">Natación competitiva</skos:altLabel>
+        <skos:prefLabel xml:lang="de">Schwimmerei</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Schwimmerei</skos:altLabel>
+        <skos:altLabel xml:lang="de">Wettkampfschwimmen</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Piscina -->
@@ -473,6 +528,9 @@
         <rdfs:label xml:lang="es">Piscina</rdfs:label>
         <skos:prefLabel xml:lang="es">Piscina</skos:prefLabel>
         <skos:altLabel xml:lang="es">Alberca</skos:altLabel>
+        <rdfs:label xml:lang="de">Schwimmbecken</rdfs:label>
+        <skos:prefLabel xml:lang="de">Schwimmbecken</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Schwimmbad</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Rutas -->
@@ -485,6 +543,9 @@
         <rdfs:label xml:lang="es">Rutas</rdfs:label>
         <skos:prefLabel xml:lang="es">Rutas</skos:prefLabel>
         <skos:altLabel xml:lang="es">Senderos</skos:altLabel>
+        <rdfs:label xml:lang="de">Pfade</rdfs:label>
+        <skos:prefLabel xml:lang="de">Pfade</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Weg</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Arbitro -->
@@ -497,6 +558,9 @@
         <rdfs:label xml:lang="es">Árbitro</rdfs:label>
         <skos:prefLabel xml:lang="es">Árbitro</skos:prefLabel>
         <skos:altLabel xml:lang="es">Juez</skos:altLabel>
+        <rdfs:label xml:lang="de">Schiedsrichter</rdfs:label>
+        <skos:prefLabel xml:lang="de">Schiedsrichter</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Kampfrichter</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta -->
@@ -509,6 +573,9 @@
         <rdfs:label xml:lang="es">Atleta</rdfs:label>
         <skos:prefLabel xml:lang="es">Atleta</skos:prefLabel>
         <skos:altLabel xml:lang="es">Deportista</skos:altLabel>
+        <rdfs:label xml:lang="de">Athlet</rdfs:label>
+        <skos:prefLabel xml:lang="de">Athlet</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Sportler</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Basquet -->
@@ -523,6 +590,9 @@
         <skos:prefLabel xml:lang="es">Baloncesto</skos:prefLabel>
         <skos:altLabel xml:lang="es">Basquet</skos:altLabel>
         <skos:altLabel xml:lang="es">Básquetbol</skos:altLabel>
+        <rdfs:label xml:lang="de">Basketball</rdfs:label>
+        <skos:prefLabel xml:lang="de">Basketball</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Korbball</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Cancha -->
@@ -535,6 +605,9 @@
         <rdfs:label xml:lang="es">Cancha</rdfs:label>
         <skos:prefLabel xml:lang="es">Cancha</skos:prefLabel>
         <skos:altLabel xml:lang="es">Terreno de juego</skos:altLabel>
+        <rdfs:label xml:lang="de">Platz</rdfs:label>
+        <skos:prefLabel xml:lang="de">Platz</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Spielfeld</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Coliseo -->
@@ -547,6 +620,9 @@
         <rdfs:label xml:lang="es">Coliseo</rdfs:label>
         <skos:prefLabel xml:lang="es">Coliseo</skos:prefLabel>
         <skos:altLabel xml:lang="es">Arena</skos:altLabel>
+        <rdfs:label xml:lang="de">Kolosseum</rdfs:label>
+        <skos:prefLabel xml:lang="de">Kolosseum</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Kampfbahn</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte -->
@@ -558,6 +634,9 @@
         <rdfs:label xml:lang="es">Deporte</rdfs:label>
         <skos:prefLabel xml:lang="es">Deporte</skos:prefLabel>
         <skos:altLabel xml:lang="es">Actividad deportiva</skos:altLabel>
+        <rdfs:label xml:lang="de">Sport</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sport</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Athletik</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipo -->
@@ -570,6 +649,9 @@
         <rdfs:label xml:lang="es">Equipo</rdfs:label>
         <skos:prefLabel xml:lang="es">Equipo</skos:prefLabel>
         <skos:altLabel xml:lang="es">Plantilla</skos:altLabel>
+        <rdfs:label xml:lang="de">Mannschaft</rdfs:label>
+        <skos:prefLabel xml:lang="de">Mannschaft</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Trupp</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Equipos -->
@@ -582,6 +664,9 @@
         <rdfs:label xml:lang="es">Deporte por equipos</rdfs:label>
         <skos:prefLabel xml:lang="es">Deporte por equipos</skos:prefLabel>
         <skos:altLabel xml:lang="es">Modalidad por equipos</skos:altLabel>
+        <rdfs:label xml:lang="de">Mannschaftssport</rdfs:label>
+        <skos:prefLabel xml:lang="de">Mannschaftssport</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Team-basiert</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Estadio -->
@@ -594,6 +679,9 @@
         <rdfs:label xml:lang="es">Estadio</rdfs:label>
         <skos:prefLabel xml:lang="es">Estadio</skos:prefLabel>
         <skos:altLabel xml:lang="es">Arena</skos:altLabel>
+        <rdfs:label xml:lang="de">Stadion</rdfs:label>
+        <skos:prefLabel xml:lang="de">Stadion</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Kampfbahn</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Futbol -->
@@ -618,6 +706,9 @@
         <rdfs:label xml:lang="es">Individual</rdfs:label>
         <skos:prefLabel xml:lang="es">Individual</skos:prefLabel>
         <skos:altLabel xml:lang="es">Solo</skos:altLabel>
+        <rdfs:label xml:lang="de">Individuell</rdfs:label>
+        <skos:prefLabel xml:lang="de">Individuell</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Allein</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Lugar -->
@@ -629,6 +720,9 @@
         <rdfs:label xml:lang="es">Lugar</rdfs:label>
         <skos:prefLabel xml:lang="es">Lugar</skos:prefLabel>
         <skos:altLabel xml:lang="es">Sede</skos:altLabel>
+        <rdfs:label xml:lang="de">Ort</rdfs:label>
+        <skos:prefLabel xml:lang="de">Ort</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Austragungsort</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Modalidad -->
@@ -640,6 +734,9 @@
         <rdfs:label xml:lang="es">Modalidad</rdfs:label>
         <skos:prefLabel xml:lang="es">Modalidad</skos:prefLabel>
         <skos:altLabel xml:lang="es">Categoría</skos:altLabel>
+        <rdfs:label xml:lang="de">Modus</rdfs:label>
+        <skos:prefLabel xml:lang="de">Modus</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Kategorie</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Participante -->
@@ -651,6 +748,9 @@
         <rdfs:label xml:lang="es">Participante</rdfs:label>
         <skos:prefLabel xml:lang="es">Participante</skos:prefLabel>
         <skos:altLabel xml:lang="es">Jugador</skos:altLabel>
+        <rdfs:label xml:lang="de">Teilnehmer</rdfs:label>
+        <skos:prefLabel xml:lang="de">Teilnehmer</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Spieler</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Voleibol -->
@@ -663,6 +763,9 @@
         <rdfs:label xml:lang="es">Voleibol</rdfs:label>
         <skos:prefLabel xml:lang="es">Voleibol</skos:prefLabel>
         <skos:altLabel xml:lang="es">Vóley</skos:altLabel>
+        <rdfs:label xml:lang="de">Volleyball</rdfs:label>
+        <skos:prefLabel xml:lang="de">Volleyball</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Volley</skos:altLabel>
     </owl:Class>
     
     <!-- http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo -->
@@ -674,6 +777,9 @@
         <rdfs:label xml:lang="es">Evento deportivo</rdfs:label>
         <skos:prefLabel xml:lang="es">Evento deportivo</skos:prefLabel>
         <skos:altLabel xml:lang="es">Competición</skos:altLabel>
+        <rdfs:label xml:lang="de">Sportereignis</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sportereignis</skos:prefLabel>
+        <skos:altLabel xml:lang="de">Wettbewerb</skos:altLabel>
     </owl:Class>
     
 
