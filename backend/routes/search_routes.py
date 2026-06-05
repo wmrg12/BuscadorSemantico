@@ -78,10 +78,11 @@ def busqueda_ontologia_info():
 def busqueda_idiomas():
     return jsonify(
         {
-            "supported": ["es", "en"],
+            "supported": ["es", "en", "de"],
             "labels": {
                 "es": "Español",
                 "en": "English",
+                "de": "Deutsch",
             },
         }
     )

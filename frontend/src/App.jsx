@@ -31,8 +31,8 @@ const TEXTOS_UI = {
     ontologyMetadataDesc: "Metadatos extraídos dinámicamente sobre la ontología.",
     supportedLangs: "Idiomas soportados",
     levelsRepresentation: "Representaciones del Multilingüismo en esta App",
-    levelInfo: "1. Información: Declarada en owl:Ontology con rdfs:comment en español e inglés.",
-    levelRealization: "2. Realización: Datos reales con etiquetas físicas @es y @en.",
+    levelInfo: "1. Información: Declarada en owl:Ontology con rdfs:comment en español, inglés y aleman.",
+    levelRealization: "2. Realización: Datos reales con etiquetas físicas @es, @en y @de.",
     levelModelization: "3. Modelización: El buscador filtra por idioma en tiempo real con consultas SPARQL.",
     sparqlConsoleTitle: "Nivel 3: Consola SPARQL - Consulta Activa (Modelización)",
     showQueryBtn: "Ver Consulta SPARQL",
@@ -66,14 +66,49 @@ const TEXTOS_UI = {
     ontologyMetadataDesc: "Metadata dynamically extracted about the ontology.",
     supportedLangs: "Supported languages",
     levelsRepresentation: "Multilingualism Representations in this App",
-    levelInfo: "1. Information: Declared in owl:Ontology with rdfs:comment in Spanish and English.",
-    levelRealization: "2. Realization: Physical data containing @es and @en tags.",
+    levelInfo: "1. Information: Declared in owl:Ontology with rdfs:comment in Spanish, English and German.",
+    levelRealization: "2. Realization: Physical data containing @es, @en and @de tags.",
     levelModelization: "3. Modelization: Search filters by language in real-time using SPARQL queries.",
     sparqlConsoleTitle: "Level 3: SPARQL Console - Active Query (Modelization)",
     showQueryBtn: "Show SPARQL Query",
     hideQueryBtn: "Hide SPARQL Query",
     noQueryYet: "Run a search to see the generated SPARQL query with the language filter."
   },
+  de: {
+    title: "Semantische Sportsuche",
+    subtitle: "RDF/OWL-Ontologie - DBpedia - Mehrsprachig",
+    placeholder: "Suche nach Sportart, Athlet, Ereignis...",
+    btnSearch: "Suchen",
+    tabLocal: "Lokale Ontologie",
+    tabDbpedia: "DBpedia",
+    noResults: "Keine Ergebnisse",
+    backendError: "Verbindung zum Server fehlgeschlagen. Starte das Backend: cd backend && python app.py",
+    loading: "Suche läuft...",
+    labelSource: "Quelle",
+    labelType: "Typ",
+    totalResults: "Ergebnisse",
+    classes: "Klassen",
+    lang: "Sprache",
+    abstract: "Beschreibung",
+    detailsBtn: "Informationen & Relationen anzeigen",
+    hideDetailsBtn: "Informationen ausblenden",
+    loadingDetails: "Eigenschaften werden geladen...",
+    labelDataProps: "Registrierte Daten",
+    labelObjProps: "Ontologie-Relationen",
+    labelIncomingProps: "Erscheint verknüpft in",
+    langCode: "de",
+    ontologyMetadataTitle: "Ebene 1: Ontologie-Informationen (owl:Ontology)",
+    ontologyMetadataDesc: "Dynamisch extrahierte Metadaten über die Ontologie.",
+    supportedLangs: "Unterstützte Sprachen",
+    levelsRepresentation: "Darstellung der Mehrsprachigkeit in dieser App",
+    levelInfo: "1. Information: Deklariert in owl:Ontology mit rdfs:comment auf Spanisch, Englisch und Deutsch.",
+    levelRealization: "2. Realisierung: Physische Daten, die die Tags @es, @en und @de enthalten.",
+    levelModelization: "3. Modellierung: Suchfilter nach Sprache in Echtzeit mittels SPARQL-Abfragen.",
+    sparqlConsoleTitle: "Ebene 3: SPARQL-Konsole - Aktive Abfrage (Modellierung)",
+    showQueryBtn: "SPARQL-Abfrage anzeigen",
+    hideQueryBtn: "SPARQL-Abfrage ausblenden",
+    noQueryYet: "Führe eine Suche aus, um die generierte SPARQL-Abfrage mit dem Sprachfilter zu sehen."
+  }
 };
 
 // Formatear valores de fecha/hora de la ontología
@@ -260,7 +295,7 @@ function TarjetaResultado({ elemento, textos, alBuscarRelacion }) {
 //
 export default function App() {
   const [idioma, setIdioma] = useState("es");
-  const [idiomas, setIdiomas] = useState({ es: "Español", en: "English" });
+  const [idiomas, setIdiomas] = useState({ es: "Español", en: "English", de: "Deutsch" });
   const [palabraClave, setPalabraClave] = useState("");
   const [palabraBusqueda, setPalabraBusqueda] = useState("");
   const [resultados, setResultados] = useState(null);
