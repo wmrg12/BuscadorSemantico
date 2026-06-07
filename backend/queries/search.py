@@ -6,7 +6,7 @@ from services.ontology_service import grafo_dbpedia as graph_dbpedia
 from services.ontology_service import buscar_deporte_dbpedia, _crear_regex_acentos
 
 
-IDIOMAS_SOPORTADOS = ["es", "en"]
+IDIOMAS_SOPORTADOS = ["es", "en", "de"]
 PROPIEDADES_ETIQUETA = (SKOS.prefLabel, RDFS.label, SKOS.altLabel)
 
 
@@ -368,7 +368,11 @@ SELECT DISTINCT ?recurso ?label ?tipo WHERE {{
         (BOUND(?label) && REGEX(STR(?label), "{regex_pal}", "i")) ||
         EXISTS {{
             ?recurso ?p ?valor .
-            FILTER(isLiteral(?valor) && REGEX(STR(?valor), "{regex_pal}", "i"))
+            FILTER(
+                isLiteral(?valor) &&
+                (LANG(?valor) = "" || LANG(?valor) = "{idioma}") &&
+                REGEX(STR(?valor), "{regex_pal}", "i")
+            )
         }}
     )
     

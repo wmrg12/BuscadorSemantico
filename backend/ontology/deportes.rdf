@@ -2562,7 +2562,7 @@
         <tieneParticipante rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Maria_Rene_Vila"/>
         <fechaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-02T00:00:00</fechaEvento>
         <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-02T19:00:00</horaEvento>
-        <nombreEvento xml:lang="en">Final 200 metros mariposa</nombreEvento>
+        <nombreEvento xml:lang="es">Final 200 metros mariposa</nombreEvento>
         <nombreEvento xml:lang="en">Final 200 meters butterfly</nombreEvento>
         <nombreEvento xml:lang="de">Finale 200 Meter Schmetterling</nombreEvento>
     </owl:NamedIndividual>

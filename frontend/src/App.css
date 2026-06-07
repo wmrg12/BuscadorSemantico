@@ -10,22 +10,37 @@
 
 :root {
   --fondo: #ffffff;
-  --superficie: #ffffff;
-  --superficie2: #f5f5f5;
+  --superficie: rgba(255, 255, 255, 0.88);
+  --superficie2: rgba(245, 245, 245, 0.88);
   --acento: #000000;
   --acento2: #000000;
   --dbpedia: #000000;
   --texto: #000000;
   --tenue: #666666;
-  --borde: #e0e0e0;
+  --borde: rgba(224, 224, 224, 0.85);
   --radio: 4px;
+  --opacidad-fondo: 0.35;
 }
 
 body {
-  background: var(--fondo);
   color: var(--texto);
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
+  background: var(--fondo);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/fondo_deportes.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: var(--opacidad-fondo);
+  z-index: -2;
+  pointer-events: none;
 }
 
 /* App */

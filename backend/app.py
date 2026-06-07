@@ -14,4 +14,4 @@ def inicio():
 
 
 if __name__ == "__main__":
-    aplicacion.run(debug=True)
+    aplicacion.run(debug=True, use_reloader=False)
