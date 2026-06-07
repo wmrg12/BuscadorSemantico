@@ -1,4 +1,5 @@
 flask
 flask-cors
-rdflib
+rdflib==6.3.2
+pyparsing==3.0.9
 SPARQLWrapper

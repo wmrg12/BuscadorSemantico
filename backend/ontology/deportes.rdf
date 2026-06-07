@@ -1264,7 +1264,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Cecilia_Zeballos">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Atleta"/>
-        <nombreParcipante>Cecilia Zeballos</nombreParticipante>
+        <nombreParticipante>Cecilia Zeballos</nombreParticipante>
         <rol>atleta</rol>
     </owl:NamedIndividual>
     

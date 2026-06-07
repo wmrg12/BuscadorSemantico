@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" >
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dueball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Dueball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lacrosse_sixes">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Lacrosse sixes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Smallbore_rifle_shooting">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Smallbore rifle shooting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sports_tourism">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Sports tourism</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bandy">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Bandy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Outrigger_ski">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Outrigger ski</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Para-alpine_skiing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Para-alpine skiing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ski_flying">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Ski flying</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sled_dog_racing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Sled dog racing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Canoe_freestyle">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Canoe freestyle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Canoeing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Canoeing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Swamp_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Swamp football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Track_cycling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Track cycling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Aesthetic_group_gymnastics">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Aesthetic group gymnastics</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/SlamBall">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">SlamBall</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Canicross">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Canicross</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dodgeball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Dodgeball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Slopestyle">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Slopestyle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jai_alai">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Jai alai</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Beach_Flags_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Beach Flags (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Chuckwagon_racing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Chuckwagon racing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Circle_rules_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Circle rules football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pig_wrestling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Pig wrestling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pitton_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Pitton (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Plunge_for_distance">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Plunge for distance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Locksport">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Locksport</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Banger_racing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Banger racing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bullseye_shooting">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Bullseye shooting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Aquaplaning_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Aquaplaning (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Leg_cricket">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Leg cricket</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Paraclimbing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Paraclimbing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Diving_chess">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Diving chess</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Asia_Goalball_Championships">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Asia Goalball Championships</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Europe_Goalball_Championships">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Europe Goalball Championships</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eight-ender">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Eight-ender</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/VX_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">VX (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Equestrianism_in_Brittany">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Equestrianism in Brittany</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Langdi_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Langdi (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Underwater_target_shooting">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Underwater target shooting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Nouka_Baich">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Nouka Baich</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Walking_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Walking football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Red_Bull_400">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Red Bull 400</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Field_hockey">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Field hockey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Formula_One">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Formula One</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sport_of_athletics">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Sport of athletics</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tennis">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Tennis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Volleyball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Volleyball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Beach_handball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Beach handball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gaelic_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Gaelic football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ice_speedway">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Ice speedway</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Surfing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Surfing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cowboy_action_shooting">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Cowboy action shooting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cutting_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Cutting (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gaelic_handball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Gaelic handball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/ITHF_table_hockey">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">ITHF table hockey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/International_rules_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">International rules football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Speed_skydiving">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Speed skydiving</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Charrería">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Charrería</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Feather_bowling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Feather bowling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rabbiting">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Rabbiting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Short_mat_bowls">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Short mat bowls</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jallikattu">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Jallikattu</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mountain_bike_orienteering">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Mountain bike orienteering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Munzee">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Munzee</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Varpa">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Varpa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Wallyball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Wallyball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Beach_wrestling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Beach wrestling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Irish_road_bowling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Irish road bowling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Khmer_traditional_wrestling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Khmer traditional wrestling</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Flag_throwing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Flag throwing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ladies&#39;_Gaelic_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Ladies&#39; Gaelic football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_darts">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">American darts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Amputee_football">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Amputee football</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Para-equestrian">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Para-equestrian</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Park_golf">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Park golf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Patball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Patball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Logrolling_(sport)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Logrolling (sport)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rugby_league_in_the_Cook_Islands">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Rugby league in the Cook Islands</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Touchtennis">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Touchtennis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Treibball">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Treibball</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Trick_roping">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Trick roping</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Trugo">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Trugo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Twelve_Mile_500">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Twelve Mile 500</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Haxey_Hood">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Sport" />
+    <rdfs:label xml:lang="en">Haxey Hood</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
