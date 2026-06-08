@@ -1296,12 +1296,12 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Campeonato_Garra">
         <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/eventoDeportivo"/>
         <rdfs:label xml:lang="es">Campeonato Garra</rdfs:label>
-        <rdfs:label xml:lang="en">Campeonato Garra</rdfs:label>
-        <rdfs:label xml:lang="de">Campeonato Garra</rdfs:label>
+        <rdfs:label xml:lang="en">Garra Championship</rdfs:label>
+        <rdfs:label xml:lang="de">Garra Meisterschaft</rdfs:label>
 
         <skos:prefLabel xml:lang="es">Campeonato Garra</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Campeonato Garra</skos:prefLabel>
-        <skos:prefLabel xml:lang="de">Campeonato Garra</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Garra Championship</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Garra Meisterschaft</skos:prefLabel>
 
         <correspondeA rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Voleibol_Juvenil"/>
         <seRealizaEn rdf:resource="http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica#Coliseo_Jose_Villazon_Peredo"/>

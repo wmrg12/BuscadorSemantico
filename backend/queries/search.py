@@ -66,9 +66,9 @@ def _literales_idioma(grafo: Graph, uri_ref, idioma: str) -> list[str]:
 def _tipo_etiqueta(grafo: Graph, tipo_uri: str | None, idioma: str = "es") -> str:
     if not tipo_uri:
         return "Recurso"
-    return _obtener_etiqueta_en_grafo(grafo, URIRef(tipo_uri), idioma) or _uri_a_etiqueta(
-        tipo_uri
-    )
+    return _obtener_etiqueta_en_grafo(
+        grafo, URIRef(tipo_uri), idioma
+    ) or _uri_a_etiqueta(tipo_uri)
 
 
 def _grafo_para_uri(uri: str) -> Graph:
@@ -149,7 +149,9 @@ def _texto_busqueda_recurso(grafo: Graph, recurso, idioma: str = "es") -> str:
     return _normalizar_texto(" ".join(textos))
 
 
-def _coincide_busqueda(texto_completo: str, tokens: list[str], consulta_norm: str) -> int:
+def _coincide_busqueda(
+    texto_completo: str, tokens: list[str], consulta_norm: str
+) -> int:
     score = 0
     if consulta_norm and consulta_norm in texto_completo:
         score = 100
@@ -233,7 +235,14 @@ def obtener_todos_los_sujetos(idioma: str = "es") -> list[dict]:
 
 
 DEPORTE_NS = "http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica/Deporte"
-TERMINOS_DEPORTE_GENERICO = {"deporte", "deportes", "sport", "sports", "Sport", "Sportarten"}
+TERMINOS_DEPORTE_GENERICO = {
+    "deporte",
+    "deportes",
+    "sport",
+    "sports",
+    "Sport",
+    "Sportarten",
+}
 
 
 def _es_consulta_deporte_generica(palabra_clave: str) -> bool:
@@ -286,20 +295,20 @@ def obtener_info_ontologia(idioma: str = "es") -> dict:
     resultados = graph_local.query(consulta)
     comentarios = {}
     uri_ontologia = "http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica"
-    
+
     for fila in resultados:
         uri_ontologia = str(fila[0])
         comentario_lit = fila[1]
         lang = comentario_lit.language or "es"
         comentarios[lang] = str(comentario_lit)
-    
+
     if not comentarios:
         comentarios = {
             "es": "Esta es una ontologia sobre deportes",
             "en": "This is an ontology about sports",
-            "de": "Dies ist eine Ontologie über Sport"
+            "de": "Dies ist eine Ontologie über Sport",
         }
-        
+
     return {
         "uri": uri_ontologia,
         "descripcion": comentarios.get(idioma, comentarios.get("es", "")),
@@ -308,24 +317,24 @@ def obtener_info_ontologia(idioma: str = "es") -> dict:
         "niveles_representacion": {
             "informacion": {
                 "titulo": "Nivel 1: Información",
-                "detalle": "La ontología declara explícitamente sus metadatos e idiomas soportados en la cabecera owl:Ontology con rdfs:comment en español, inglés y alemán."
+                "detalle": "La ontología declara explícitamente sus metadatos e idiomas soportados en la cabecera owl:Ontology con rdfs:comment en español, inglés y alemán.",
             },
             "realizacion": {
                 "titulo": "Nivel 2: Realización",
-                "detalle": "Los datos (instancias, clases y propiedades) contienen etiquetas físicas con tags de idioma @es, @en y @de en el archivo RDF/OWL."
+                "detalle": "Los datos (instancias, clases y propiedades) contienen etiquetas físicas con tags de idioma @es, @en y @de en el archivo RDF/OWL.",
             },
             "modelizacion": {
                 "titulo": "Nivel 3: Modelización",
-                "detalle": "El buscador realiza consultas SPARQL y filtra dinámicamente los recursos por idioma usando la función FILTER(LANG(?label) = 'idioma')."
-            }
-        }
+                "detalle": "El buscador realiza consultas SPARQL y filtra dinámicamente los recursos por idioma usando la función FILTER(LANG(?label) = 'idioma').",
+            },
+        },
     }
 
 
 def obtener_query_sparql_busqueda(palabra_clave: str, idioma: str = "es") -> str:
     palabra_clave_norm = _normalizar_texto(palabra_clave)
     regex_pal = _crear_regex_acentos(palabra_clave_norm)
-    
+
     return f"""PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -390,21 +399,23 @@ def busqueda_local_sparql(palabra_clave: str, idioma: str = "es") -> list[dict]:
         for fila in resultados:
             uri_str = str(fila[0])
             label = str(fila[1]) if fila[1] else _uri_a_etiqueta(uri_str)
-            
+
             if fila[2]:
                 tipo = str(fila[2])
             else:
                 tipo_uri = _tipo_dominio(graph_local, fila[0])
                 tipo = _tipo_etiqueta(graph_local, tipo_uri, idioma)
-                
-            datos.append({
-                "uri": uri_str,
-                "label": label,
-                "tipo": tipo,
-                "lang": idioma,
-                "fuente": "local",
-                "score": 100
-            })
+
+            datos.append(
+                {
+                    "uri": uri_str,
+                    "label": label,
+                    "tipo": tipo,
+                    "lang": idioma,
+                    "fuente": "local",
+                    "score": 100,
+                }
+            )
         return datos
     except Exception as e:
         print(f"[SPARQL Error] {e}")
@@ -440,7 +451,7 @@ def busqueda_dbpedia_local(palabra_clave: str, idioma: str = "es") -> list[dict]
     resultados = []
     uris_vistas = set()
 
-    # Cuando no es español, priorizar la búsqueda live de DBpedia
+    # Cuando no es español, priorizar la busqueda live de DBpedia
     # (los archivos offline solo contienen datos en español)
     if idioma != "es":
         resultados_online = buscar_deporte_dbpedia(palabra_clave, idioma=idioma)
@@ -470,7 +481,6 @@ def busqueda_dbpedia_local(palabra_clave: str, idioma: str = "es") -> list[dict]
                 if res_online["uri"] not in uris_vistas:
                     resultados.append(res_online)
                     uris_vistas.add(res_online["uri"])
-
     return resultados
 
 
@@ -543,9 +553,9 @@ def obtener_individuos(uri_clase: str = None, idioma: str = "es") -> list[dict]:
                 continue
             vistos.add(uri_str)
 
-            etiqueta = _obtener_etiqueta_en_grafo(grafo, URIRef(uri_str), idioma) or _uri_a_etiqueta(
-                uri_str
-            )
+            etiqueta = _obtener_etiqueta_en_grafo(
+                grafo, URIRef(uri_str), idioma
+            ) or _uri_a_etiqueta(uri_str)
             datos.append(
                 {
                     "uri": uri_str,
@@ -997,7 +1007,7 @@ def obtener_detalles_recurso(uri: str, idioma: str = "es") -> dict:
                     "propiedad": p_etiqueta,
                     "valor": str(o),
                     "es_iri": False,
-                    "lang": o.language if o.language else None
+                    "lang": o.language if o.language else None,
                 }
             )
         elif isinstance(o, URIRef):
