@@ -2,4 +2,6 @@ venv/
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
+*.pyd.venv/
+/.venv/
+.venv
