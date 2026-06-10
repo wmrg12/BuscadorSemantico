@@ -1,5 +1,0 @@
-flask
-flask-cors
-rdflib==6.3.2
-pyparsing==2.4.7
-SPARQLWrapper
