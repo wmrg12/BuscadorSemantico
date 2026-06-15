@@ -176,14 +176,8 @@ def _buscar_en_grafo(
 
     resultados = []
 
-    for s in set(grafo.subjects()):
-        if not isinstance(s, URIRef):
-            continue
-
-        if _es_meta_clase(grafo, s):
-            continue
-
-        texto_completo = _texto_busqueda_recurso(grafo, s, idioma)
+    for s in _obtener_sujetos_buscables(grafo):
+        texto_completo = _texto_recurso(grafo, s, idioma)
         score = _coincide_busqueda(texto_completo, tokens, consulta_norm)
         if score == 0:
             continue
@@ -283,24 +277,15 @@ def _buscar_tipos_deporte(
 
 
 def obtener_info_ontologia(idioma: str = "es") -> dict:
-    consulta = """
-    PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT DISTINCT ?ontologia ?comentario WHERE {
-        ?ontologia a owl:Ontology .
-        ?ontologia rdfs:comment ?comentario .
-    }
-    """
-    resultados = graph_local.query(consulta)
     comentarios = {}
     uri_ontologia = "http://www.semanticweb.org/hp/ontologies/2026/2/WebSemantica"
 
-    for fila in resultados:
-        uri_ontologia = str(fila[0])
-        comentario_lit = fila[1]
-        lang = comentario_lit.language or "es"
-        comentarios[lang] = str(comentario_lit)
+    for ontologia in graph_local.subjects(RDF.type, OWL.Ontology):
+        uri_ontologia = str(ontologia)
+        for comentario in graph_local.objects(ontologia, RDFS.comment):
+            if isinstance(comentario, Literal):
+                lang = comentario.language or "es"
+                comentarios[lang] = str(comentario)
 
     if not comentarios:
         comentarios = {
@@ -489,26 +474,16 @@ def obtener_clases(idioma: str = "es") -> list[dict]:
     vistos = set()
 
     for grafo, fuente in [(graph_local, "local"), (graph_dbpedia, "dbpedia")]:
-        consulta = """
-        PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-        SELECT DISTINCT ?clase WHERE {
-            { ?clase a owl:Class . }
-            UNION
-            { ?clase a rdfs:Class . }
-            FILTER(isIRI(?clase))
-        }
-        """
-
-        resultados = grafo.query(consulta)
-        for fila in resultados:
-            uri_str = str(fila[0])
+        clases_set = set(grafo.subjects(RDF.type, OWL.Class)) | set(grafo.subjects(RDF.type, RDFS.Class))
+        for clase in clases_set:
+            if not isinstance(clase, URIRef):
+                continue
+            uri_str = str(clase)
             if uri_str in vistos:
                 continue
             vistos.add(uri_str)
 
-            etiqueta = _obtener_etiqueta_en_grafo(grafo, URIRef(uri_str), idioma)
+            etiqueta = _obtener_etiqueta_en_grafo(grafo, clase, idioma)
             if not etiqueta:
                 continue
 
@@ -526,36 +501,23 @@ def obtener_individuos(uri_clase: str = None, idioma: str = "es") -> list[dict]:
 
     for grafo, fuente in [(graph_local, "local"), (graph_dbpedia, "dbpedia")]:
         if uri_clase:
-            consulta = f"""
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            SELECT DISTINCT ?ind ?label WHERE {{
-                ?ind a <{uri_clase}> .
-                FILTER(isIRI(?ind))
-                OPTIONAL {{ ?ind rdfs:label ?label . }}
-            }}
-            LIMIT 50
-            """
+            clase_ref = URIRef(uri_clase)
+            individuos = grafo.subjects(RDF.type, clase_ref)
         else:
-            consulta = """
-            PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            SELECT DISTINCT ?ind ?label WHERE {
-                ?ind a owl:NamedIndividual .
-                OPTIONAL { ?ind rdfs:label ?label . }
-            }
-            LIMIT 50
-            """
+            individuos = grafo.subjects(RDF.type, OWL.NamedIndividual)
 
-        resultados = grafo.query(consulta)
-        for fila in resultados:
-            uri_str = str(fila[0])
+        for ind in individuos:
+            if not isinstance(ind, URIRef):
+                continue
+            uri_str = str(ind)
             if uri_str in vistos:
                 continue
             vistos.add(uri_str)
 
             etiqueta = _obtener_etiqueta_en_grafo(
-                grafo, URIRef(uri_str), idioma
+                grafo, ind, idioma
             ) or _uri_a_etiqueta(uri_str)
+            
             datos.append(
                 {
                     "uri": uri_str,
@@ -564,6 +526,8 @@ def obtener_individuos(uri_clase: str = None, idioma: str = "es") -> list[dict]:
                     "fuente": fuente,
                 }
             )
+            if len(datos) >= 50:
+                break
 
     return datos[:50]
 
@@ -844,6 +808,22 @@ def _cumple_tipo(grafo: Graph, recurso, tipos_buscados: set[str]) -> bool:
     return False
 
 
+_CACHE_SUJETOS_BUSQUEDA = {}
+
+def _obtener_sujetos_buscables(grafo: Graph) -> list[URIRef]:
+    cache_key = id(grafo)
+    if cache_key in _CACHE_SUJETOS_BUSQUEDA:
+        return _CACHE_SUJETOS_BUSQUEDA[cache_key]
+    
+    sujetos = []
+    for s in set(grafo.subjects()):
+        if isinstance(s, URIRef) and not _es_meta_clase(grafo, s):
+            sujetos.append(s)
+            
+    _CACHE_SUJETOS_BUSQUEDA[cache_key] = sujetos
+    return sujetos
+
+
 _CACHE_TEXTO_RECURSO = {}
 _CACHE_CONTEXTO_RELACIONAL = {}
 
@@ -931,13 +911,7 @@ def busqueda_compuesta_relacional(
 
     resultados = []
 
-    for recurso in set(grafo.subjects()):
-        if not isinstance(recurso, URIRef):
-            continue
-
-        if _es_meta_clase(grafo, recurso):
-            continue
-
+    for recurso in _obtener_sujetos_buscables(grafo):
         # Si la consulta pide un tipo, filtramos por tipo.
         # Ejemplo: "atleta futbol" solo devuelve Atletas.
         if tipos_buscados and not _cumple_tipo(grafo, recurso, tipos_buscados):
